@@ -1,0 +1,56 @@
+{
+  "components": [
+    {
+      "text": "# Open Jira Ticket",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0kiv9na",
+        "columns": null
+      },
+      "id": "Field_13q33zp"
+    },
+    {
+      "text": "## Newcomer Information",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ot9snd",
+        "columns": null
+      },
+      "id": "Field_15mtkct"
+    },
+    {
+      "text": "**Full Name:** {{fullName}}\n\n**Date of Birth:** {{dateOfBirth}}\n\n**Email Address:** {{emailAddress}}\n\n**Citizen Card (CC) Number:** {{identificationNumber}}\n\n**Citizen Card (CC) Validity:** {{identificationValidity}}\n\n**NIF:** {{nif}}\n\n**NISS:** {{niss}}\n\n**Address:** {{address}}\n\n**Postal Code:** {{postalCode}}\n\n**Marital Status:** {{maritalStatus}}\n\n**Number of Dependents:** {{numberOfDependents}}\n\n**IBAN:** {{iban}}\n\n**Start Date:** {{startDate}}\n\n**Photo:** {{ if photoLink != \"\" then \"[View](\" + photoLink + \")\" else \"Not Provided\"}}\n\n**Certificate of Qualifications:** {{if certificateOfQualificationsLink != \"\" then \"[View](\" + certificateOfQualificationsLink + \")\" else \"Not Provided\"}}\n",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1giexle",
+        "columns": null
+      },
+      "id": "Field_1lipnaq"
+    },
+    {
+      "label": "I have opened the Jira ticket",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0aoq319",
+        "columns": null
+      },
+      "id": "Field_041yopg",
+      "key": "ticketOpened",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_OpenJiraTicket",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

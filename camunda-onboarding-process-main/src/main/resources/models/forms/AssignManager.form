@@ -1,0 +1,47 @@
+{
+  "components": [
+    {
+      "text": "# Assign Manager",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0bw3j09",
+        "columns": null
+      },
+      "id": "Field_019gwfq"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1yqwb5h",
+        "columns": null
+      },
+      "id": "Field_1ihb8pq"
+    },
+    {
+      "label": "Manager (First and Last name)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ljpf75",
+        "columns": null
+      },
+      "id": "Field_01m40iw",
+      "key": "managerName",
+      "description": "Ex. Gonçalo Ramos",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_AssignManager",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="nacionalSemTermo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d8c73b0e-da10-4483-9e0b-85d10f066acf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="fullName" class="java.lang.String"/>
+	<parameter name="maritalStatus" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="postalCode" class="java.lang.String"/>
+	<parameter name="identificationNumber" class="java.lang.String"/>
+	<parameter name="identificationValidity" class="java.lang.String"/>
+	<parameter name="nif" class="java.lang.String"/>
+	<parameter name="niss" class="java.lang.String"/>
+	<parameter name="startDate" class="java.lang.String"/>
+	<parameter name="baseSalary" class="java.lang.String"/>
+	<parameter name="baseSalaryInWords" class="java.lang.String"/>
+	<parameter name="iht" class="java.lang.String"/>
+	<parameter name="ihtInWords" class="java.lang.String"/>
+	<parameter name="companySignatureURL" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="30" width="480" height="30" uuid="f185b30b-4e27-462f-aefa-7af631e7d0ea"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[ACORDO SOBRE ISENÇÃO DE HORÁRIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="80" width="482" height="120" uuid="d93701b4-8c07-409a-9b97-305f2994ed22"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Entre<br><b>Syone, S.A.</b>, com sede na Rua Alfredo da Silva, nº 8 A, Edifício Stern, Piso 3D, freguesia de Alfragide, titular do NIPC 504.729.624, matriculada na Conservatória do Registo Comercial da Amadora sob o mesmo número, com o capital social de € 200.000,00 (duzentos mil euros), representada neste acto pelo Dr. José Eduardo Taborda Bravo Silva, na qualidade de Administrador, doravante designado por Sociedade,<br><br>E]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="200" width="480" height="160" uuid="d9262c25-71fa-4a79-a8c4-acb6d5b40bb8"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>"+ $P{fullName} + "</b>, " + $P{maritalStatus} + ", portador/a do Documento de Identificação n.º " + $P{identificationNumber} + ", válido até " + $P{identificationValidity} + ", NIF " + $P{nif} + ", NISS " + $P{niss} + ", residente na " + $P{address} + ", " + $P{postalCode} + ", adiante designado/a por Trabalhador/a, a prestar serviço na Rua Alfredo da Silva, n.º 8º A, Edifício Stern, Piso 3 D, 2610-016 Alfragide e nas instalações dos clientes do Empregador, com a categoria profissional de Nível, desempenhando funções relacionadas com a implementação de software nas instalações dos clientes, ou seja, nomeadamente, procede à instalação de bases de dados, à instalação e manutenção das aplicações de software e à movimentação de dados entre departamentos, acções de pré-venda, auferindo pela prestação do seu trabalho a retribuição base de €" + $P{baseSalary} + " (" + $P{baseSalaryInWords} + ")."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="370" width="479" height="130" uuid="1aaa776d-4c85-4edd-bbf4-557b8a813cd6"/>
+				<textElement textAlignment="Justified">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[E considerando que estamos perante uma das seguintes situações previstas no art. 218º do Código de Trabalho:
+    na alínea a) do n.º 1 – exercício de cargos de administração, de direcção, de confiança, de fiscalização ou de apoio aos titulares desses cargos, ou‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬
+     na alínea b) do n.º 1 – execução de trabalhos preparatórios ou complementares que, pela sua natureza, só possam ser efectuados fora dos limites dos horários normais de trabalho; ou‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬
+    na alínea c) do n.º 1 – exercício regular da actividade fora do estabelecimento, sem controlo imediato da hierarquia; ou‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬
+     n.º 2 – outra situação admitida em instrumento de regulamentação colectiva de trabalho.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="40" y="400" width="13" height="12" uuid="168e23c2-ff80-4602-883a-1a5526ae16d0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="40" y="427" width="13" height="12" uuid="dfad5a33-0cb0-417b-8447-16e0bec24000"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="40" y="455" width="13" height="12" uuid="b0f984c2-21f9-4140-9dba-2b3207460e47"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="40" y="482" width="13" height="12" uuid="4313f76f-b6a2-439d-95ee-d370ab0eeddc"/>
+			</rectangle>
+			<line>
+				<reportElement x="40" y="455" width="13" height="12" uuid="ac4dcf8d-3894-43cf-92e3-854acbc83d46"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="40" y="455" width="13" height="12" uuid="a5e30284-2290-4189-b27d-aa8c9385c6a6"/>
+			</line>
+			<staticText>
+				<reportElement x="40" y="510" width="479" height="100" uuid="c342217d-55ec-4328-b9e6-2c930c64a4ea"/>
+				<textElement textAlignment="Justified">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[É celebrado o presente acordo de prestação de trabalho no regime da isenção de horário, através do qual fica estabelecido, nos termos do disposto no art. 219º do Código do Trabalho: 
+    na alínea a) – a não sujeição do trabalhador aos limites máximos dos períodos normais de trabalho, ou
+    na alínea b) – a possibilidade de alargamento da prestação a um determinado número de horas, por dia ou por semana; ou‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬
+      na alínea c) – a observância dos períodos normais de trabalho acordados.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="42" y="539" width="13" height="12" uuid="9596ab55-0886-4ddc-b52b-4c0f91556c7a"/>
+			</rectangle>
+			<line>
+				<reportElement x="42" y="539" width="13" height="12" uuid="8a3780d0-08cb-4c59-a43a-66c49af4ce4b"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="42" y="539" width="13" height="12" uuid="a34f64bc-e266-4031-8d9c-d8a9876cce43"/>
+			</line>
+			<rectangle>
+				<reportElement x="42" y="567" width="13" height="12" uuid="93f6b9f3-b6b8-4c17-9ce9-4e66bfb0190c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="42" y="595" width="13" height="12" uuid="d2b776db-8fda-4bf4-8da5-e8f7a8ed7951"/>
+			</rectangle>
+			<textField>
+				<reportElement x="40" y="630" width="478" height="60" uuid="f60692db-7924-4300-98c8-25f44d56624b"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Como contrapartida da prestação do trabalho em regime de isenção de horário, o trabalhador tem direito a receber uma retribuição especial, no montante de €" + $P{iht} + " (" + $P{ihtInWords} + "), que será paga com a mesma periodicidade com que é paga a retribuição base."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="700" width="477" height="70" uuid="8ae01e7a-1bc0-441b-aa64-92fc878cea72"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[As partes têm consciência que a isenção de horário de trabalho ora acordada não prejudica o direito do trabalhador aos dias de descanso semanal obrigatório, aos feriados obrigatórios e aos dias de descanso complementar, nem ao descanso diário previsto no art. 214º do Código do Trabalho.]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<staticText>
+				<reportElement x="40" y="130" width="477" height="30" uuid="ea01fe34-943b-4743-ae37-001b9443be09"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[                      Pela Sociedade                                                        	  O Trabalhador]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="80" width="477" height="30" uuid="c91e7c85-6b2c-4f46-8791-7ea7c71aac26"/>
+				<textElement markup="html">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Alfragide, " + $P{startDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="30" width="475" height="30" uuid="be9afa64-660f-4d5a-8bcf-8d3a4005a074"/>
+				<text><![CDATA[O presente acordo vigora até que uma das partes o denuncie.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="70" y="160" width="170" height="110" uuid="1f16394e-9df6-4e49-866e-2c7dd7cf5362"/>
+				<imageExpression><![CDATA[$P{companySignatureURL}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "text": "# Create Life Profile",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0xrs8uc",
+        "columns": null
+      },
+      "id": "Field_095n11n"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_16tfxbn",
+        "columns": null
+      },
+      "id": "Field_1jy61lv"
+    },
+    {
+      "label": "I have created newcomer's Life profile",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1vqqifv",
+        "columns": null
+      },
+      "id": "Field_1feroal",
+      "key": "lifeProfileConfigured",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_CreateLifeProfile",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

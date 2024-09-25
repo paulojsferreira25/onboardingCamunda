@@ -1,0 +1,36 @@
+{
+  "components": [
+    {
+      "text": "# Verify Policies Approval",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_03whooj",
+        "columns": null
+      },
+      "id": "Field_1datvaa"
+    },
+    {
+      "label": "I have verified that the company policies have been approved by the newcomer",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_03dk1o2",
+        "columns": null
+      },
+      "id": "Field_1axb2rk",
+      "key": "policiesApproved",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_VerifyPoliciesApproval",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

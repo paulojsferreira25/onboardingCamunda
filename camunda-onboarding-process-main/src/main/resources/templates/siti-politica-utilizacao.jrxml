@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Training" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9ebcbfbb-b4d9-458a-ab22-7a40c59ada5f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="syoneLogoURL" class="java.lang.String"/>
+	<parameter name="fullName" class="java.lang.String"/>
+	<parameter name="maritalStatus" class="java.lang.String"/>
+	<parameter name="identificationNumber" class="java.lang.String"/>
+	<parameter name="identificationValidity" class="java.lang.String"/>
+	<parameter name="nif" class="java.lang.String"/>
+	<parameter name="niss" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="postalCode" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="110" width="480" height="30" forecolor="#02CCB1" uuid="419057e1-7fdd-40e2-b639-c4bfcf93596a"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECLARAÇÃO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="150" width="480" height="579" uuid="04778992-4bda-4563-9cde-9dcba2f50c1b"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font size="10"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fullName} + ", " + $P{maritalStatus} + ", portador/a do documento de identificação n.º " + $P{identificationNumber} + ", válido até " + $P{identificationValidity} + ", NIF " + $P{nif} +", NISS " + $P{niss} + ", residente na " + $P{address} + ", " + $P{postalCode} + ", vem, para os devidos efeitos, declarar e expressamente reconhecer que, no dia __ de ______ de 20__, teve conhecimento da Política de Utilização SI-TI SYONE, a qual fora disponibilizada pela respectiva entidade empregadora.<br><br><br>Alfragide, __ de _______ de 20__.<br><br><br>Trabalhador,"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="10" width="75" height="30" uuid="887ab01d-54c1-4de3-b5e7-8e1fc0055966"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Open Software Solutions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="750" width="120" height="40" uuid="16768deb-6245-4b1b-80b6-8020f83c1bba"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[R. Alfredo da Silva N8-A
+Edifício Stern 3D
+2610-016 Alfragide - Portugal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="750" width="50" height="40" forecolor="#02CCB1" uuid="5851ff5c-f9a4-4798-a77e-e8d650063778"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[syone.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="440" y="-10" width="80" height="80" uuid="ae2b4b88-d3e3-4840-a494-7e1bad807d62"/>
+				<imageExpression><![CDATA[$P{syoneLogoURL}]]></imageExpression>
+			</image>
+		</band>
+		<band height="802">
+			<staticText>
+				<reportElement x="40" y="10" width="75" height="30" uuid="b5afb943-bb21-4f97-ac78-beae7a3d989d"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Open Software Solutions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="750" width="50" height="40" forecolor="#02CCB1" uuid="079d0278-8ab6-4aed-9719-9239cb75842b"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[syone.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="750" width="120" height="40" uuid="4117e014-96d1-4260-85d3-7c8a68326d7e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[R. Alfredo da Silva N8-A
+Edifício Stern 3D
+2610-016 Alfragide - Portugal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="110" width="480" height="30" forecolor="#02CCB1" uuid="c5548aac-28f9-4524-8514-9ade2ae9b10b"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Política de utilização SI-TI Syone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="140" width="480" height="140" uuid="3c6c38bf-5149-460e-ba03-d8fe66f6fdac"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[Esta política de utilização é dirigida a todos os colaboradores da Syone, S.A que utilizam os seus SI-TI.
+
+A Syone reconhece a importância da segurança da sua infra-estrutura tecnológica (equipamentos, software e telecomunicações), serviços e sistemas para garantir serviços de alta-qualidade e espera que com esta politica de utilização SI-TI consiga proteger as suas instalações, os seus colaboradores, os seus parceiros e os seus clientes contra qualquer prática ilegal. 
+
+A Syone encoraja os seus colaboradores a utilizar todos os SI-TI disponibilizados de forma a facilitar o seu trabalho. No entanto existem regras elementares que terão de ser respeitadas de forma a garantir à Syone e ao seus membros uma utilização adequada dos seus SI-TI. 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="290" width="480" height="20" forecolor="#4F81BD" uuid="f38aec46-d767-41ad-a3d6-0507ce54e638"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Riscos de Utilização SI-TI ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="310" width="480" height="160" uuid="cc971216-2892-49ad-a073-ef60983c4384"/>
+				<text><![CDATA[Os utilizadores dos SI-TI Syone deverão estar cientes dos riscos que a sua utilização significa. Estes incluem: 
+    •  Responsabilidade legal; 
+    •  Brechas de confidencialidade; 
+    •  Leitura não autorizada de informação sensível; 
+    •  Packet spoofing; 
+    •  Debilitação da integridade de conteúdos; 
+    •  Estragos à reputação da Syone; 
+    •  Perda de produtividade; 
+    •  Congestionamento de rede e servidores e a consequente perda de produtividade; 
+    •  Recuperação de logs de sistema, correio electrónico, mensagens electrónicas (fóruns, chat's, etc) quando pedido por tribunais; 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="480" width="480" height="20" forecolor="#4F81BD" uuid="448c4a4a-77b8-48eb-a140-531dea17ff0c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Etiqueta de utilização SI-TI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="500" width="480" height="230" uuid="99eaaccb-3a19-4e86-8e87-ca596dc1ac35"/>
+				<text><![CDATA[Utilizadores SI-TI Syone deverão em todas as alturas utilizar a etiqueta apropriada ao meio: sejam elas Email, Internet ou telecomunicações que demonstrem o profissionalismo da Syone.
+
+A Syone disponibiliza acesso à Internet como um meio essencial de trabalho. Este acesso é contudo disponibilizado como um privilégio do utilizador e não um direito. Todos os utilizadores deverão utilizar o senso comum quando utilizam o acesso à Internet disponibilizado pela Syone. Todos os utilizadores deverão conformar as regras comuns de etiqueta, como por exemplo a utilização de etiqueta aceite em fóruns, e não poderão representar a Syone ou os seus interesses em nenhuma forma quando não estão a utilizar a Internet para assuntos da empresa. 
+
+A Syone considera o correio electrónico (Email) como uma importante ferramenta de comunicação e reconhece a importância do seu conteúdo bem como respostas atempadas de forma a fazer transparecer o profissionalismo Syone e a providenciar um bom serviço ao cliente. 
+
+Com efeito, o correio electrónico deverá ser utilizado, preferencialmente, enquanto ferramenta profissional e ao serviço da Syone, sem prejuízo de, pontual e esporadicamente, o email ter uma utilização pessoal por parte do seu utilizador. 
+]]></text>
+			</staticText>
+			<image>
+				<reportElement x="440" y="-10" width="80" height="80" uuid="45df90b1-21d2-4e0c-b126-862d64560ae2"/>
+				<imageExpression><![CDATA[$P{syoneLogoURL}]]></imageExpression>
+			</image>
+		</band>
+		<band height="802">
+			<staticText>
+				<reportElement x="40" y="10" width="75" height="30" uuid="7505ba4b-e243-4791-9379-d14d6bb80ede"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Open Software Solutions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="750" width="120" height="40" uuid="9f434100-7c35-4504-af05-eb6b13d644ba"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[R. Alfredo da Silva N8-A
+Edifício Stern 3D
+2610-016 Alfragide - Portugal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="750" width="50" height="40" forecolor="#02CCB1" uuid="bdfc6960-9c13-40ad-becd-b8aa438d37a9"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[syone.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="80" width="480" height="20" forecolor="#4F81BD" uuid="bbb090dc-ec68-4162-a29b-99e9f18167e1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Uso aceitável dos SI-TI Syone ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="100" width="480" height="370" uuid="9491afc1-6eca-44c4-8cb2-667568c8d8ca"/>
+				<text><![CDATA[O uso aceitável dos SI-TI Syone incluem o seguinte: 
+    •  Condução de negócios Syone; 
+    •  Envio e recepção de e-mail relacionado com trabalho; 
+    •  Cursos online Syone ou Formações Syone; 
+    •  Colaboração com outros contactos profissionais relacionados com o trabalho; 
+    •  Participação em grupos de discussão em tópicos relacionados com o trabalho; 
+    •  Desenvolvimento de competências; 
+
+Durante tempo pessoal é aceitável utilizar os SI-TI da Syone para o seguinte: 
+    •  Explorar a Internet para fins úteis; 
+    •  Envio e recepção de e-mails de família e amigos; 
+    •  Cursos online pessoais ou formação informática; 
+    •  Participação em grupos de discussão em tópicos com relevância profissional; 
+    •  Utilização de recursos que providencia a mais variada informação como por exemplo, educação, viagens, tempo, etc...
+ 
+Nota: Os colaboradores que utilizem o e-mail da Syone para fins pessoais deverão em todas as alturas apresentar as suas comunicações de forma a que se consiga perceber que estas são pessoais e não uma comunicação oficial da empresa. 
+
+Assim sendo, no Assunto dos e-mails com fins pessoais, deverá ser feita uma menção inicial a PESSOAL, para que, desta forma, o colaborador em questão beneficie do direito de reserva e confidencialidade relativamente ao conteúdo das mensagens de natureza pessoal, o qual se assume como um direito legalmente tutelado. 
+
+Porém, cumpre esclarecer que toda a correspondência que não tenha a menção de PESSOAL considerar-se-á para todos os efeitos destinada à Syone e exclusivamente relacionada com o exercício da actividade profissional do colaborador.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="500" width="480" height="230" uuid="b7a1b272-9321-483d-8a5d-05e8d5db533d"/>
+				<text><![CDATA[Qualquer outro uso dos SI-TI da Syone que não os descritos acima não são aceitáveis. Para maior clareza eis alguns exemplos inaceitáveis em matéria dos SI-TI da Syone: 
+    •  Violações de direitos de propriedade intelectual, designadamente, direitos de propriedade industrial e de direito de autor e direitos conexos, nomeadamente, por scan's, distribuição de música, software, etc; 
+    •  Hacking/cracking e qualquer crime relacionado com segurança informática; 
+    •  Phreaking e qualquer crime relacionado com telefonia incluindo social engineering; 
+    •  Obscenidades e propaganda de ódio; 
+    •  Disponibilização de informação sensível sem autorização (tanto de clientes como da Syone); 
+    •  Disponibilização de informação e/ou contactos pessoas de clientes e/ou colaboradores; 
+    •  Causar congestionamentos de rede e/ou falhas à mesma; 
+    •  Introdução, instalação e proliferação de vírus, worms, trojans etc.; 
+    •  Port scanning ou scans de segurança; 
+    •  Interferência na disponibilização de serviços e/ou sistemas; 
+    •  Monitorização de rede e/ou utilizadores da mesma; 
+    •  Comentários e/ou atitudes desonestos; 
+    •  Ofertas não honestas de produtos, itens e/ou serviços 
+    •  Envio de spam ou junk mail (ex: chain letters, esquemas de pirâmide, actividades de jogo, etc) 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="480" width="480" height="20" forecolor="#4F81BD" uuid="37b6b9fe-8159-43dc-b88a-fe40b8b6ed33"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Uso inaceitável dos SI-TI Syone ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="440" y="-10" width="80" height="80" uuid="9f2cf6cf-9610-4aa5-afd4-096a15e39684"/>
+				<imageExpression><![CDATA[$P{syoneLogoURL}]]></imageExpression>
+			</image>
+		</band>
+		<band height="802">
+			<staticText>
+				<reportElement x="40" y="10" width="75" height="30" uuid="84b8e397-5f5b-4180-b20a-84b58f99a14e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Open Software Solutions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="750" width="120" height="40" uuid="e3fd3b04-dedd-4592-be4d-679041ba221e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[R. Alfredo da Silva N8-A
+Edifício Stern 3D
+2610-016 Alfragide - Portugal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="750" width="50" height="40" forecolor="#02CCB1" uuid="f6d2f7b2-4690-4ada-8ce3-14e17d83843d"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[syone.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="100" width="480" height="350" uuid="c7c08ce0-9546-47e5-951d-633040653e29"/>
+				<textElement markup="none"/>
+				<text><![CDATA[A prevenção é uma ferramenta importante na redução dos impactos das ameaças aos SI-TI Syone. De seguida apresentamos alguns pontos a ter sempre em consideração. 
+    •  Assegure que os seus códigos e passwords de acesso aos sistemas e serviços da Syone mantêm-se confidenciais; 
+    •  Regularmente altere as suas password e evite utilizar a mesma password para todos os serviços; 
+    •  Efectue automaticamente ou manualmente scan's a ficheiros, documentos, imagens, etc., antes de os abrir, com o seu anti-vírus de forma a prevenir infecções e a proliferação de vírus, trojans, worms, etc nos SI-TI Syone; 
+    •  Quando possível tente sempre utilizar métodos de encriptação nas suas transmissões, utilizando por exemplo a assinatura digital do Cartão de Cidadão; 
+    •  Alerte de imediato sempre que detectar alguma utilização indevida de qualquer sistema ou serviço Syone; 
+    •  Coopere com o helpdesk de forma a facilitar a identificação e a correcção de qualquer anomalia detectada; 
+    •  Respeite e não divulgue regulações/memos emitidos pela administração;
+
+O e-mail não sendo um meio de comunicação seguro está sujeito aos mais diversos ataques. Entre eles: 
+    •  Personificação: O endereço de envio (From) não pode ser confiado visto ser possível altera-lo e criar "Return address" diferentes 
+    •  Leituras não autorizadas: Email's e os seus conteúdos são transmitidos em texto. Como consequência este poderá ser lido ou alterado quando em trânsito. 
+    •  Mail bombing: É um ataque de e-mail que consiste no envio de um grande número de e-mail's até o sistema de recepção falhar. 
+    •  Junk/Spam: Email não solicitado e sem opção de remoção é considerado Junk/Spam. A grande maioria deste é impedido de prosseguir pelos filtros no entanto existe sempre algum que passa. 
+    •  Vírus/Malware: Vírus e outro software malicioso é principalmente transmitido via e-mail. Todos os anexos recebidos poderão conter esta ameaça. 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="80" width="480" height="20" forecolor="#4F81BD" uuid="e4615894-8819-4450-9f58-a3e1dff11eaf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Segurança]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="560" width="480" height="170" uuid="fd62ae60-0fd3-424e-95e2-d25487828682"/>
+				<textElement markup="none"/>
+				<text><![CDATA[A Syone considera que os seus SI-TI como um serviços importante e reconhece a importância da sua boa utilização de forma a providencia bons serviços ao cliente. 
+
+A Syone é desta forma responsável por: 
+    •  Providenciar acesso aos sistemas de informação e comunicação Syone para a condução de negócios empresariais. 
+
+Nota: A Syone respeita a privacidade dos seus colaboradores, razão pela qual expressamente se refere que não intercepta logs de sistema, correio electrónico, conferências de voz e video, mensagens electrónicas (voz, foruns, IM, etc), ficheiros, etc regularmente. 
+
+Para propósitos administrativos, suporte técnico ou segurança nenhum utilizador deverá ter nenhum expectação de privacidade em qualquer mensagem, ficheiro, imagem ou dados criados, enviados ou]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="540" width="480" height="20" forecolor="#4F81BD" uuid="f7745ec8-3eeb-45e9-8a69-30d4cfd28816"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empresa ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="480" width="480" height="50" uuid="ae12beb6-529c-4753-bee7-5782585568a0"/>
+				<textElement markup="none"/>
+				<text><![CDATA[As responsabilidades e direitos associados a esta politica estão divididos nas seguintes categorias: 
+    •  Empresa 
+    •  Utilizadores]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="460" width="480" height="20" forecolor="#4F81BD" uuid="0292f2f4-1cea-479c-966f-af8353cbed40"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Responsabilidade ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="440" y="-10" width="80" height="80" uuid="4cbb69a7-0657-4200-ac3f-6f2de89a1318"/>
+				<imageExpression><![CDATA[$P{syoneLogoURL}]]></imageExpression>
+			</image>
+		</band>
+		<band height="790">
+			<staticText>
+				<reportElement x="40" y="10" width="75" height="30" uuid="ff2b5337-3edc-4e92-93bd-770f07f5f6a1"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Open Software Solutions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="750" width="50" height="40" forecolor="#02CCB1" uuid="ccac2776-c4a4-42b7-a080-1c9e690455ee"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[syone.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="750" width="120" height="40" uuid="d08ae6db-fdef-4215-89b8-ef274fb90946"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[R. Alfredo da Silva N8-A
+Edifício Stern 3D
+2610-016 Alfragide - Portugal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="80" width="480" height="150" uuid="cdef8cfd-022a-41f4-9dd3-c0eaf026a422"/>
+				<textElement markup="none"/>
+				<text><![CDATA[recebidos quando é utilizada a infra-estrutura da Syone ou o seu equipamento. A Syone reserva o direito de monitorizar todos e qualquer aspecto dos seus sistemas informáticos incluindo, mas não limitado a: 
+    •  Sites/sítios internet visitados; 
+    •  Sistemas de instant messaging (MSN, Google Chat, ICQ, etc.); 
+    •  Grupos de chat; 
+    •  Newsgroups; 
+    •  Email enviado ou recebido; 
+
+Tal monitorização poderá ocorrer em qualquer altura, sem aviso prévio e sem a obtenção de uma permissão. A Syone executará tal monitorização em concordância com as estipulações de emprego e leis de privacidade Portuguesas. 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="260" width="480" height="160" uuid="d74b3f4c-5f8f-4c56-bdfd-ddfe4f46a665"/>
+				<textElement markup="none"/>
+				<text><![CDATA[Utilizadores Syone são responsáveis por: 
+    •  Utilização dos SI-TI Syone em concordância com esta politica de utilização; 
+    •  Respeito e protecção dos direitos da propriedade intelectual detidos pela Syone e outros, incluindo copyrights, trademarks, desenhos industriais, patentes, segredos de trademark, direitos morais, direitos contratuais e direitos de licenciamentos; 
+    •  Respeito e protecção dos aspectos confidenciais de qualquer informação transmitida ou recolhida via a Internet; 
+    •  Tomar todas as medidas e precauções necessárias de forma a manter a privacidade de todas as mensagens e documentos considerados sensíveis ou de acesso restrito; 
+    •  Reportar de imediato qualquer ocorrência que entre em conflito com esta politica e qualquer falha de segurança identificada nos sistemas de segurança Syone; 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="240" width="480" height="20" forecolor="#4F81BD" uuid="b096f9ae-7f1e-4d74-ae17-800b7e5b168b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Utilizadores ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="430" width="480" height="20" forecolor="#4F81BD" uuid="01952b23-6ba3-4d01-973a-3a8f155ec416"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Incumprimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="450" width="480" height="90" uuid="6e350567-06b4-4c0a-8ae0-2d627c534cd9"/>
+				<textElement markup="none"/>
+				<text><![CDATA[O incumprimento da presente Política de Utilização SI-TI SBS será considerado como uma infracção disciplinar, consubstanciada na violação do dever de obediência a que está sujeito o colaborador da Syone, para além da eventual responsabilidade em que o colaborador poderá incorrer nos termos gerais de direito.
+
+Tal conduta poderá, posteriormente, dar origem à instauração do competente processo disciplinar, com todos os efeitos daí decorrentes.
+]]></text>
+			</staticText>
+			<image>
+				<reportElement x="440" y="-10" width="80" height="80" uuid="495926fc-ddcc-4c87-9085-bcb4ebd1ac1d"/>
+				<imageExpression><![CDATA[$P{syoneLogoURL}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

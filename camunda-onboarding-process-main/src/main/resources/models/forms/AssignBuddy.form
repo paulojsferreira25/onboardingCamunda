@@ -1,0 +1,63 @@
+{
+  "components": [
+    {
+      "text": "# Assign Buddy",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1foegp7",
+        "columns": null
+      },
+      "id": "Field_00u2a2x"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}\n\n**Manager Name:** {{managerName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yc8o8u",
+        "columns": null
+      },
+      "id": "Field_0ity66w"
+    },
+    {
+      "label": "Name (First and Last)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1y8ok8c",
+        "columns": null
+      },
+      "id": "Field_0z1c8a4",
+      "key": "buddyName",
+      "validate": {
+        "required": true
+      },
+      "description": "Ex. Gonçalo Ramos",
+      "readonly": false
+    },
+    {
+      "label": "Email Address",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_12zxlua",
+        "columns": null
+      },
+      "id": "Field_1cdkzrr",
+      "key": "buddyEmailAddress",
+      "description": "Ex. goncalo.ramos@syone.com",
+      "validate": {
+        "required": true,
+        "validationType": "email"
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_AssignBuddy",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

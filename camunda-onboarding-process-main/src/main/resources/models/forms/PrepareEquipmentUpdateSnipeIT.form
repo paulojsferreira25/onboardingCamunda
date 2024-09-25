@@ -1,0 +1,36 @@
+{
+  "components": [
+    {
+      "text": "# Prepare Equipment and Update Snipe-IT",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ov9rv7",
+        "columns": null
+      },
+      "id": "Field_1xhfz7m"
+    },
+    {
+      "label": "I have prepared the equipment for the newcomer and updated the data on Snipe-IT",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1wwinfg",
+        "columns": null
+      },
+      "id": "Field_0bi3swq",
+      "key": "equipmentPrepared",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_PrepareEquipmentUpdateSnipeIT",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

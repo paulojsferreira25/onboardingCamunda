@@ -1,0 +1,519 @@
+{
+  "components": [
+    {
+      "text": "# ",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bjmi6n",
+        "columns": 5
+      },
+      "id": "Field_1svfuve"
+    },
+    {
+      "label": "Image view",
+      "type": "image",
+      "layout": {
+        "row": "Row_1bjmi6n",
+        "columns": 5
+      },
+      "id": "Field_1idfa2e",
+      "source": "https://careers.recruiteecdn.com/image/upload/q_auto,f_auto,w_400,c_limit/production/images/BN5l/2dDjxgF-CXUi.png",
+      "properties": {}
+    },
+    {
+      "text": "**The data was sent back to be reviewed by the Office Operations with the following comments:**\n\n{{ooCommentsAboutContractData}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bi6v6r",
+        "columns": null
+      },
+      "id": "Field_1w7dngd",
+      "conditional": {
+        "hide": "=ooCommentsAboutContractData = \"\" or ooCommentsAboutContractData = null"
+      },
+      "properties": {}
+    },
+    {
+      "text": "**The data was sent back to be reviewed by the CEO with the following comments:**\n\n{{ceoCommentsAboutContractData}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bi6v6r",
+        "columns": null
+      },
+      "id": "Field_0zdilgy",
+      "conditional": {
+        "hide": "=ceoCommentsAboutContractData = \"\" or ceoCommentsAboutContractData = null"
+      }
+    },
+    {
+      "text": "**The data failed the auto validation with the following comments:**\n\n{{autoValidationCommentsAboutSalaryData}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bi6v6r",
+        "columns": null
+      },
+      "id": "Field_1a9xy9s",
+      "conditional": {
+        "hide": "=autoValidationCommentsAboutSalaryData = \"\" or autoValidationCommentsAboutSalaryData = null or isSalaryDataValid = true"
+      }
+    },
+    {
+      "text": "___",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0c7a3g3",
+        "columns": null
+      },
+      "id": "Field_0rvh980",
+      "conditional": {
+        "hide": "=ooCommentsAboutContractData = null and ceoCommentsAboutContractData = null and (isSalaryDataValid = true or isSalaryDataValid = null)"
+      }
+    },
+    {
+      "text": "# Add Data for Contract Documents",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ubilj9",
+        "columns": null
+      },
+      "id": "Field_0r80khx"
+    },
+    {
+      "text": "## Newcomer Information",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1x9ld0y",
+        "columns": null
+      },
+      "id": "Field_16lu0hp"
+    },
+    {
+      "text": "**Full Name:** {{fullName}}\n\n**Date of Birth:** {{dateOfBirth}}\n\n**Email Address:** {{emailAddress}}\n\n**Citizen Card (CC) Number:** {{identificationNumber}}\n\n**Citizen Card (CC) Validity:** {{identificationValidity}}\n\n**NIF:** {{nif}}\n\n**NISS:** {{niss}}\n\n**Address:** {{address}}\n\n**Postal Code:** {{postalCode}}\n\n**Marital Status:** {{maritalStatus}}\n\n**Number of Dependents:** {{numberOfDependents}}\n\n**IBAN:** {{iban}}\n\n**Start Date:** {{startDate}}\n\n**Photo:** {{ if photoLink != \"\" then \"[View](\" + photoLink + \")\" else \"Not Provided\"}}\n\n**Certificate of Qualifications:** {{if certificateOfQualificationsLink != \"\" then \"[View](\" + certificateOfQualificationsLink + \")\" else \"Not Provided\"}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_12g484w",
+        "columns": null
+      },
+      "id": "Field_1n8x29n"
+    },
+    {
+      "text": "## Data for Contract Documents",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1c7jxnd",
+        "columns": null
+      },
+      "id": "Field_09uamek"
+    },
+    {
+      "label": "Client",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0rweoy1",
+        "columns": null
+      },
+      "id": "Field_1hizz96",
+      "key": "client",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Professional Services (Technical)",
+          "value": "Professional Services (Technical)"
+        },
+        {
+          "label": "Professional Services (Management)",
+          "value": "Professional Services (Management)"
+        },
+        {
+          "label": "Business Development",
+          "value": "Business Development"
+        },
+        {
+          "label": "Marketing",
+          "value": "Marketing"
+        },
+        {
+          "label": "Human Resources",
+          "value": "Human Resources"
+        },
+        {
+          "label": "Office Operations",
+          "value": "Office Operations"
+        }
+      ],
+      "label": "Area",
+      "type": "select",
+      "layout": {
+        "row": "Row_00754w0",
+        "columns": null
+      },
+      "id": "Field_0dc4lbr",
+      "key": "area",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Associate Engineer",
+          "value": "Associate Engineer"
+        },
+        {
+          "label": "Engineer",
+          "value": "Engineer"
+        },
+        {
+          "label": "Senior Engineer",
+          "value": "Senior Engineer"
+        },
+        {
+          "label": "Architect",
+          "value": "Architect"
+        },
+        {
+          "label": "Solution Manager",
+          "value": "Solution Manager"
+        },
+        {
+          "label": "Senior Solution Manager",
+          "value": "Senior Solution Manager"
+        },
+        {
+          "label": "CTO",
+          "value": "CTO"
+        },
+        {
+          "label": "Associate Team/Project Manager",
+          "value": "Associate Team/Project Manager"
+        },
+        {
+          "label": "Team/Project Manager",
+          "value": "Team/Project Manager"
+        },
+        {
+          "label": "Senior Team/Project Manager",
+          "value": "Senior Team/Project Manager"
+        },
+        {
+          "label": "Professional Services Manager",
+          "value": "Professional Services Manager"
+        },
+        {
+          "label": "CSO",
+          "value": "CSO"
+        },
+        {
+          "label": "Territory Business Developer",
+          "value": "Territory Business Developer"
+        },
+        {
+          "label": "Strategic Business Developer",
+          "value": "Strategic Business Developer"
+        },
+        {
+          "label": "Business Development Manager",
+          "value": "Business Development Manager"
+        },
+        {
+          "label": "CCO",
+          "value": "CCO"
+        },
+        {
+          "label": "Consultant I",
+          "value": "Consultant I"
+        },
+        {
+          "label": "Consultant II",
+          "value": "Consultant II"
+        },
+        {
+          "label": "Expert",
+          "value": "Expert"
+        },
+        {
+          "label": "Manager",
+          "value": "Manager"
+        },
+        {
+          "label": "CMO",
+          "value": "CMO"
+        },
+        {
+          "label": "Associate Specialist",
+          "value": "Associate Specialist"
+        },
+        {
+          "label": "Specialist",
+          "value": "Specialist"
+        },
+        {
+          "label": "Team Leader",
+          "value": "Team Leader"
+        },
+        {
+          "label": "CFO",
+          "value": "CFO"
+        }
+      ],
+      "label": "Level",
+      "type": "select",
+      "layout": {
+        "row": "Row_00754w0",
+        "columns": null
+      },
+      "id": "Field_1tlk0ix",
+      "key": "level",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Base Salary",
+      "type": "number",
+      "layout": {
+        "row": "Row_1iopwvq",
+        "columns": null
+      },
+      "id": "Field_0bhog3l",
+      "key": "baseSalary",
+      "decimalDigits": 2,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Base Salary (In words: X euros)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1iopwvq",
+        "columns": 11
+      },
+      "id": "Field_1dybp36",
+      "key": "baseSalaryInWords",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Expenses",
+      "type": "number",
+      "layout": {
+        "row": "Row_1t0zqh8",
+        "columns": null
+      },
+      "id": "Field_16riz5b",
+      "key": "expenses",
+      "decimalDigits": 2,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Sem Termo",
+          "value": "Sem Termo"
+        },
+        {
+          "label": "Termo Certo",
+          "value": "Termo Certo"
+        },
+        {
+          "label": "Termo Incerto",
+          "value": "Termo Incerto"
+        }
+      ],
+      "label": "Contract Type",
+      "type": "select",
+      "layout": {
+        "row": "Row_0vmdyin",
+        "columns": null
+      },
+      "id": "Field_0d3jwwz",
+      "key": "contractType",
+      "validate": {
+        "required": true
+      },
+      "searchable": false
+    },
+    {
+      "label": "Duration (in months)",
+      "type": "number",
+      "layout": {
+        "row": "Row_0c8oscc",
+        "columns": null
+      },
+      "id": "Field_09kj89j",
+      "key": "contractDuration",
+      "decimalDigits": 1,
+      "conditional": {
+        "hide": "=contractType != \"Termo Certo\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "End Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0c8oscc",
+        "columns": null
+      },
+      "id": "Field_14im0nt",
+      "key": "contractEndDate",
+      "conditional": {
+        "hide": "=contractType != \"Termo Certo\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Full-time",
+          "value": "Full-time"
+        },
+        {
+          "label": "Part-time",
+          "value": "Part-time"
+        }
+      ],
+      "label": "Contract Regime",
+      "type": "select",
+      "layout": {
+        "row": "Row_08kqlxs",
+        "columns": null
+      },
+      "id": "Field_1a3j8xa",
+      "key": "contractRegime",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Hours per Day",
+      "type": "number",
+      "layout": {
+        "row": "Row_1plmwfp",
+        "columns": null
+      },
+      "id": "Field_1yqwpnf",
+      "key": "hoursPerDay",
+      "decimalDigits": 1,
+      "conditional": {
+        "hide": "=contractRegime!=\"Part-time\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Days per Week",
+      "type": "number",
+      "layout": {
+        "row": "Row_1plmwfp",
+        "columns": null
+      },
+      "id": "Field_1rf8g9t",
+      "key": "daysPerWeek",
+      "decimalDigits": 0,
+      "conditional": {
+        "hide": "=contractRegime!=\"Part-time\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "National",
+          "value": "National"
+        },
+        {
+          "label": "Foreign (Schengen Area)",
+          "value": "Foreign (Schengen Area)"
+        },
+        {
+          "label": "Foreign (Outside Schengen Area)",
+          "value": "Foreign (Outside Schengen Area)"
+        }
+      ],
+      "label": "Newcomer Origin",
+      "type": "radio",
+      "layout": {
+        "row": "Row_032pdwz",
+        "columns": null
+      },
+      "id": "Field_1pop7qy",
+      "key": "contractOrigin",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        },
+        {
+          "label": "Not Specified",
+          "value": "Not Specified"
+        }
+      ],
+      "label": "Duodécimos",
+      "type": "radio",
+      "layout": {
+        "row": "Row_1kak12p",
+        "columns": null
+      },
+      "id": "Field_0mg6whn",
+      "key": "duodecimos",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "In-person signing?",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_100z9v7",
+        "columns": null
+      },
+      "id": "Field_193j9e1",
+      "key": "inPersonSigning"
+    }
+  ],
+  "type": "default",
+  "id": "Form_AddDataForContractDocs",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "schemaVersion": 16
+}

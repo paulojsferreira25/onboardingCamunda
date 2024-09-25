@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="DRD_OnboardingProcess" name="Onboarding Process" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.23.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.0.0">
+  <decision id="autoValidateSalaryData" name="Auto Validate Salary Data">
+    <decisionTable id="DecisionTable_0y3u0gr" hitPolicy="FIRST">
+      <input id="InputClause_09jpwhd" label="Level">
+        <inputExpression id="LiteralExpression_1twkjob" typeRef="string">
+          <text>level</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0robyvs" label="BaseSalary" biodi:width="192">
+        <inputExpression id="LiteralExpression_0fd3he3" typeRef="number">
+          <text>baseSalary</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0bjb7zf" label="Expenses">
+        <inputExpression id="LiteralExpression_00xr6pv" typeRef="number">
+          <text>expenses</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0lyqhcg" label="Is Salary Data Valid?" name="isSalaryDataValid" typeRef="boolean" biodi:width="200" />
+      <output id="OutputClause_0kgg3bj" label="Auto Validation Comments" name="autoValidationCommentsAboutSalaryData" typeRef="string" biodi:width="297" />
+      <rule id="DecisionRule_1koea6a">
+        <description>não necessita correção, logo avança</description>
+        <inputEntry id="UnaryTests_13n49dj">
+          <text>"Associate Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m3zqr8">
+          <text>[875..1475]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zyqc21">
+          <text>[0..200]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1335q9n">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01aamnm">
+          <text>"Não necessita correção, logo avança."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18s8jia">
+        <description>necessita correção no baseiht</description>
+        <inputEntry id="UnaryTests_09igtfp">
+          <text>"Associate Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1avuwk4">
+          <text>not([875..1475])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14m01tz">
+          <text>[0..200]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vxw400">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tlnecj">
+          <text>"Necessita correção no baseiht."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1w3oa4p">
+        <description>necessita correção nas expenses</description>
+        <inputEntry id="UnaryTests_0kkssjx">
+          <text>"Associate Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cyzdam">
+          <text>[875..1475]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1www3rc">
+          <text>not([0..200])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0y7bfjk">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q5yse1">
+          <text>"Necessita correção nas expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qecus8">
+        <description>necessita correção baseiht e expenses</description>
+        <inputEntry id="UnaryTests_0whtuwi">
+          <text>"Associate Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xr0cy9">
+          <text>not([875..1475])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h73qgb">
+          <text>not([0..200])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gier7j">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1klmy7t">
+          <text>"Necessita correção baseiht e expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1llm4qu">
+        <description>não necessita correção, logo avança</description>
+        <inputEntry id="UnaryTests_013eijn">
+          <text>"Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_089hwxj">
+          <text>[1476..2175]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gkykx0">
+          <text>[200..300]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ewa0e5">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x559f2">
+          <text>"Não necessita correção, logo avança."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0grs78z">
+        <description>necessita correção no baseiht</description>
+        <inputEntry id="UnaryTests_1qi1ovd">
+          <text>"Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bcwzm2">
+          <text>not([1476..2175])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ax7dwn">
+          <text>[200..300]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14hvlkf">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16h2tu1">
+          <text>"Necessita correção no baseiht."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0yzfz0c">
+        <description>necessita correção nas expenses</description>
+        <inputEntry id="UnaryTests_0pm5uoi">
+          <text>"Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15mxec0">
+          <text>[1476..2175]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08z3qea">
+          <text>not([200..300])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1p7xpd2">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1iwcn9y">
+          <text>"Necessita correção nas expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06s6wk8">
+        <description>necessita correção baseiht e expenses</description>
+        <inputEntry id="UnaryTests_1u4vlph">
+          <text>"Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0amb1oo">
+          <text>not([1476..2175])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1infugo">
+          <text>not([200..300])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0v4sndx">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d18qv2">
+          <text>"Necessita correção baseiht e expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0emsptw">
+        <description>não necessita correção, logo avança</description>
+        <inputEntry id="UnaryTests_01oq5x1">
+          <text>"Senior Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cyl5ce">
+          <text>[2176..2775]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e16pg5">
+          <text>[300..400]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0x47l8u">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ipbceb">
+          <text>"Não necessita correção, logo avança."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0vkbze9">
+        <description>necessita correção no baseiht</description>
+        <inputEntry id="UnaryTests_0omole4">
+          <text>"Senior Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iwtt57">
+          <text>not([2176..2775])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sjpned">
+          <text>[300..400]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jp72v7">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h76qmf">
+          <text>"Necessita correção no baseiht."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cyapa0">
+        <description>necessita correção nas expenses</description>
+        <inputEntry id="UnaryTests_0md8uk0">
+          <text>"Senior Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11fl1lz">
+          <text>[2176..2775]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09n3ws5">
+          <text>not([300..400])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_036vznv">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fmiggc">
+          <text>"Necessita correção nas expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0aszens">
+        <description>necessita correção baseiht e expenses</description>
+        <inputEntry id="UnaryTests_1udkqm4">
+          <text>"Senior Engineer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xyffe1">
+          <text>not([2176..2775])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_066xbp9">
+          <text>not([300..400])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15kkvxj">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18ibrb8">
+          <text>"Necessita correção baseiht e expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mnwnjc">
+        <description>não necessita correção, logo avança</description>
+        <inputEntry id="UnaryTests_0xlpz70">
+          <text>"Architect"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16m3250">
+          <text>[2776..3375]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zyopfk">
+          <text>[400..550]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_150c224">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o879fa">
+          <text>"Não necessita correção, logo avança."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1yv9esv">
+        <description>necessita correção no baseiht</description>
+        <inputEntry id="UnaryTests_1hiajd5">
+          <text>"Architect"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xfkvrz">
+          <text>not([2776..3375])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sgu7yk">
+          <text>[400..550]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jckze9">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ozjihf">
+          <text>"Necessita correção no baseiht."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_044pwrs">
+        <description>necessita correção nas expenses</description>
+        <inputEntry id="UnaryTests_11t08u2">
+          <text>"Architect"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rufhms">
+          <text>[2776..3375]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18w02uk">
+          <text>not([400..550])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15kcd7y">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c3y7iq">
+          <text>"Necessita correção nas expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ks5tnv">
+        <description>necessita correção baseiht e expenses</description>
+        <inputEntry id="UnaryTests_0wle7zs">
+          <text>"Architect"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a9nnqf">
+          <text>not([2776..3375])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17kxjj9">
+          <text>not([400..550])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1t1017o">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0em8wxx">
+          <text>"Necessita correção baseiht e expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0f1fg9f">
+        <description>não necessita correção, logo avança</description>
+        <inputEntry id="UnaryTests_1lm8vz3">
+          <text>"Solution Manager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m94sd2">
+          <text>[3376..3875]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sa7pq9">
+          <text>[550..750]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bpieai">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ffjub7">
+          <text>"Não necessita correção, logo avança."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0e2a4hp">
+        <description>necessita correção no baseiht</description>
+        <inputEntry id="UnaryTests_0spukd6">
+          <text>"Solution Manager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xsz1gh">
+          <text>not([3376..3875])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hcfdrs">
+          <text>[550..750]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cfd1dp">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_112eex5">
+          <text>"Necessita correção no baseiht."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01n8u7x">
+        <description>necessita correção nas expenses</description>
+        <inputEntry id="UnaryTests_1xnp2kf">
+          <text>"Solution Manager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18t7qno">
+          <text>[3376..3875]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1avrjia">
+          <text>not([550..750])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lmlusn">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11t48g6">
+          <text>"Necessita correção nas expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ux2ozr">
+        <description>necessita correção baseiht e expenses</description>
+        <inputEntry id="UnaryTests_1t8etq9">
+          <text>"Solution Manager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hgxk0t">
+          <text>not([3376..3875])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1umqche">
+          <text>not([550..750])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1m806lg">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07p7pdb">
+          <text>"Necessita correção baseiht e expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09abgg1">
+        <description>não necessita correção, logo avança</description>
+        <inputEntry id="UnaryTests_0qsglhd">
+          <text>"Senior Solution Manager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eiqq76">
+          <text>[3876..4775]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04jrq7v">
+          <text>[750..900]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16j3g66">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yf4akq">
+          <text>"Não necessita correção, logo avança."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08oftry">
+        <description>necessita correção no baseiht</description>
+        <inputEntry id="UnaryTests_1y0jr89">
+          <text>"Senior Solution Manager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dk2wm3">
+          <text>not([3876..4775])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y5j5tr">
+          <text>[750..900]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jin89x">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fnj8cv">
+          <text>"Necessita correção no baseiht."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0tmytrv">
+        <description>necessita correção nas expenses</description>
+        <inputEntry id="UnaryTests_10kq7yg">
+          <text>"Senior Solution Manager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x6tj2x">
+          <text>[3876..4775]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_194qkb9">
+          <text>not([750..900])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1w0rlrf">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00gttl9">
+          <text>"Necessita correção nas expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0q8vxtd">
+        <description>necessita correção baseiht e expenses</description>
+        <inputEntry id="UnaryTests_1ujermt">
+          <text>"Senior Solution Manager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15ojmf0">
+          <text>not([3876..4775])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yxlzo2">
+          <text>not([750..900])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nhhc2g">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kftalf">
+          <text>"Necessita correção baseiht e expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zjgx6k">
+        <description>não necessita correção, logo avança</description>
+        <inputEntry id="UnaryTests_1an4opf">
+          <text>"CTO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03ljas9">
+          <text>[4776..5475]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04fjenb">
+          <text>[900..1050]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rpziq5">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lhdqwh">
+          <text>"Não necessita correção, logo avança."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gax5oz">
+        <description>necessita correção no baseiht</description>
+        <inputEntry id="UnaryTests_06uxun2">
+          <text>"CTO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_196786h">
+          <text>not([4776..5475])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12aa289">
+          <text>[900..1050]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f12q6q">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19xmc13">
+          <text>"Necessita correção no baseiht."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lkonbo">
+        <description>necessita correção nas expenses</description>
+        <inputEntry id="UnaryTests_04qw3xa">
+          <text>"CTO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1keqbsa">
+          <text>[4776..5475]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wf7vlf">
+          <text>not([900..1050])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0geu95q">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tor5qp">
+          <text>"Necessita correção nas expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02elsic">
+        <description>necessita correção baseiht e expenses</description>
+        <inputEntry id="UnaryTests_0rtjd24">
+          <text>"CTO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lb2awg">
+          <text>not([4776..5475])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17qaryf">
+          <text>not([900..1050])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1834vxo">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pyy0zp">
+          <text>"Necessita correção baseiht e expenses."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1e4s2g8">
+        <description>não necessita correção, logo avança</description>
+        <inputEntry id="UnaryTests_1l4vq2m">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mfgk9m">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jknz5c">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rtp9rm">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19s8h1e">
+          <text>"Não necessita correção, logo avança."</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="chooseContractTemplate" name="Choose Contract Template">
+    <decisionTable id="DecisionTable_0vv1q7u">
+      <input id="InputClause_138uvgk" label="Contract Origin" biodi:width="207">
+        <inputExpression id="LiteralExpression_0nqwpr1" typeRef="string">
+          <text>contractOrigin</text>
+        </inputExpression>
+      </input>
+      <input id="Input_1" label="Contract Type">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>contractType</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0vfrslt" label="Contract Regime">
+        <inputExpression id="LiteralExpression_1a7h0yt" typeRef="string">
+          <text>contractRegime</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Contract Template" name="contractTemplate" typeRef="string" biodi:width="241" />
+      <output id="OutputClause_0h6jwv1" label="Is Contract Automated?" name="contractAutomated" typeRef="boolean" />
+      <rule id="DecisionRule_1jnrl80">
+        <inputEntry id="UnaryTests_1mb2o9v">
+          <text>"National"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cr1xom">
+          <text>"Sem Termo"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jjd5ks">
+          <text>"Full-time"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1s7h9h0">
+          <text>"nacional-sem-termo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hbwzy1">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zrhhtl">
+        <inputEntry id="UnaryTests_0qb9xar">
+          <text>"National"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hw1hme">
+          <text>"Termo Certo"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o5y6nd">
+          <text>"Full-time"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qwv1i8">
+          <text>"nacional-termo-certo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0obvi16">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12nj5x6">
+        <inputEntry id="UnaryTests_04wmp7w">
+          <text>"National"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hbuvyv">
+          <text>"Termo Incerto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1izelwi">
+          <text>"Full-time"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ik00xk">
+          <text>"nacional-termo-incerto"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w5qdw7">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0po057o">
+        <inputEntry id="UnaryTests_0x2zhdc">
+          <text>"Foreign (Schengen Area)"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yg9q0a">
+          <text>"Sem Termo"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1frivnp">
+          <text>"Full-time"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fzait5">
+          <text>"schengen-sem-termo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p351te">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bckzi4">
+        <inputEntry id="UnaryTests_0sou43u">
+          <text>"Foreign (Schengen Area)"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wntxvj">
+          <text>"Termo Certo"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1b1afwr">
+          <text>"Full-time"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rrnipn">
+          <text>"schengen-termo-certo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bczgf1">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0e4pdlo">
+        <inputEntry id="UnaryTests_1pu6dy8">
+          <text>"Foreign (Schengen Area)"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rubjs1">
+          <text>"Termo Incerto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17ux6cb">
+          <text>"Full-time"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_005w2dj">
+          <text>"schengen-termo-incerto"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_075m7jx">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1kmduvn">
+        <inputEntry id="UnaryTests_18ccjt0">
+          <text>"Foreign (Outside Schengen Area)"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jfr83i">
+          <text>"Sem Termo"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lw2wen">
+          <text>"Full-time"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bdt3ak">
+          <text>"fora-schengen-sem-termo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jelhdy">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ca27jh">
+        <inputEntry id="UnaryTests_1wfq4wx">
+          <text>"Foreign (Outside Schengen Area)"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kqb1oj">
+          <text>"Termo Certo"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i295rt">
+          <text>"Full-time"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f1yg55">
+          <text>"fora-schengen-termo-certo"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zvijzx">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0us733j">
+        <inputEntry id="UnaryTests_18gxu67">
+          <text>"Foreign (Outside Schengen Area)"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iap4sa">
+          <text>"Termo Incerto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n0dpg0">
+          <text>"Full-time"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0l9hg1l">
+          <text>"fora-schengen-termo-incerto"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w572hg">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1u7xuoy">
+        <inputEntry id="UnaryTests_1vnu81k">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n0g8jo">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ck5fkn">
+          <text>"Part-time"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01qcmua">
+          <text>""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00a3d9i">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="autoValidateSalaryData">
+        <dc:Bounds height="80" width="180" x="190" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape dmnElementRef="chooseContractTemplate">
+        <dc:Bounds height="80" width="180" x="470" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

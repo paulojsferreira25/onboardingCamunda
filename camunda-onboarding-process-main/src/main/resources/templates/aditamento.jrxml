@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Training" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9ebcbfbb-b4d9-458a-ab22-7a40c59ada5f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="fullName" class="java.lang.String"/>
+	<parameter name="maritalStatus" class="java.lang.String"/>
+	<parameter name="identificationNumber" class="java.lang.String"/>
+	<parameter name="identificationValidity" class="java.lang.String"/>
+	<parameter name="nif" class="java.lang.String"/>
+	<parameter name="niss" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="postalCode" class="java.lang.String"/>
+	<parameter name="baseSalary" class="java.lang.String"/>
+	<parameter name="iht" class="java.lang.String"/>
+	<parameter name="startDate" class="java.lang.String"/>
+	<parameter name="companySignatureURL" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="80" width="479" height="170" uuid="a4ae282c-c704-4a23-82ac-9452c9bfaca2"/>
+				<textElement markup="html">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>SYONE, S.A.</b>, com sede na Rua Alfredo da Silva, nº 8 A, Edifício Stern, Piso 3D, freguesia de Alfragide, titular do NIPC 504729624, matriculada na Conservatória do Registo Comercial da Amadora sob o mesmo número, com o capital social de €200.000,00 (duzentos mil euros), representada neste acto por representada neste acto pelo Dr. José Eduardo Taborda Bravo Silva, na qualidade de Administrador, doravante designado por Sociedade,<br>E<br>" + $P{fullName}	+ ", " + $P{maritalStatus} + ", portador/a do Documento de Identificação n.º " + $P{identificationNumber} + " válido até " + $P{identificationValidity} + ", NIF " + $P{nif} + ", NISS " + $P{niss} + ", residente na " + $P{address} + ", " + $P{postalCode} + ", adiante designado/a por Trabalhador/a,<br><br>E considerando que o Trabalhador se encontra ao serviço da Sociedade na data da celebração do presente aditamento,<br><br>É celebrado, nos termos dos art. 263º e 264º, nº3 do Código do Trabalho, o presente Aditamento ao Contrato de Trabalho que se rege pelo disposto nas cláusulas seguintes:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="50" width="479" height="30" uuid="3d7a453f-caff-4bec-9d87-d8939d44c429"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADITAMENTO AO CONTRATO DE TRABALHO ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="260" width="479" height="20" uuid="a4d74989-1338-4fda-9c2a-a1f89c2824e1"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRIMEIRA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="280" width="479" height="20" uuid="2027dd9a-d28f-48bb-b014-83dbe98cabb5"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUBSIDIO DE FÉRIAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="300" width="479" height="50" uuid="990b5f44-0290-44b6-8dc4-436d1469da57"/>
+				<textElement textAlignment="Left">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[As partes acordam expressamente que, independentemente da marcação das férias vencidas a 01 de Janeiro de cada ano civil e do gozo efectivo das mesmas, o pagamento do subsidio de férias será efectuado fraccionado e em duodécimos, devendo a totalidade do mesmo estar liquidada pela Sociedade até ao final do ano civil a que respeita.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="350" width="479" height="20" uuid="e7c28f6d-9c51-462a-b9bc-8eae4e4045ef"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEGUNDA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="390" width="479" height="40" uuid="b00fe32a-678f-41b6-bf7b-1ae051ac256f"/>
+				<textElement textAlignment="Left">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[As partes acordam expressamente um regime de pagamento fraccionado e em duodécimos do subsídio de Natal, devendo a totalidade do mesmo estar liquidada pela Sociedade até 15 de Dezembro do ano civil a que respeita.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="370" width="479" height="20" uuid="f6b864ac-d528-4c98-9256-993a091716a9"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUBSIDIO DE NATAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="450" width="479" height="120" uuid="7bdae820-d4f6-4293-a93f-991eb82e1c32"/>
+				<textElement textAlignment="Left">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Inexistem condições que não sejam aquelas que estão expressamente estabelecidas no presente contrato.
+1.  Todas e quaisquer alterações ao presente deverão ser feitas por escrito, mediante o acordo de ambas as partes, a título de aditamento ao presente.
+2.  Qualquer alteração dos dados dos contratantes, nomeadamente residência e outros, deverá de imediato ser comunicado por escrito.
+
+Por corresponder à expressão das suas vontades e ser verdade, vai o presente contrato ser assinado pelos contratantes, o qual é feito em duplicado e em duas folhas, tendo qualquer das vias igual valor, ficando um exemplar na posse de cada uma das partes.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="430" width="479" height="20" uuid="c8392e41-49e8-436b-abe8-3a1b1cd04ee7"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TERCEIRA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="640" width="140" height="20" uuid="f3a9866d-ab67-4af3-b6da-6aecf9f8cecf"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Pela SOCIEDADE,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="640" width="140" height="20" uuid="afbd96e2-3863-4f45-9766-af6f74177b9c"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[O TRABALHADOR]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="610" width="140" height="20" uuid="e91571af-b414-40f1-9f2c-481742e6897e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Lisboa, " + $P{startDate}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="40" y="660" width="170" height="110" uuid="ee041a74-7285-4ff0-8aa4-a5d0deb904b9"/>
+				<imageExpression><![CDATA[$P{companySignatureURL}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

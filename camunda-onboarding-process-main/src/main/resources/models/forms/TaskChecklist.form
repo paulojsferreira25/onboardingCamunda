@@ -1,0 +1,111 @@
+{
+  "components": [
+    {
+      "text": "# Task Checklist",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yl8by7",
+        "columns": null
+      },
+      "id": "Field_16b64op"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": null,
+        "columns": null
+      },
+      "id": "Field_08xv3ov"
+    },
+    {
+      "label": "Contract Documents Archived",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_12d96fz",
+        "columns": null
+      },
+      "id": "Field_0qa4s8f",
+      "key": "contractDocsArchived",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Certificate of Qualifications Archived",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0d1hedj",
+        "columns": null
+      },
+      "id": "Field_0cxn0dc",
+      "key": "certificateOfQualificationsArchived",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Meal Allowance Card Requested",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1muws48",
+        "columns": null
+      },
+      "id": "Field_1tw0lym",
+      "key": "mealAllowanceCardRequested",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Newcomer Registered in Social Security",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0058q70",
+        "columns": null
+      },
+      "id": "Field_0id92q9",
+      "key": "newcomerRegisteredInSocialSecurity",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Newcomer Registered in Health Insurance",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1lze1ux",
+        "columns": null
+      },
+      "id": "Field_13a7ktf",
+      "key": "newcomerRegisteredInHealthInsurance",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Newcomer Registered in Workcare",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_06bzmht",
+        "columns": null
+      },
+      "id": "Field_067jgeo",
+      "key": "newcomerRegisteredInWorkcare",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_ExternalTasksChecklist",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

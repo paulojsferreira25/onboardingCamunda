@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="nacionalSemTermo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d8c73b0e-da10-4483-9e0b-85d10f066acf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="fullName" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="postalCode" class="java.lang.String"/>
+	<parameter name="identificationNumber" class="java.lang.String"/>
+	<parameter name="identificationValidity" class="java.lang.String"/>
+	<parameter name="nif" class="java.lang.String"/>
+	<parameter name="niss" class="java.lang.String"/>
+	<parameter name="startDate" class="java.lang.String"/>
+	<parameter name="client" class="java.lang.String"/>
+	<parameter name="baseSalary" class="java.lang.String"/>
+	<parameter name="baseSalaryInWords" class="java.lang.String"/>
+	<parameter name="companySignatureURL" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802">
+			<textField>
+				<reportElement x="40" y="90" width="480" height="160" uuid="afef8dcd-6b7f-4855-bc90-61c39b6e4793"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Entre: " + "<br>" + "<b>SYONE, S.A.</b>, registada na Conservatória do Registo Comercial Competente, com o número 504729624 e o mesmo n.º de contribuinte fiscal, com o capital social de € 200.00,00 (duzentos mil euros) e sede na Rua Alfredo da Silva, Nº 8-A, Edifício Stern, Piso 3D 2610-016 Amadora, neste ato representada pelos seu Administrador único com poderes para o ato, José Eduardo Taborda Bravo Silva, adiante designada como «<b>Empregadora</b>»" + "<br>" + "E" + "<br>" + "<b>" + $P{fullName} + "</b>" + ", residente na " + $P{address} + ", " + $P{postalCode} + ", titular do cartão de cidadão número " + $P{identificationNumber} + ", válido até " + $P{identificationValidity} + ", da identificação fiscal número " + $P{nif} + " e do NISS " + $P{niss} + ", adiante designado como «<b>Trabalhador</b>»,"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="320" width="480" height="30" uuid="6786d677-e1d9-4e65-acb9-d1338db1f194"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Primeira
+(Funções)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="772" width="480" height="30" uuid="3a567348-d0a3-491c-b45d-d5a06c859c46"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="370" width="480" height="390" uuid="cdf28380-965a-44e7-85fb-119874c7e54e"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  Pelo presente Contrato, o Trabalhador é admitido ao serviço da Empregadora, sob a sua autoridade e direção, para exercer as funções inerentes à sua categoria profissional de Consultor Técnico, entre as quais se incluem as seguintes:
+    a.  Como Consultor Informático:
+        i.   Pesquisa, consulta e elaboração de documentação de apoio;
+        ii.  Preparação e realização de apresentações, demonstrações e formação a Clientes.
+    b.  Em Desenvolvimento de Projectos de Software Aplicacional:
+        i.   Desenvolvimento de software aplicacional, incluindo pesquisa, consulta e elaboração de soluções para resposta a necessidades específicas dos projectos e dos clientes;
+        ii.  Pesquisa, consulta e elaboração de documentação de apoio;
+        iii. Preparação e realização de apresentações, demonstrações e formação a clientes.
+    c.  Como Apoio Pré-Venda:
+        i.   Pesquisa, consulta e elaboração de documentação de apoio.
+        ii.  Preparação e realização de apresentações e demonstrações a clientes.
+O Segundo prestará o seu esforço à Sociedade naquilo que lhe for solicitado, e em especial comprometendo-se a:
+    a.  Sujeitar-se à disciplina própria dos elementos que integram na Sociedade o seu grupo profissional;
+    b.  Abster-se durante o período de serviço de actividades ou tarefas que não sejam as estritamente profissionais;
+    c.  Transmitir aos seus superiores as necessidades e problemas dos assuntos à sua responsabilidade e as sugestões para a sua solução;
+    d.  Garantir que as informações ascendentes e descendentes na via hierárquica se processem com toda a objectividade.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="250" width="480" height="60" uuid="ca1334ec-ba93-4bca-b9cc-cb70963321d9"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[Individualmente também designados por «Parte» e quando em conjunto designadas «Partes»,
+
+É livremente e de boa fé celebrado o presente contrato de trabalho (doravante «Contrato»), que se regerá pelas disposições legais e pelas seguintes cláusulas:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="30" width="480" height="30" uuid="6b6985f4-97d0-4150-9c93-99aef01339c3"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[CONTRATO DE TRABALHO A TERMO INCERTO]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<staticText>
+				<reportElement x="40" y="30" width="480" height="120" uuid="ba026653-225d-494f-99eb-872606a0e5c8"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[2.  Na atividade mencionada no número 1 da presente Cláusula, são incluídas as tarefas afins ou funcionalmente ligadas para as quais o Trabalhador tenha qualificação adequada e que não impliquem desvalorização profissional. 
+3.  Quando o interesse da Empregadora o exija, pode esta encarregar o Trabalhador de exercer, temporariamente, funções não compreendidas na atividade contratada, desde que tal não implique modificação substancial da posição do Trabalhador.
+4.  O Trabalhador tem direito a formação profissional contínua, nos termos estabelecidos no artigo 131.º do Código do Trabalho.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="200" width="480" height="140" uuid="d8031ea3-f4a9-47b3-881b-60d66b976525"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1.  O presente Contrato entra em vigor no dia " + $P{startDate} + " e é celebrado a termo incerto, caducando quando, prevendo-se a conclusão da atividade cuja execução justifica a sua celebração, a Sociedade comunicar ao Trabalhador o termo do mesmo, na sequência de comunicação escrita enviada pela Empregadora com o aviso prévio previsto no artigo 345.º do Código do Trabalho.<br>2.	Nos termos e para os efeitos do disposto no artigo 140.º, n.º 2, alínea f) do Código de Trabalho, resultante do acréscimo excecional da atividade da Sociedade motivado pela adjudicação dos contratos celebrados pela Sociedade, entre outros, com a " + $P{client} + ", os quais se traduzem na satisfação de uma necessidade temporária e pontual da Sociedade."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="160" width="480" height="30" uuid="b187e939-1fc7-4d32-a32d-09c82b51fb4a"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Segunda
+(Início, Duração e Fundamentação)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="360" width="480" height="30" uuid="6adacef5-fbe9-406f-b025-ab04bab4af58"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Terceira
+(Período Experimental)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="400" width="480" height="60" uuid="093d08d3-9364-4a8b-9658-6976899a0ac2"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[Durante os primeiros 30 dias de execução do presente Contrato encontra-se em curso um período experimental, durante o qual qualquer das Partes poderá denunciar o Contrato, sem aviso prévio e sem necessidade de invocação de justa causa, não tendo a outra Parte direito a qualquer indemnização.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="772" width="480" height="30" uuid="7a47c2c8-e5dd-4824-be86-48ca57dabbf2"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="480" width="480" height="30" uuid="83845719-83af-4ef9-8988-23f587385c82"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Quarta
+(Organização de Tempo de Trabalho)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="520" width="480" height="80" uuid="43ced364-563f-4870-9985-1af11ce36667"/>
+				<textElement>
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  Os períodos de trabalho diário e semanal do Trabalhador são, respetivamente, de 8 (oito) e 40 (quarenta) horas.
+2.  Caso haja necessidade de prestação de trabalho suplementar, nos termos dos artigos 226.º e 227.º, ambos do Código do Trabalho, o Trabalhador beneficiará dos direitos estabelecidos nas normas dos artigos 228.º, 229.º e 268.º, todos do Código do Trabalho.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="620" width="480" height="30" uuid="ca922243-948f-49a9-9d0a-dae995a3ea1f"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Quinta
+(Local do Trabalho)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="660" width="480" height="70" uuid="c1464abc-7407-4212-ac47-d6a2b83f141d"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[A atividade do Trabalhador será prestada nas instalações da Empregadora sitas em Rua Alfredo da Silva, n8A, Edifício Stern, Piso 3 D, 2610-016 Alfragide, podendo deslocar-se dentro do território de Portugal ou para o estrangeiro sempre que necessário no âmbito do exercício das funções.]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<textField>
+				<reportElement x="40" y="770" width="480" height="30" uuid="a72c4400-aa00-4d5b-9176-68b032d01624"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="15.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="28" width="480" height="30" uuid="8dba0d9e-21d3-44c4-a3f5-cb06d86eecf5"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Sexta
+(Retribuição)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="140" width="480" height="200" uuid="568650a5-7367-42be-8395-aca36ed86b9d"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[2.  A Empregadora pagará, ainda, ao Trabalhador subsídios de férias e de Natal, nos termos do disposto no Código do Trabalho.
+3.  Todos os pagamentos a efetuar pela Empregadora ao Trabalhador, ao abrigo do presente Contrato, serão realizados através de transferência bancária para a conta do Trabalhador.
+4.  Sem prejuízo da retribuição mensal auferida pelo Trabalhador indicada no número 1 da presente cláusula, o Empregador garante o pagamento das contribuições do Trabalhador para a Segurança Social, enquadrando-se o Trabalhador no regime geral dos trabalhadores por conta de outrem, previsto no Código dos Regimes Contributivos do Sistema Previdencial de Segurança Social.
+5.  Desta forma, o Trabalhador será igualmente abrangido pelos regimes de proteção no desemprego, na doença e na parentalidade, previstos no Decreto-Lei n.º 220/2006, Decreto-Lei n.º 28/2004, de 4 de fevereiro e na Lei n.º 90/2019, de 4 de setembro, respetivamente. 
+6.  Ao Trabalhador poderão ser conferidos, ainda, outros benefícios que serão estabelecidos por documento autónomo reduzido a escrito.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="68" width="480" height="71" uuid="9582f6c9-d4b2-4579-a59a-d847b84433e1"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1.  Pelas suas funções, o Trabalhador aufere a retribuição mensal ilíquida (“salário bruto”) de € " + $P{baseSalary} + " (" + $P{baseSalaryInWords} + "), bem como dos seguintes complementos: retribuição por isenção de horário de trabalho (Acordo IHT), todos pagos com caráter mensal e em função da efetiva prestação de trabalho por parte do Trabalhador."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="360" width="480" height="30" uuid="3596b338-c203-4723-8db3-f794538c7fa4"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Sétima
+(Férias)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="400" width="480" height="90" uuid="ba5f0a45-6b31-426f-a8bb-2f38eb5434bd"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  Sem prejuízo das exceções previstas nos artigos 239.º e 245.º do Código do Trabalho (relativas a: ano de admissão, impedimento prolongado e ano de cessação), o Trabalhador tem direito, em cada ano civil, a um mínimo de 22 dias úteis de férias, vencendo-se esse direito no dia 01 de janeiro de cada ano civil.
+2.  O gozo das férias não pode ser transferido de um ano civil para o ano subsequente, sem a aprovação prévia da Empregadora.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="500" width="480" height="30" uuid="c649e922-2a89-4ef3-a070-3c84b366f922"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Oitava
+(Confidencialidade e Segredos Comerciais)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="540" width="480" height="200" uuid="10878665-3be8-46e8-8766-9f1d6924fe4f"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  O Trabalhador reconhece e compreende que é <b>informação confidencial</b> tudo o que é produzido ou recebido pelo Trabalhador durante a execução deste Contrato, com respeito à Empregadora, bem como aos respetivos clientes, sócios, gerentes, diretores, parceiros, fornecedores e colaboradores (mesmo que não seja declarado/classificado como confidencial), designadamente, mas não limitando: documentos, programas informáticos, publicações, informações contidas em base de dados, na "intranet", em qualquer tipo de comunicação interna ou nas redes informáticas, ou qualquer outro material intelectual; planificações de negócios; estratégias de <i>marketing</i>; estratégias pré-negociais, negociais e comerciais; carteira de clientes; contactos; preços; acordos; informação e declarações financeiras;  análises financeiras; estrutura de mercado; transações e informações conexas às mesmas; projetos e todos os seus componentes; necessidades; estruturas; organização; composição do produto; informação técnica; técnicas, métodos, procedimentos; instrumentos, <i>design</i>, gráficos, planos, filmes e <i>software</i>, processos e sistemas operativos; projetos (implementados ou em desenvolvimento) e todos os seus componentes.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="740" width="480" height="30" uuid="9f48a8a6-2ded-46d9-b492-813a5a3c66f4"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[2.  O Trabalhador reconhece que a reputação e o sucesso da Empregadora requerem que a <i>informação confidencial</i> permaneça secreta.]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<textField>
+				<reportElement x="43" y="770" width="480" height="30" uuid="19370314-c094-407b-b9c7-c4a74c439406"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="15.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="43" y="28" width="480" height="450" uuid="08b138b6-d689-4668-9e3e-3ac66edcada9"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[3.  O Trabalhador obriga-se a guardar segredo e confidencialidade sobre toda a <i>informação confidencial</i> e a utilizá-la apenas para efeitos do cumprimento do disposto no presente Contrato e em benefício da Empregadora, quer durante a execução do Contrato, quer após a sua cessação (independentemente da sua causa).
+4.  O Trabalhador reconhece e aceita que, quer durante a vigência do Contrato, quer após a cessação do mesmo, se encontra proibido de efetuar quaisquer reproduções, cópias, modificações, comunicações públicas, distribuição, fornecimento, divulgação ou cedência, gratuita ou onerosa, de qualquer <i>informação confidencial</i> e/ou respetivos suportes a quaisquer terceiros, bem como de os utilizar em benefício próprio ou de terceiro para qualquer efeito que não seja o cumprimento do disposto no presente Contrato.
+5.  O Trabalhador compromete-se a tomar todas as medidas ao seu alcance para prevenir eventuais fugas de <i>informação confidencial</i>, não só durante a execução do Contrato, mas também após a sua cessação. 
+6.  O Trabalhador compreende que o seu dever de confidencialidade (descrito na presente Cláusula), pode dizer respeito a informação que se encontra abrangida e tutelada pelo regime jurídico de proteção dos segredos comerciais, previsto, nomeadamente, nos artigos 313.º a 315.º do Código da Propriedade Industrial (CPI).
+7.  O Trabalhador reconhece, ainda, que todos os suportes (físicos, digitais ou outros, como registos, relatórios, anotações e outros documentos processados, bem como as suas respetivas cópias e reproduções) que contenham segredos comerciais/de indústria e/ou <i>informação confidencial</i> são propriedade exclusiva da Empregadora, comprometendo-se o Trabalhador a manter tais documentos sempre devidamente protegidos e vigiados e a devolvê-los à Empregadora imediatamente após o termo do Contrato.
+8.  O Trabalhador compreende e aceita que:
+    a)  A violação das obrigações que assume ao abrigo desta Cláusula é suscetível de prejudicar gravemente a Empregadora;
+    b)  Em caso de incumprimento dessas obrigações ficará constituído no dever de reparar todos os danos que causar à Empregadora em resultado, direto ou indireto, do referido incumprimento/violação, podendo, ainda, haver lugar a responsabilidade criminal e/ou contraordenacional;
+    c)  O incumprimento dessas obrigações durante a vigência do Contrato constitui infração disciplinar grave e impeditiva da subsistência da relação de trabalho.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="478" width="480" height="30" uuid="53bd4ceb-d2ce-4407-a31e-e88d97c69d7c"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Nona
+(Propriedade Intelectual)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="518" width="480" height="250" uuid="2e2faf09-268c-468e-8b63-24a0deb36ca5"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  As Partes acordam que a titularidade dos direitos de propriedade intelectual, designadamente, direitos de propriedade industrial e direitos de autor e conexos, relativos às criações do Trabalhador no local de trabalho e/ou no exercício das suas funções laborais, será sempre considerada como pertencente à Empregadora.
+2.  Sempre que, nos termos do número anterior, estejam em causa direitos de patente ou de modelo de utilidade, o Trabalhador desde já expressamente reconhece que a titularidade de tais direitos pertence à Empregadora enquanto invenção feita durante a execução de contrato de trabalho, estando já a atividade inventiva expressamente prevista e especialmente remunerada nos termos da Cláusula Sexta do presente Contrato.
+3.  Sempre que, nos termos do número 1 da presente Cláusula, estejam em causa direitos de autor sobre obras, o Trabalhador desde já expressamente reconhece que: 
+    a)  a titularidade sobre tais direitos pertence em exclusivo à Empregadora enquanto obra por contra de outrem no cumprimento de dever funcional e/ou de contrato de trabalhado conforme aplicável;
+    b)  não é devido qualquer outro pagamento ou retribuição para além do determinado na Cláusula Sexta, nomeadamente a título de retribuição especial ou suplementar, mesmo que a qualidade daquilo que vier a ser produzido exceda claramente o que era pretendido ou expectável ou que desses resultados venham a fazer-se utilizações ou retirar-se vantagens não previstas no]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<textField>
+				<reportElement x="40" y="772" width="480" height="30" uuid="a988174f-9b7a-44da-aee6-6ac6030ac533"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="15.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="30" width="480" height="100" uuid="7e20ee30-c2d1-4be5-b6e4-5ebe165e68c8"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[presente contrato; e
+    c)  a Empregadora poderá realizar quaisquer modificações, adaptações e/ou alterações às obras em vista à sua livre exploração.
+4.  Caso a Empregadora venha a ser demandada por ter infringido quaisquer direitos de propriedade intelectual por facto culposo ou negligente imputável ao Trabalhador, o Trabalhador indemnizá-la-á de todos os danos e das despesas que, em consequência, aquela haja de fazer e de todas as quantias que tenha de pagar, seja a que título for.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="140" width="480" height="30" uuid="1a8859b2-81ee-4a48-9153-2b4ee0ab0304"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Décima
+(Outros Deveres Específicos e Declarações do Trabalhador)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="180" width="480" height="450" uuid="0839672d-6d37-47bd-9dc6-d2bf203c2323"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  O Trabalhador declara que não está vinculado a nenhum compromisso, laboral ou de outra natureza, que o impeça de exercer cabalmente as funções para as quais é contratado ao abrigo do presente Contrato e que não está sujeito a qualquer cláusula de não concorrência que possa constituir um obstáculo ou impedimento à celebração ou execução do mesmo.
+2.  O Trabalhador compromete-se a:
+    a)  Cumprir todos os seus deveres laborais, designadamente mas não limitando, os previstos no artigo 128.º do Código do Trabalho e nos procedimentos, políticas, normas, regulamentos, políticas em vigor na Empregadora, em cada momento, bem como os respetivos a clientes da Empregadora a que o Trabalhador esteja alocado no âmbito da execução do presente Contrato;
+    b)  Não aceitar quaisquer comissões, prémios ou gratificações de quaisquer terceiros com os quais a Empregadora mantenha relações comerciais, profissionais ou de parceria;
+    c)  Durante o período de vigência do Contrato, não concorrer com a Empregadora, e bem assim, a não exercer, diretamente ou por interposta pessoa, por conta própria ou alheia, de forma remunerada ou não (designadamente, mas não limitando, através de contrato de trabalho, contrato de prestação de serviços, desempenho de funções em cargos sociais societários), em Portugal ou no estrangeiro, qualquer atividade concorrente ou similar às levadas a cabo pela Empregadora; esta obrigação inclui (sem limitar), designadamente, a de não explorar qualquer negócio concorrente com o da Empregadora e a de não contratar trabalhador ou prestador de serviços da Empregadora, por si ou interposta pessoa;
+    d)  Não exercer, diretamente ou por interposta pessoa, por conta própria ou alheia, de forma remunerada ou não (designadamente, mas não limitando, através de contrato de trabalho, contrato de prestação de serviços, desempenho de funções em cargos sociais societários), em Portugal ou no estrangeiro, qualquer atividade que prejudique, em disponibilidade ou qualidade, o exercício das funções para as quais é contratado ao abrigo do presente Contrato.
+3.  O Trabalhador compreende e aceita que:
+    a)  A violação das obrigações que assume ao abrigo desta Cláusula é suscetível de prejudicar gravemente a Empregadora;
+    b)  Em caso de incumprimento dessas obrigações ficará constituído no dever de reparar todos os danos que causar à Empregadora em resultado, direto ou indireto, do referido incumprimento/violação;
+    c)  O incumprimento dessas obrigações durante a vigência do Contrato constitui infração disciplinar grave e impeditiva da subsistência da relação de trabalho.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="650" width="480" height="30" uuid="15511539-72ac-48a1-bdb0-051e35d86fa1"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Décima Primeira
+(Seguro de Acidentes de Trabalho)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="690" width="480" height="81" uuid="ab2148ef-920b-477f-a209-b87ef5bb6b8c"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[A responsabilidade pela reparação de acidentes de trabalho sofridos pelo Trabalhador ao abrigo do presente Contrato é transferida pela Empregadora para a Companhia de Seguros AGEAS Seguros, através do seguro de acidentes de trabalho com a apólice n.º 10.10.279868.]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<textField>
+				<reportElement x="40" y="772" width="480" height="30" uuid="a4f49664-4b6f-4ee6-bf2f-d3fd272e71a3"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="15.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="30" width="480" height="30" uuid="9b3bc1f5-953f-4cd2-ac58-6a990705867f"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Décima Segunda
+(Fundo de Garantia de Compensação do Trabalho)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="70" width="480" height="60" uuid="0cd5a384-507d-4329-9554-abc9eef245f2"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[A Empregadora declara que aderiu ao Fundo de Garantia de Compensação de Trabalho (FGCT), gerido pelo Instituto de Gestão Financeira da Segurança Social, IP, no qual é incluído o Trabalhador, mediante comunicação ao referido Fundo da sua admissão, a realizar após o período transitório de suspensão previsto no artigo 32.º n.º4 da Lei 13/2023, de 3 abril.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="150" width="480" height="30" uuid="55690011-3f9c-4f0a-a910-9c391372f461"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Décima Terceira
+(Denúncia)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="190" width="480" height="140" uuid="c33b412c-1b37-463f-a4df-bd37c391364e"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  Decorrido o período experimental referido na Cláusula Terceira deste Contrato, o Trabalhador poderá denunciar o presente Contrato independentemente de justa causa, mediante envio/entrega de comunicação escrita à Empregadora, com a antecedência mínima de 30 (trinta) ou 60 (sessenta) dias, consoante a duração do contrato seja, respetivamente, de dois anos ou período superior. 
+2.  Se o Trabalhador não cumprir, total ou parcialmente, o prazo de aviso prévio referido no n.º 1 desta Cláusula, ficará obrigado a pagar à Empregadora uma indemnização de valor igual à retribuição base e diuturnidades correspondentes ao período de antecedência em falta, sem prejuízo de responsabilidade civil por danos eventualmente causados em resultado da inobservância do referido prazo ou de obrigação assumida em pacto de permanência.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="350" width="480" height="30" uuid="4225e43c-e85b-4ec8-9571-e90dba85952f"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Décima Quarta
+(Utilização de Sistemas com Inteligência Artificial)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="390" width="480" height="70" uuid="7ff1a8bd-eb6d-400d-a025-161cbe31711a"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[A Empregadora não recorre a sistemas de inteligência artificial/algoritmos para apoio na tomada de decisões sobre a manutenção do emprego, assim como as condições de trabalho, incluindo a elaboração de perfis e o controlo da atividade profissional. Caso venha a recorrer a tais sistemas para essas finalidades, a Empregadora compromete-se a informar, por escrito, o Trabalhador sobre os seus parâmetros, critérios, regras e instruções.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="480" width="480" height="30" uuid="79c827e9-b7e2-49e9-89e4-e024d874fcbc"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Décima Quinta
+(Proteção de Dados Pessoais)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="520" width="480" height="250" uuid="fcdbc8d7-c3a3-47a9-8d4b-f35b744c11c0"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  A Empregadora, na qualidade de responsável pelo tratamento, realizará operações de tratamento de dados pessoais do Trabalhador – o titular dos dados –, reconhecendo o Trabalhador que a comunicação dos dados pessoais constitui uma obrigação contratual e legal, assim como um requisito necessário para a celebração e execução do presente Contrato.
+2.  As atividades de tratamento destinam-se às atividades relacionadas com a administração e gestão do presente contrato e da relação laboral entre as Partes, nomeadamente, o processamento de salários e/ou outras relacionadas com a gestão de pessoal, sendo os referidos dados pessoais e tratamentos necessários quer para a execução do contrato, quer para o cumprimento das obrigações legais a que a Empregadora se encontra sujeita, nomeadamente, no âmbito da legislação laboral, de segurança social e fiscal.
+3.  A Empregadora poderá ainda realizar o tratamento de dados pessoais necessários para efeito dos interesses legítimos prosseguidos pela Empregadora ou por terceiros, nomeadamente, quando o tratamento dos dados pessoais seja estritamente necessário e proporcional de modo garantir a segurança das redes e da informação.
+4.  A Empregadora procederá, nomeadamente, ao tratamento das seguintes categorias de dados pessoais do Trabalhador: (a) Dados de Identificação ; (b) Dados de Contactos de Emergência; (c) Dados de Bilhete de Identidade ou Cartão do Cidadão; (d) Dados Bancários; (e) Situação Académica; (f) Situação Fiscal; (g) Dados de documentos de identificação.]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<textField>
+				<reportElement x="40" y="772" width="480" height="30" uuid="ba6abd6d-4eac-4cf1-a424-f93a5423459d"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="15.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="30" width="480" height="742" uuid="8feadecb-6f50-4135-81c2-575b66528362"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[5.  O Trabalhador tem, desde já, conhecimento e reconhece que poderão ocorrer tratamentos de categorias especiais de dados pessoais quando:
+    a)  Necessário para efeitos do cumprimento de obrigações e do exercício de direitos específicos da Empregadora ou do Trabalhador em matéria de legislação laboral, de segurança social e de proteção social; ou,
+    b)  Necessário para efeitos de medicina preventiva ou do trabalho e/ou para a avaliação da capacidade de trabalho do Trabalhador;
+    c)  Necessário para a utilização de sistemas de leitura biométrica, para a finalidade de controlo de assiduidade e pontualidade e/ou controlo de acesso;
+6.  A Empregadora, no âmbito das atividades relacionadas com a administração e gestão do presente Contrato e da relação laboral entre as Partes, poderá comunicar e/ou transferir os dados pessoais do Trabalhador às entidades a seguir identificadas, não excluindo outras entidades não mencionadas, mas que tenham legitimidade legal para proceder ao tratamento dos dados em questão: (a) IGFSS – Instituto de Gestão Financeira da Segurança Social; (b) AT – Autoridade Tributária; (c) Instituições Bancárias e Seguradoras; (d) INE – Instituto Nacional de Estatística; (e) ACT – Autoridade para as Condições do Trabalho; (f) DGERT – Direção Geral do Emprego e das Relações de trabalho; (g) Entidade que tem a seu cargo o desempenho das funções relativas à Segurança, Higiene e Medicina no trabalho; (h) Subcontratantes que tratem os dados pessoais dos trabalhadores por conta da Empregadora e para finalidades por esta determinadas; (i) Qualquer outra entidade à qual tenham sido atribuídas funções de processamento de salários e/ou outras relacionadas com a gestão de recursos humanos.
+7.  As comunicações e/ou transferências referidas no número anterior têm como finalidade, nomeadamente: (a) O cálculo e pagamento de retribuições, prestações acessórias, outros abonos e gratificações; (b) O cálculo, retenção na fonte e operações relativas a descontos na retribuição, obrigatórios ou facultativos, decorrentes de disposição legal; (c) A realização de operações estatísticas não nominativas relacionadas com o processamento de salários no âmbito da entidade processadora; (d) O cumprimento das obrigações a que a Empregadora se encontra sujeita, nomeadamente, no âmbito da legislação laboral, de segurança social e fiscal.
+8.  Os referidos dados pessoais, e outros que venham a ser objeto de tratamento pela Empregadora, serão obtidos através do presente contrato, bem como através de outros documentos que venham a ser solicitados pela Empregadora, no exercício das funções do Trabalhador, e, no decorrer da relação laboral entre as Partes.
+9.  As referidas comunicações e/ou transferências terão como finalidade operações e atividades relacionadas com a administração e gestão do contrato e da relação laboral entre as Partes, e, para efeito dos interesses legítimos prosseguidos pela Empregadora, garantindo esta que em caso de qualquer transferência de dados que ocorra para fora do espaço da União Europeia, tanto a Empregadora, como os seus subcontratantes, ou como o terceiro destinatário dos dados pessoais em questão, cumprirão as suas obrigações legais quanto às condições de tal transferência, nomeadamente, no que respeita à aplicação de medidas técnicas e organizativas adequadas para assegurar um nível de segurança adequado ao risco.
+10.  A Empregadora conservará os dados pessoais apenas durante o período necessário à execução das finalidades a que os mesmos se destinam e ao cumprimento das suas obrigações legais tendo em consideração para a definição deste período, quer as melhores práticas, quer as obrigações legais a que a Empregadora se encontra sujeita, nomeadamente, no âmbito da legislação laboral, de segurança social e fiscal.
+11.  O Trabalhador tem direito de acesso aos dados pessoais que lhe digam respeito, à sua retificação ou apagamento, à limitação ou posição ao tratamento, a apresentar reclamações junto à autoridade de controlo, bem como, o direito à portabilidade dos dados, reconhecendo que estes direitos poderão ser limitados em cumprimento das obrigações legais a que a Empregadora se encontra sujeita, nomeadamente, no âmbito da legislação laboral, de segurança social e fiscal. O exercício destes direitos deve ser operado através de envio de um email para o seguinte endereço dataprivacy@syone.com.]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<textField>
+				<reportElement x="40" y="772" width="480" height="30" uuid="39dc4f7e-55ef-4caa-8201-79149778f66e"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="15.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="78" width="480" height="30" uuid="c07d120f-1a11-4414-80e9-7ccab1340898"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Décima Sexta
+(Tratamento de Dados Biométricos)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="120" width="480" height="190" uuid="28d8b0d3-9c64-46c3-b916-4930870055fb"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  A Empregadora irá proceder à recolha e tratamento de dados biométricos dos trabalhadores com a finalidade de controlo de assiduidade e de acessos às instalações desta, com fundamento na prossecução de interesses legítimos da Empregadora e obrigações legais da Empregadora.
+2.  A Empregadora irá utilizar apenas representações dos dados biométricos, garantindo que o processo de recolha não permite a reversibilidade dos dados em causa.
+3.  Os dados do Trabalhador serão conservados pelo período necessário para a prossecução das finalidades do tratamento a que se destinam, sendo eliminados quando se verifique a ocorrência da cessação do contrato de trabalho ou de transferência do trabalhador para outro local de trabalho.
+4.  Apenas terão acesso ao registo de dados biométricos as pessoas que a estes necessitem de aceder, no âmbito do exercício das suas funções.
+5.  A Empregadora poderá comunicar os dados pessoais dos trabalhadores à entidade que presta serviços de fornecimento e manutenção de equipamento de leitura de dados biométrico.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="310" width="480" height="30" uuid="db94aab8-76ae-4b95-84fe-86090d5a1ef5"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Décima Sétima
+(Pacto de Não Concorrência)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="350" width="480" height="410" uuid="168439dc-a8cd-49fe-90ae-65a8164cf663"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  Aplicar-se-ão as seguintes Restrições Pós-Abandono da empresa, reservando-se, no entanto, à Empregadora o direito de as exercer ou de a elas renunciar, a qualquer uma ou a todas elas, segundo o seu critério absoluto, devendo para o efeito comunicar ao Trabalhador com 15 dias de antecedência em relação à data de produção de efeitos da cessação do contrato, a sua intenção de exercício ou renúncia das mesmas.
+2.  Caso a Empregadora celebre um pacto de não concorrência será atribuída ao Trabalhador, durante o período em que se encontrarem em vigor as obrigações e restrições previstas nesta cláusula, uma compensação mensal, correspondente a 25% da remuneração mensal ilíquida de base que o Trabalhador aufira à data da cessação do respetivo contrato de trabalho a qual poderá sofrer redução equitativa em função das quantias despendidas pela Sociedade com a formação profissional do Trabalhador. 
+3.  A finalidade das seguintes limitações é a de proteger o negócio da Empregadora, assim como o de qualquer outra Empresa pertencente ao mesmo Grupo empresarial, incluindo a própria, as Empresas Coligadas, as expectativas de negócio e os clientes e fornecedores da mesma, e não a de impedir o Trabalhador de arranjar um emprego interessante e lucrativo depois de deixar o serviço da Empregadora. 
+4.  O Trabalhador compreende que a Empregadora detém um mercado no âmbito do seu objeto social que ultrapassa o seu país de origem e que as restrições aqui mencionadas podem ser aplicáveis em qualquer jurisdição com interesse para a proteção dos legítimos interesses da Empregadora. 
+5.  Assim sendo, e como cláusulas e condições deste contrato de trabalho, as seguintes restrições serão impostas ao Trabalhador durante o período de 1 ano, contado a partir da data da cessação do seu contrato de Trabalho.
+6.  O Trabalhador não poderá, direta ou indiretamente através de terceiros: 
+    a)  Fazer ofertas de emprego a ou por qualquer forma tentar induzir, atrair ou encorajar qualquer outro funcionário da Empregadora, na altura da cessação do contrato de trabalho do Trabalhador, a deixar a Empregadora ou qualquer Empresa Coligada desta com o propósito de se envolver ou adquirir interesses num negócio semelhante ao ou concorrencial com as atividades da Empregadora ou de qualquer Empresa Coligada desta, nem 
+    b)  Angariar negócios que façam concorrência com ou sejam similares às atividades da Empregadora ou de Empresas Coligadas desta junto de qualquer pessoa, firma ou Empresa comercial que seja um potencial ou atual cliente ou fornecedor da Empregadora ou de Empresas Coligadas desta, nem pedir emprego a qualquer pessoa, firma ou Empresa comercial que seja um potencial ou atual cliente ou fornecedor da Empregadora ou de Empresas Coligadas desta,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="30" width="480" height="48" uuid="7a5dfe65-1c37-49cb-80f3-d95128e76b81"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[12.  Qualquer outro tratamento de dados pessoais do Trabalhador que a Empregadora venha a efetuar para outras finalidades que não as identificadas na presente Cláusula, será objeto de informação ao Trabalhador em momento anterior ao início do tratamento.]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<textField>
+				<reportElement x="40" y="770" width="480" height="30" uuid="2537d2c2-c346-4f3f-b1d3-8af4eb1fb70f"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="15.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="28" width="480" height="259" uuid="bb2fd9b1-224b-44a9-b9cc-a22e4084094f"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[b)  Angariar negócios que façam concorrência com ou sejam similares às atividades da Empregadora ou de Empresas Coligadas desta junto de qualquer pessoa, firma ou Empresa comercial que seja um potencial ou atual cliente ou fornecedor da Empregadora ou de Empresas Coligadas desta, nem pedir emprego a qualquer pessoa, firma ou Empresa comercial que seja um potencial ou atual cliente ou fornecedor da Empregadora ou de Empresas Coligadas desta,
+        i.   com os quais o Trabalhador tenha tido contactos profissionais diretos ou indiretos enquanto esteve ao serviço da Empregadora;
+        ii.  acerca dos quais o Trabalhador tomou conhecimento de determinadas Informações Confidenciais em virtude do seu trabalho;
+        iii. que exijam que o Trabalhador faça uso de Informações Confidenciais de que tomou conhecimento enquanto esteve ao serviço da Empregadora.
+7.  Para os efeitos previstos na alínea b), i da presente cláusula, consideram-se como contactos indiretos do Trabalhador as intervenções e ou participações concretas e específicas do Trabalhador com entidades terceiras, decorrentes do exercício da respetiva atividade profissional, nomeadamente as que decorram por via de clientes, fornecedores ou outras entidades coligadas com estes, e com os quais não tenha existido uma intervenção direta e imediata da Empregadora.
+8.  O Trabalhador compreende e aceita que o exercício por parte do Trabalhador das atividades identificadas nesta cláusula pode efetivamente causar prejuízo à Empregadora.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="310" width="480" height="30" uuid="bd1e988e-e89c-4cd9-879f-f1925b8bd45d"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Décima Oitava
+(Formação e Certificação)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="348" width="480" height="312" uuid="39b8e5ac-59b6-4ea9-b849-0cf789b0f212"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  A Sociedade irá fornecer ao Trabalhador, ao longo da duração do presente contrato, vários cursos de formação necessários ao desempenho das suas funções.
+2.  O Trabalhador tem direito, em cada ano, a um número mínimo de 40 (quarenta) horas de formação contínua ou, um número mínimo de horas de formação profissional proporcional à duração do contrato de trabalho, caso este tenha duração igual ou superior a três meses.
+3.  O Trabalhador obriga-se a frequentar e participar nas ações de formação profissional que lhe sejam indicadas e proporcionadas pela Sociedade, sob pena de incorrer em responsabilidade disciplinar.
+4.  Por outro lado, e nos casos em que as ações de formação e exames de certificação impliquem despesas específicas consideradas avultadas e que sejam custeadas pela sociedade, as partes estabelecem, nos termos do disposto no artigo 137 n.º 1 do Código do Trabalho, a obrigatoriedade do Trabalhador se manter ao serviço da Sociedade pelo período de 2 (dois) anos a contar do terminus de cada uma das ações de formação ou de cada um dos exames de certificação. 
+5.  Para efeitos do ponto anterior a Sociedade obriga-se a entregar ao Trabalhador, após a realização de cada acção de formação profissional ou exame de certificação uma declaração da qual conste a identificação da acção de formação ou do exame de certificação, a data da sua conclusão e o custo a ela inerente.
+6.  Tais declarações, após serem assinadas por ambas as partes, serão anexas ao contrato, dele fazendo parte integrante. 
+7.  Sem prejuízo, a Sociedade ressalva-se o direito de prescindir, segundo o seu critério absoluto, do prazo estabelecido para o Pacto de Permanência.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="680" width="480" height="30" uuid="2e02a670-7af4-4aa5-84d1-8adb4f78fa67"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11" isBold="true"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[Cláusula Décima Nona
+(Disposições Gerais)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="720" width="480" height="50" uuid="6d48a586-c7cd-494b-b6bb-67a4032537e9"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[1.  Este Contrato prevalece sobre qualquer outro contrato de trabalho anteriormente celebrado com o Trabalhador referente à sua relação laboral com a Empregadora ou com quaisquer sociedades coligadas desta.]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<staticText>
+				<reportElement x="40" y="28" width="480" height="192" uuid="e5ca37d8-65c2-4018-a837-032431954acd"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="11" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[2.  A eventual nulidade ou anulabilidade de qualquer disposição (cláusula, número ou alínea) deste Contrato não afetará a validade das restantes disposições e de todo o Contrato.
+3.  Quaisquer comunicações efetuadas ao abrigo deste Contrato serão expedidas para os endereços que figuram no presente documento que, em caso de litígio judicial ou extra judicial, é expressamente convencionado como o local onde se encontram domiciliadas as Partes para efeito de realização de citação ou notificação, sendo inoponível às Partes qualquer alteração do domicílio convencionado, salvo se for notificada à outra Parte mediante carta registada, com aviso de receção, nos 30 dias subsequentes à respetiva superveniência.
+4.  Caso a Empregadora pretenda cessar o contrato de trabalho por via de despedimento coletivo, despedimento por extinção do posto de trabalho ou despedimento por inadaptação, cumprirá o procedimento inerente a cada uma das modalidades de despedimento, sem prejuízo do cumprimento dos prazos previstos nos artigos 363.º, 371.º e 378.º, respetivamente, todos do Código do Trabalho.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="238" width="480" height="59" uuid="dd97ba05-1784-4edb-98ba-a839b233f972"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[A Empregadora e o Trabalhador aceitam o Contrato nos termos acima exarados, que é feito em duplicado, sendo as duas vias válidas como originais, ficando um exemplar na posse da Empregadora e o outro na posse do Trabalhador.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="318" width="480" height="30" uuid="ac2c439f-39fd-498f-83de-b31c6b5da455"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="10"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Amadora, " + $P{startDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="772" width="480" height="30" uuid="3b583ce2-c77f-4f74-b04d-5aee41ca2bda"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="15.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="40" y="410" width="480" height="30" uuid="2acf5904-d96e-4ef4-a3a4-6ff8b5c3a3c3"/>
+				<staticText>
+					<reportElement x="0" y="3" width="480" height="20" uuid="49569716-76c5-43b4-a87a-3b26e10f5b27"/>
+					<textElement textAlignment="Justified" markup="html">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="2.0"/>
+					</textElement>
+					<text><![CDATA[                          Pela Empregadora,                                                           O Trabalhador,]]></text>
+				</staticText>
+			</frame>
+			<textField>
+				<reportElement x="280" y="510" width="240" height="20" uuid="d05137e5-e9e4-419b-a581-210c0945ef6d"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fullName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="490" width="240" height="20" uuid="99f90b88-4fc7-4f80-81a4-a3637d70249c"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[______________________________________
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="490" width="240" height="20" uuid="ec4a51af-dd6f-46e8-bf4b-9544c0a6cc21"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[______________________________________
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="510" width="240" height="20" uuid="9aa30bc4-0e55-4ff0-a463-c6f0484b8763"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[José Eduardo Taborda Bravo Silva]]></text>
+			</staticText>
+			<image>
+				<reportElement x="80" y="440" width="170" height="110" uuid="0c187bfc-4347-4f38-9a29-0b01c75b5ddd"/>
+				<imageExpression><![CDATA[$P{companySignatureURL}]]></imageExpression>
+			</image>
+		</band>
+		<band height="802">
+			<textField>
+				<reportElement x="40" y="772" width="480" height="30" uuid="385dbd81-a2b7-43a0-91a4-baa3f3566394"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="11"/>
+					<paragraph lineSpacingSize="15.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="28" width="480" height="730" uuid="e529e40a-dadf-43c3-8fe9-b777e2992f2d"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+					<paragraph lineSpacingSize="2.0"/>
+				</textElement>
+				<text><![CDATA[<b>ANEXO 1</b><br>
+<b>A. Categorias de dados pessoais do Trabalhador, conforme número 4, da Cláusula 15ª:</b><br>
+<b>1. Dados de Identificação:</b><br>
+1.1. Nome completo;<br>
+1.2. Nome conhecido;<br>
+1.3. Data de nascimento;<br>
+1.4. Morada completa;<br>
+1.5. Correio eletrónico;<br>
+1.6. Telemóvel.<br>
+<b>2. Dados de Contactos de Emergência:</b><br>
+2.1. Nome;<br>
+2.2. Parentesco;<br>
+2.3. Morada completa;<br>
+2.4. Telefone.<br>
+<b>3. Dados de Bilhete de Identidade ou Cartão do Cidadão ou de Passaporte ou de Cartão/Autorização de Residência:</b><br>
+3.1. Número de identificação civil;<br>
+3.2. Local de emissão;<br>
+3.3. Data de emissão;<br>
+3.4. Validade;<br>
+3.5. Número de Identificação de Segurança Social;<br>
+3.6. Nacionalidade;<br>
+3.7. Naturalidade.<br>
+<b>4. Dados Bancários e Informações Académicas:</b><br>
+4.1. Nome do Banco;<br>
+4.2. NIB;<br>
+4.3. IBAN.<br>
+4.4. Situação Académica:<br>
+4.5. Habilitações literárias;<br>
+4.6. Estabelecimento de ensino;<br>
+4.7. Média final;<br>
+4.8. Pós-graduação;<br>
+4.9. Mestrado;<br>
+4.10. Doutoramento.<br>
+<b>5. Situação Fiscal:</b><br>
+5.1. Número de identificação Fiscal;<br>
+5.2. Código de repartição de finanças;<br>
+5.3. Estado civil (solteiro; casado; divorciado; viúvo; união de facto equiparado a solteiro; união de facto equiparado a casado;<br>
+5.4. Grau de incapacidade;<br>
+5.5. Número de titulares;<br>
+5.6. Número de dependentes;<br>
+<b>6. Agregado Familiar:</b><br>
+6.1. Nome completo;<br>
+6.2. Grau de parentesco;<br>
+6.3. Estado civil;<br>
+6.4. Sexo;<br>
+6.5. Data de nascimento;<br>
+6.6. Número de identificação Fiscal.<br>
+
+<b>B. Documentos do Trabalhador, conforme número 5, da Cláusula 15ª:</b><br>
+1. Bilhete de Identidade ou Cartão do Cidadão ou Passaporte ou Cartão ou Autorização de Residência;<br>
+2. Fotografia;<br>
+3. Currículo Vitae;<br>
+4. Comprovativo do NIB;<br>
+5. Certificado de habilitações;<br>
+6. Certificados de trabalho;<br>
+7. Declaração relativa ao agregado familiar;<br>
+8. Boletim de vacinação.<br>]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

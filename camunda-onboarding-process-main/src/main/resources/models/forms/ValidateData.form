@@ -1,0 +1,133 @@
+{
+  "components": [
+    {
+      "text": "#",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_17qwgti",
+        "columns": 5
+      },
+      "id": "Field_1fizx9i"
+    },
+    {
+      "label": "Image view",
+      "type": "image",
+      "layout": {
+        "row": "Row_17qwgti",
+        "columns": 5
+      },
+      "id": "Field_0vhzzrk",
+      "source": "https://careers.recruiteecdn.com/image/upload/q_auto,f_auto,w_400,c_limit/production/images/BN5l/2dDjxgF-CXUi.png"
+    },
+    {
+      "text": "___",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1db8jvx",
+        "columns": null
+      },
+      "id": "Field_04na1f0"
+    },
+    {
+      "text": "# Validate Data",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0zydxyu",
+        "columns": null
+      },
+      "id": "Field_0rq31er"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1vfnipn",
+        "columns": null
+      },
+      "id": "Field_0dhn8xz"
+    },
+    {
+      "text": "## Data for Contract Documents",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0q6rlrt",
+        "columns": null
+      },
+      "id": "Field_0xhmfhg"
+    },
+    {
+      "text": "**Client:** {{client}}\n\n**Area:** {{area}}\n\n**Level:** {{level}}\n\n**Base Salary:** {{baseSalary}}\n\n**Base Salary (In words):** {{baseSalaryInWords}}\n\n**IHT:** {{iht}}\n\n**Expenses:** {{expenses}}\n\n**Contract Type:** {{contractType}}\n\n{{if contractDuration != null then \"**Duration (in months):** \" + string(contractDuration) else \"\"}}\n\n{{if contractEndDate != null then \"**End Date:** \" + contractEndDate else \"\"}}\n\n**Contract Regime:** {{contractRegime}}\n\n{{if hoursPerDay != null then \"**Hours per Day:** \" + string(hoursPerDay) else \"\"}}\n\n{{if daysPerWeek != null then \"**Days Per Week:** \" + string(daysPerWeek) else \"\"}}\n\n**Newcomer Origin:** {{contractOrigin}}\n\n**Duodécimos:** {{duodecimos}}\n\n**In-Person Signing:** {{if inPersonSigning = true then \"Yes\" else \"No\"}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ep3ht4",
+        "columns": null
+      },
+      "id": "Field_0bz2f57"
+    },
+    {
+      "label": "IHT (In Words: X euros)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_105wicw",
+        "columns": null
+      },
+      "id": "Field_0uemq02",
+      "key": "ihtInWords"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "yes"
+        },
+        {
+          "label": "No",
+          "value": "no"
+        }
+      ],
+      "label": "Is the data correct?",
+      "type": "radio",
+      "layout": {
+        "row": "Row_19lwxry",
+        "columns": null
+      },
+      "id": "Field_1yq11pn",
+      "key": "validateDataDecision",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Comments",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1b5h91v",
+        "columns": null
+      },
+      "id": "Field_01s6edt",
+      "key": "ooCommentsAboutContractData",
+      "validate": {
+        "required": true
+      },
+      "description": "This field contains the information explaining the rejection to P&C",
+      "conditional": {
+        "hide": "=validateDataDecision!=\"no\""
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_ValidateData",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "schemaVersion": 16
+}

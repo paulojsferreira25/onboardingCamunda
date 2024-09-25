@@ -1,0 +1,3216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0n0esd6" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.23.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.5.0">
+  <bpmn:collaboration id="Collaboration_OnboardingProcess">
+    <bpmn:participant id="Participant_NewcomerOnboardingProcess" name="Newcomer Onboarding Process" processRef="Process_OnboardingProcess" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_OnboardingProcess" name="Onboarding Process" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:userTaskForm id="userTaskForm_25kakc8">{
+  "components": [
+    {
+      "text": "#",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0v80kym",
+        "columns": 5
+      },
+      "id": "Field_1y8gpl5"
+    },
+    {
+      "label": "Image view",
+      "type": "image",
+      "layout": {
+        "row": "Row_0v80kym",
+        "columns": 5
+      },
+      "id": "Field_146inxk",
+      "source": "https://careers.recruiteecdn.com/image/upload/q_auto,f_auto,w_400,c_limit/production/images/BN5l/2dDjxgF-CXUi.png"
+    },
+    {
+      "text": "___",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0xprwaq",
+        "columns": null
+      },
+      "id": "Field_1tt5b8p"
+    },
+    {
+      "text": "# Validate Newcomer Information",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_09rssee",
+        "columns": null
+      },
+      "id": "Field_0r80khx"
+    },
+    {
+      "label": "Full Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1bx2pcm",
+        "columns": null
+      },
+      "id": "Field_172tpcy",
+      "key": "fullName",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date of Birth",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1dil4oz",
+        "columns": null
+      },
+      "id": "Field_0mgj3qz",
+      "key": "dateOfBirth",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Email Address",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1dil4oz",
+        "columns": null
+      },
+      "id": "Field_07vchnb",
+      "key": "emailAddress",
+      "validate": {
+        "required": true,
+        "validationType": "email"
+      }
+    },
+    {
+      "label": "Citizen Card (CC) Number",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0lkjzcz",
+        "columns": null
+      },
+      "id": "Field_16w3nwk",
+      "key": "identificationNumber",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Citizen Card (CC) Validity",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0lkjzcz",
+        "columns": null
+      },
+      "id": "Field_17oc3ak",
+      "key": "identificationValidity",
+      "properties": {},
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "NIF",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00rvd39",
+        "columns": null
+      },
+      "id": "Field_1pn7w9p",
+      "key": "nif",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "NISS",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00rvd39",
+        "columns": null
+      },
+      "id": "Field_1a6y9jo",
+      "key": "niss",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Address",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_03rp5cl",
+        "columns": 12
+      },
+      "id": "Field_1nknf7n",
+      "key": "address",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Postal Code",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_03rp5cl",
+        "columns": 4
+      },
+      "id": "Field_11faooy",
+      "key": "postalCode",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Single",
+          "value": "Não Casado"
+        },
+        {
+          "label": "Married (Sole Holder)",
+          "value": "Casado, único titular"
+        },
+        {
+          "label": "Married (Two Holders)",
+          "value": "Casado, dois titulares"
+        },
+        {
+          "label": "Single - Disabled",
+          "value": "Não Casado – portador de deficiência"
+        },
+        {
+          "label": "Married (Sole Holder) - Disabled",
+          "value": "Casado, único titular - portador de deficiência"
+        },
+        {
+          "label": "Married (Two Holders) - Disabled",
+          "value": "Casado, dois titulares - portador de deficiência"
+        }
+      ],
+      "label": "Marital Status",
+      "type": "select",
+      "layout": {
+        "row": "Row_0ji2kel",
+        "columns": null
+      },
+      "id": "Field_0lqsdkr",
+      "key": "maritalStatus",
+      "searchable": false,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Number of Dependents",
+      "type": "number",
+      "layout": {
+        "row": "Row_0ji2kel",
+        "columns": null
+      },
+      "id": "Field_0okh0h9",
+      "key": "numberOfDependents",
+      "decimalDigits": 0,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "IBAN",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1jk1il4",
+        "columns": null
+      },
+      "id": "Field_0c2m4o2",
+      "key": "iban",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Start Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1hu78sd",
+        "columns": null
+      },
+      "id": "Field_0jp3x7b",
+      "key": "startDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "text": "**Photo:** {{ if photoLink != \"\" then \"[View](\" + photoLink + \")\" else \"Not Provided\"}}\n\n**Certificate of Qualifications:** {{if certificateOfQualificationsLink != \"\" then \"[View](\" + certificateOfQualificationsLink + \")\" else \"Not Provided\"}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0k47j6l",
+        "columns": null
+      },
+      "id": "Field_1ttualc"
+    }
+  ],
+  "type": "default",
+  "id": "Form_ValidateNewcomerInfo",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "schemaVersion": 16
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_2oa1o9b">{
+  "components": [
+    {
+      "text": "# Assign Manager",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0bw3j09",
+        "columns": null
+      },
+      "id": "Field_019gwfq"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1yqwb5h",
+        "columns": null
+      },
+      "id": "Field_1ihb8pq"
+    },
+    {
+      "label": "Manager (First and Last name)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ljpf75",
+        "columns": null
+      },
+      "id": "Field_01m40iw",
+      "key": "managerName",
+      "description": "Ex. Gonçalo Ramos",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_AssignManager",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_285gtn6">{
+  "components": [
+    {
+      "text": "# Assign Buddy",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1foegp7",
+        "columns": null
+      },
+      "id": "Field_00u2a2x"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}\n\n**Manager Name:** {{managerName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yc8o8u",
+        "columns": null
+      },
+      "id": "Field_0ity66w"
+    },
+    {
+      "label": "Name (First and Last)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1y8ok8c",
+        "columns": null
+      },
+      "id": "Field_0z1c8a4",
+      "key": "buddyName",
+      "validate": {
+        "required": true
+      },
+      "description": "Ex. Gonçalo Ramos",
+      "readonly": false
+    },
+    {
+      "label": "Email Address",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_12zxlua",
+        "columns": null
+      },
+      "id": "Field_1cdkzrr",
+      "key": "buddyEmailAddress",
+      "description": "Ex. goncalo.ramos@syone.com",
+      "validate": {
+        "required": true,
+        "validationType": "email"
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_AssignBuddy",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_1c1nsr1">{
+  "components": [
+    {
+      "text": "# ",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bjmi6n",
+        "columns": 5
+      },
+      "id": "Field_1svfuve"
+    },
+    {
+      "label": "Image view",
+      "type": "image",
+      "layout": {
+        "row": "Row_1bjmi6n",
+        "columns": 5
+      },
+      "id": "Field_1idfa2e",
+      "source": "https://careers.recruiteecdn.com/image/upload/q_auto,f_auto,w_400,c_limit/production/images/BN5l/2dDjxgF-CXUi.png",
+      "properties": {}
+    },
+    {
+      "text": "**The data was sent back to be reviewed by the Office Operations with the following comments:**\n\n{{ooCommentsAboutContractData}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bi6v6r",
+        "columns": null
+      },
+      "id": "Field_1w7dngd",
+      "conditional": {
+        "hide": "=ooCommentsAboutContractData = \"\" or ooCommentsAboutContractData = null"
+      },
+      "properties": {}
+    },
+    {
+      "text": "**The data was sent back to be reviewed by the CEO with the following comments:**\n\n{{ceoCommentsAboutContractData}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bi6v6r",
+        "columns": null
+      },
+      "id": "Field_0zdilgy",
+      "conditional": {
+        "hide": "=ceoCommentsAboutContractData = \"\" or ceoCommentsAboutContractData = null"
+      }
+    },
+    {
+      "text": "**The data failed the auto validation with the following comments:**\n\n{{autoValidationCommentsAboutSalaryData}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bi6v6r",
+        "columns": null
+      },
+      "id": "Field_1a9xy9s",
+      "conditional": {
+        "hide": "=autoValidationCommentsAboutSalaryData = \"\" or autoValidationCommentsAboutSalaryData = null or isSalaryDataValid = true"
+      }
+    },
+    {
+      "text": "___",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0c7a3g3",
+        "columns": null
+      },
+      "id": "Field_0rvh980",
+      "conditional": {
+        "hide": "=ooCommentsAboutContractData = null and ceoCommentsAboutContractData = null and (isSalaryDataValid = true or isSalaryDataValid = null)"
+      }
+    },
+    {
+      "text": "# Add Data for Contract Documents",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ubilj9",
+        "columns": null
+      },
+      "id": "Field_0r80khx"
+    },
+    {
+      "text": "## Newcomer Information",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1x9ld0y",
+        "columns": null
+      },
+      "id": "Field_16lu0hp"
+    },
+    {
+      "text": "**Full Name:** {{fullName}}\n\n**Date of Birth:** {{dateOfBirth}}\n\n**Email Address:** {{emailAddress}}\n\n**Citizen Card (CC) Number:** {{identificationNumber}}\n\n**Citizen Card (CC) Validity:** {{identificationValidity}}\n\n**NIF:** {{nif}}\n\n**NISS:** {{niss}}\n\n**Address:** {{address}}\n\n**Postal Code:** {{postalCode}}\n\n**Marital Status:** {{maritalStatus}}\n\n**Number of Dependents:** {{numberOfDependents}}\n\n**IBAN:** {{iban}}\n\n**Start Date:** {{startDate}}\n\n**Photo:** {{ if photoLink != \"\" then \"[View](\" + photoLink + \")\" else \"Not Provided\"}}\n\n**Certificate of Qualifications:** {{if certificateOfQualificationsLink != \"\" then \"[View](\" + certificateOfQualificationsLink + \")\" else \"Not Provided\"}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_12g484w",
+        "columns": null
+      },
+      "id": "Field_1n8x29n"
+    },
+    {
+      "text": "## Data for Contract Documents",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1c7jxnd",
+        "columns": null
+      },
+      "id": "Field_09uamek"
+    },
+    {
+      "label": "Client",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0rweoy1",
+        "columns": null
+      },
+      "id": "Field_1hizz96",
+      "key": "client",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Professional Services (Technical)",
+          "value": "Professional Services (Technical)"
+        },
+        {
+          "label": "Professional Services (Management)",
+          "value": "Professional Services (Management)"
+        },
+        {
+          "label": "Business Development",
+          "value": "Business Development"
+        },
+        {
+          "label": "Marketing",
+          "value": "Marketing"
+        },
+        {
+          "label": "Human Resources",
+          "value": "Human Resources"
+        },
+        {
+          "label": "Office Operations",
+          "value": "Office Operations"
+        }
+      ],
+      "label": "Area",
+      "type": "select",
+      "layout": {
+        "row": "Row_00754w0",
+        "columns": null
+      },
+      "id": "Field_0dc4lbr",
+      "key": "area",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Associate Engineer",
+          "value": "Associate Engineer"
+        },
+        {
+          "label": "Engineer",
+          "value": "Engineer"
+        },
+        {
+          "label": "Senior Engineer",
+          "value": "Senior Engineer"
+        },
+        {
+          "label": "Architect",
+          "value": "Architect"
+        },
+        {
+          "label": "Solution Manager",
+          "value": "Solution Manager"
+        },
+        {
+          "label": "Senior Solution Manager",
+          "value": "Senior Solution Manager"
+        },
+        {
+          "label": "CTO",
+          "value": "CTO"
+        },
+        {
+          "label": "Associate Team/Project Manager",
+          "value": "Associate Team/Project Manager"
+        },
+        {
+          "label": "Team/Project Manager",
+          "value": "Team/Project Manager"
+        },
+        {
+          "label": "Senior Team/Project Manager",
+          "value": "Senior Team/Project Manager"
+        },
+        {
+          "label": "Professional Services Manager",
+          "value": "Professional Services Manager"
+        },
+        {
+          "label": "CSO",
+          "value": "CSO"
+        },
+        {
+          "label": "Territory Business Developer",
+          "value": "Territory Business Developer"
+        },
+        {
+          "label": "Strategic Business Developer",
+          "value": "Strategic Business Developer"
+        },
+        {
+          "label": "Business Development Manager",
+          "value": "Business Development Manager"
+        },
+        {
+          "label": "CCO",
+          "value": "CCO"
+        },
+        {
+          "label": "Consultant I",
+          "value": "Consultant I"
+        },
+        {
+          "label": "Consultant II",
+          "value": "Consultant II"
+        },
+        {
+          "label": "Expert",
+          "value": "Expert"
+        },
+        {
+          "label": "Manager",
+          "value": "Manager"
+        },
+        {
+          "label": "CMO",
+          "value": "CMO"
+        },
+        {
+          "label": "Associate Specialist",
+          "value": "Associate Specialist"
+        },
+        {
+          "label": "Specialist",
+          "value": "Specialist"
+        },
+        {
+          "label": "Team Leader",
+          "value": "Team Leader"
+        },
+        {
+          "label": "CFO",
+          "value": "CFO"
+        }
+      ],
+      "label": "Level",
+      "type": "select",
+      "layout": {
+        "row": "Row_00754w0",
+        "columns": null
+      },
+      "id": "Field_1tlk0ix",
+      "key": "level",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Base Salary",
+      "type": "number",
+      "layout": {
+        "row": "Row_1iopwvq",
+        "columns": null
+      },
+      "id": "Field_0bhog3l",
+      "key": "baseSalary",
+      "decimalDigits": 2,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Base Salary (In words: X euros)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1iopwvq",
+        "columns": 11
+      },
+      "id": "Field_1dybp36",
+      "key": "baseSalaryInWords",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Expenses",
+      "type": "number",
+      "layout": {
+        "row": "Row_1t0zqh8",
+        "columns": null
+      },
+      "id": "Field_16riz5b",
+      "key": "expenses",
+      "decimalDigits": 2,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Sem Termo",
+          "value": "Sem Termo"
+        },
+        {
+          "label": "Termo Certo",
+          "value": "Termo Certo"
+        },
+        {
+          "label": "Termo Incerto",
+          "value": "Termo Incerto"
+        }
+      ],
+      "label": "Contract Type",
+      "type": "select",
+      "layout": {
+        "row": "Row_0vmdyin",
+        "columns": null
+      },
+      "id": "Field_0d3jwwz",
+      "key": "contractType",
+      "validate": {
+        "required": true
+      },
+      "searchable": false
+    },
+    {
+      "label": "Duration (in months)",
+      "type": "number",
+      "layout": {
+        "row": "Row_0c8oscc",
+        "columns": null
+      },
+      "id": "Field_09kj89j",
+      "key": "contractDuration",
+      "decimalDigits": 1,
+      "conditional": {
+        "hide": "=contractType != \"Termo Certo\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "End Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0c8oscc",
+        "columns": null
+      },
+      "id": "Field_14im0nt",
+      "key": "contractEndDate",
+      "conditional": {
+        "hide": "=contractType != \"Termo Certo\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Full-time",
+          "value": "Full-time"
+        },
+        {
+          "label": "Part-time",
+          "value": "Part-time"
+        }
+      ],
+      "label": "Contract Regime",
+      "type": "select",
+      "layout": {
+        "row": "Row_08kqlxs",
+        "columns": null
+      },
+      "id": "Field_1a3j8xa",
+      "key": "contractRegime",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Hours per Day",
+      "type": "number",
+      "layout": {
+        "row": "Row_1plmwfp",
+        "columns": null
+      },
+      "id": "Field_1yqwpnf",
+      "key": "hoursPerDay",
+      "decimalDigits": 1,
+      "conditional": {
+        "hide": "=contractRegime!=\"Part-time\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Days per Week",
+      "type": "number",
+      "layout": {
+        "row": "Row_1plmwfp",
+        "columns": null
+      },
+      "id": "Field_1rf8g9t",
+      "key": "daysPerWeek",
+      "decimalDigits": 0,
+      "conditional": {
+        "hide": "=contractRegime!=\"Part-time\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "National",
+          "value": "National"
+        },
+        {
+          "label": "Foreign (Schengen Area)",
+          "value": "Foreign (Schengen Area)"
+        },
+        {
+          "label": "Foreign (Outside Schengen Area)",
+          "value": "Foreign (Outside Schengen Area)"
+        }
+      ],
+      "label": "Newcomer Origin",
+      "type": "radio",
+      "layout": {
+        "row": "Row_032pdwz",
+        "columns": null
+      },
+      "id": "Field_1pop7qy",
+      "key": "contractOrigin",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        },
+        {
+          "label": "Not Specified",
+          "value": "Not Specified"
+        }
+      ],
+      "label": "Duodécimos",
+      "type": "radio",
+      "layout": {
+        "row": "Row_1kak12p",
+        "columns": null
+      },
+      "id": "Field_0mg6whn",
+      "key": "duodecimos",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "In-person signing?",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_100z9v7",
+        "columns": null
+      },
+      "id": "Field_193j9e1",
+      "key": "inPersonSigning"
+    }
+  ],
+  "type": "default",
+  "id": "Form_AddDataForContractDocs",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "schemaVersion": 16
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_0qjsttm">{
+  "components": [
+    {
+      "text": "# ",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bjmi6n",
+        "columns": 5
+      },
+      "id": "Field_1svfuve"
+    },
+    {
+      "label": "Image view",
+      "type": "image",
+      "layout": {
+        "row": "Row_1bjmi6n",
+        "columns": 5
+      },
+      "id": "Field_1idfa2e",
+      "source": "https://careers.recruiteecdn.com/image/upload/q_auto,f_auto,w_400,c_limit/production/images/BN5l/2dDjxgF-CXUi.png",
+      "properties": {}
+    },
+    {
+      "text": "**The data was sent back to be reviewed by the Office Operations with the following comments:**\n\n{{ooCommentsAboutContractData}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bi6v6r",
+        "columns": null
+      },
+      "id": "Field_1w7dngd",
+      "conditional": {
+        "hide": "=ooCommentsAboutContractData = \"\" or ooCommentsAboutContractData = null"
+      },
+      "properties": {}
+    },
+    {
+      "text": "**The data was sent back to be reviewed by the CEO with the following comments:**\n\n{{ceoCommentsAboutContractData}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bi6v6r",
+        "columns": null
+      },
+      "id": "Field_0zdilgy",
+      "conditional": {
+        "hide": "=ceoCommentsAboutContractData = \"\" or ceoCommentsAboutContractData = null"
+      }
+    },
+    {
+      "text": "**The data failed the auto validation with the following comments:**\n\n{{autoValidationCommentsAboutSalaryData}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bi6v6r",
+        "columns": null
+      },
+      "id": "Field_1a9xy9s",
+      "conditional": {
+        "hide": "=autoValidationCommentsAboutSalaryData = \"\" or autoValidationCommentsAboutSalaryData = null or isSalaryDataValid = true"
+      }
+    },
+    {
+      "text": "___",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0c7a3g3",
+        "columns": null
+      },
+      "id": "Field_0rvh980",
+      "conditional": {
+        "hide": "=ooCommentsAboutContractData = null and ceoCommentsAboutContractData = null and (isSalaryDataValid = true or isSalaryDataValid = null)"
+      }
+    },
+    {
+      "text": "# Add Data for Contract Documents",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ubilj9",
+        "columns": null
+      },
+      "id": "Field_0r80khx"
+    },
+    {
+      "text": "## Newcomer Information",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1x9ld0y",
+        "columns": null
+      },
+      "id": "Field_16lu0hp"
+    },
+    {
+      "text": "**Full Name:** {{fullName}}\n\n**Date of Birth:** {{dateOfBirth}}\n\n**Email Address:** {{emailAddress}}\n\n**Citizen Card (CC) Number:** {{identificationNumber}}\n\n**Citizen Card (CC) Validity:** {{identificationValidity}}\n\n**NIF:** {{nif}}\n\n**NISS:** {{niss}}\n\n**Address:** {{address}}\n\n**Postal Code:** {{postalCode}}\n\n**Marital Status:** {{maritalStatus}}\n\n**Number of Dependents:** {{numberOfDependents}}\n\n**IBAN:** {{iban}}\n\n**Start Date:** {{startDate}}\n\n**Photo:** {{ if photoLink != \"\" then \"[View](\" + photoLink + \")\" else \"Not Provided\"}}\n\n**Certificate of Qualifications:** {{if certificateOfQualificationsLink != \"\" then \"[View](\" + certificateOfQualificationsLink + \")\" else \"Not Provided\"}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_12g484w",
+        "columns": null
+      },
+      "id": "Field_1n8x29n"
+    },
+    {
+      "text": "## Data for Contract Documents",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1c7jxnd",
+        "columns": null
+      },
+      "id": "Field_09uamek"
+    },
+    {
+      "label": "Client",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0rweoy1",
+        "columns": null
+      },
+      "id": "Field_1hizz96",
+      "key": "client",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Professional Services (Technical)",
+          "value": "Professional Services (Technical)"
+        },
+        {
+          "label": "Professional Services (Management)",
+          "value": "Professional Services (Management)"
+        },
+        {
+          "label": "Business Development",
+          "value": "Business Development"
+        },
+        {
+          "label": "Marketing",
+          "value": "Marketing"
+        },
+        {
+          "label": "Human Resources",
+          "value": "Human Resources"
+        },
+        {
+          "label": "Office Operations",
+          "value": "Office Operations"
+        }
+      ],
+      "label": "Area",
+      "type": "select",
+      "layout": {
+        "row": "Row_00754w0",
+        "columns": null
+      },
+      "id": "Field_0dc4lbr",
+      "key": "area",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Associate Engineer",
+          "value": "Associate Engineer"
+        },
+        {
+          "label": "Engineer",
+          "value": "Engineer"
+        },
+        {
+          "label": "Senior Engineer",
+          "value": "Senior Engineer"
+        },
+        {
+          "label": "Architect",
+          "value": "Architect"
+        },
+        {
+          "label": "Solution Manager",
+          "value": "Solution Manager"
+        },
+        {
+          "label": "Senior Solution Manager",
+          "value": "Senior Solution Manager"
+        },
+        {
+          "label": "CTO",
+          "value": "CTO"
+        },
+        {
+          "label": "Associate Team/Project Manager",
+          "value": "Associate Team/Project Manager"
+        },
+        {
+          "label": "Team/Project Manager",
+          "value": "Team/Project Manager"
+        },
+        {
+          "label": "Senior Team/Project Manager",
+          "value": "Senior Team/Project Manager"
+        },
+        {
+          "label": "Professional Services Manager",
+          "value": "Professional Services Manager"
+        },
+        {
+          "label": "CSO",
+          "value": "CSO"
+        },
+        {
+          "label": "Territory Business Developer",
+          "value": "Territory Business Developer"
+        },
+        {
+          "label": "Strategic Business Developer",
+          "value": "Strategic Business Developer"
+        },
+        {
+          "label": "Business Development Manager",
+          "value": "Business Development Manager"
+        },
+        {
+          "label": "CCO",
+          "value": "CCO"
+        },
+        {
+          "label": "Consultant I",
+          "value": "Consultant I"
+        },
+        {
+          "label": "Consultant II",
+          "value": "Consultant II"
+        },
+        {
+          "label": "Expert",
+          "value": "Expert"
+        },
+        {
+          "label": "Manager",
+          "value": "Manager"
+        },
+        {
+          "label": "CMO",
+          "value": "CMO"
+        },
+        {
+          "label": "Associate Specialist",
+          "value": "Associate Specialist"
+        },
+        {
+          "label": "Specialist",
+          "value": "Specialist"
+        },
+        {
+          "label": "Team Leader",
+          "value": "Team Leader"
+        },
+        {
+          "label": "CFO",
+          "value": "CFO"
+        }
+      ],
+      "label": "Level",
+      "type": "select",
+      "layout": {
+        "row": "Row_00754w0",
+        "columns": null
+      },
+      "id": "Field_1tlk0ix",
+      "key": "level",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Base Salary",
+      "type": "number",
+      "layout": {
+        "row": "Row_1iopwvq",
+        "columns": null
+      },
+      "id": "Field_0bhog3l",
+      "key": "baseSalary",
+      "decimalDigits": 2,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Base Salary (In words: X euros)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1iopwvq",
+        "columns": 11
+      },
+      "id": "Field_1dybp36",
+      "key": "baseSalaryInWords",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Expenses",
+      "type": "number",
+      "layout": {
+        "row": "Row_1t0zqh8",
+        "columns": null
+      },
+      "id": "Field_16riz5b",
+      "key": "expenses",
+      "decimalDigits": 2,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Sem Termo",
+          "value": "Sem Termo"
+        },
+        {
+          "label": "Termo Certo",
+          "value": "Termo Certo"
+        },
+        {
+          "label": "Termo Incerto",
+          "value": "Termo Incerto"
+        }
+      ],
+      "label": "Contract Type",
+      "type": "select",
+      "layout": {
+        "row": "Row_0vmdyin",
+        "columns": null
+      },
+      "id": "Field_0d3jwwz",
+      "key": "contractType",
+      "validate": {
+        "required": true
+      },
+      "searchable": false
+    },
+    {
+      "label": "Duration (in months)",
+      "type": "number",
+      "layout": {
+        "row": "Row_0c8oscc",
+        "columns": null
+      },
+      "id": "Field_09kj89j",
+      "key": "contractDuration",
+      "decimalDigits": 1,
+      "conditional": {
+        "hide": "=contractType != \"Termo Certo\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "End Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0c8oscc",
+        "columns": null
+      },
+      "id": "Field_14im0nt",
+      "key": "contractEndDate",
+      "conditional": {
+        "hide": "=contractType != \"Termo Certo\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Full-time",
+          "value": "Full-time"
+        },
+        {
+          "label": "Part-time",
+          "value": "Part-time"
+        }
+      ],
+      "label": "Contract Regime",
+      "type": "select",
+      "layout": {
+        "row": "Row_08kqlxs",
+        "columns": null
+      },
+      "id": "Field_1a3j8xa",
+      "key": "contractRegime",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Hours per Day",
+      "type": "number",
+      "layout": {
+        "row": "Row_1plmwfp",
+        "columns": null
+      },
+      "id": "Field_1yqwpnf",
+      "key": "hoursPerDay",
+      "decimalDigits": 1,
+      "conditional": {
+        "hide": "=contractRegime!=\"Part-time\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Days per Week",
+      "type": "number",
+      "layout": {
+        "row": "Row_1plmwfp",
+        "columns": null
+      },
+      "id": "Field_1rf8g9t",
+      "key": "daysPerWeek",
+      "decimalDigits": 0,
+      "conditional": {
+        "hide": "=contractRegime!=\"Part-time\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "National",
+          "value": "National"
+        },
+        {
+          "label": "Foreign (Schengen Area)",
+          "value": "Foreign (Schengen Area)"
+        },
+        {
+          "label": "Foreign (Outside Schengen Area)",
+          "value": "Foreign (Outside Schengen Area)"
+        }
+      ],
+      "label": "Newcomer Origin",
+      "type": "radio",
+      "layout": {
+        "row": "Row_032pdwz",
+        "columns": null
+      },
+      "id": "Field_1pop7qy",
+      "key": "contractOrigin",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        },
+        {
+          "label": "Not Specified",
+          "value": "Not Specified"
+        }
+      ],
+      "label": "Duodécimos",
+      "type": "radio",
+      "layout": {
+        "row": "Row_1kak12p",
+        "columns": null
+      },
+      "id": "Field_0mg6whn",
+      "key": "duodecimos",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "In-person signing?",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_100z9v7",
+        "columns": null
+      },
+      "id": "Field_193j9e1",
+      "key": "inPersonSigning"
+    }
+  ],
+  "type": "default",
+  "id": "Form_AddDataForContractDocs",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "schemaVersion": 16
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_2arknk5">{
+  "components": [
+    {
+      "text": "# Prepare Contract",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_09rssee",
+        "columns": null
+      },
+      "id": "Field_0r80khx"
+    },
+    {
+      "label": "I have prepared the contract, got it signed by the CEO and uploaded it.",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0s2w0ww",
+        "columns": null
+      },
+      "id": "Field_18f7flg",
+      "key": "contractPrepared",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "text": "**Upload Contract Form:** {{ if uploadContractFormLink then \"[Link](\" + uploadContractFormLink + \")\" else \"Not Found\" }}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0fst384",
+        "columns": null
+      },
+      "id": "Field_0tyxwmw"
+    },
+    {
+      "text": "## Newcomer Information",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1rgwjrq",
+        "columns": null
+      },
+      "id": "Field_1mcvhyj"
+    },
+    {
+      "text": "**Full Name:** {{fullName}}\n\n**Date of Birth:** {{dateOfBirth}}\n\n**Email Address:** {{emailAddress}}\n\n**Citizen Card (CC) Number:** {{identificationNumber}}\n\n**Citizen Card (CC) Validity:** {{identificationValidity}}\n\n**NIF:** {{nif}}\n\n**NISS:** {{niss}}\n\n**Address:** {{address}}\n\n**Postal Code:** {{postalCode}}\n\n**Marital Status:** {{maritalStatus}}\n\n**Number of Dependents:** {{numberOfDependents}}\n\n**IBAN:** {{iban}}\n\n**Start Date:** {{startDate}}\n\n**Photo:** {{ if photoLink != \"\" then \"[View](\" + photoLink + \")\" else \"Not Provided\"}}\n\n**Certificate of Qualifications:** {{if certificateOfQualificationsLink != \"\" then \"[View](\" + certificateOfQualificationsLink + \")\" else \"Not Provided\"}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_06b81fx",
+        "columns": null
+      },
+      "id": "Field_0x4hzom"
+    },
+    {
+      "text": "## Data for Contract Documents",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1c7jxnd",
+        "columns": null
+      },
+      "id": "Field_09uamek"
+    },
+    {
+      "text": "**Client:** {{client}}\n\n**Area:** {{area}}\n\n**Level:** {{level}}\n\n**Base Salary:** {{baseSalary}}\n\n**IHT:** {{iht}} \n\n**Expenses:** {{expenses}}\n\n**Contract Type:** {{contractType}} \n\n{{if contractDuration != null then \"**Duration (in months):** \" + string(contractDuration) else \"\"}}\n\n{{if contractEndDate != null then \"**End Date:** \" + contractEndDate else \"\"}}\n\n**Contract Regime:** {{contractRegime}}\n\n{{if hoursPerDay != null then \"**Hours per Day:** \" + string(hoursPerDay) else \"\"}}\n\n{{if daysPerWeek != null then \"**Days Per Week:** \" + string(daysPerWeek) else \"\"}}\n\n**Newcomer Origin:** {{contractOrigin}}\n\n**Duodécimos:** {{duodecimos}}\n\n**In-Person Signing:** {{if inPersonSigning = true then \"Yes\" else \"No\"}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1cn2gja",
+        "columns": null
+      },
+      "id": "Field_14ou714"
+    }
+  ],
+  "type": "default",
+  "id": "Form_AddDataForContractDocs",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_1ao5im2">{
+  "components": [
+    {
+      "text": "# Approve Contract",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0njg3ey",
+        "columns": null
+      },
+      "id": "Field_0txijxp"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}\n\n**Contract:** {{ if contractLink then \"[View](\" + contractLink + \")\" else \"Not Found\" }}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0bj7ts8",
+        "columns": null
+      },
+      "id": "Field_09yx3ni"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "yes"
+        },
+        {
+          "label": "No",
+          "value": "no"
+        }
+      ],
+      "label": "Do you approve?",
+      "type": "radio",
+      "layout": {
+        "row": "Row_1htf9f9",
+        "columns": null
+      },
+      "id": "Field_1kpiopc",
+      "key": "contractApproved",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Comments",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1yfxvo0",
+        "columns": null
+      },
+      "id": "Field_1j5qb09",
+      "key": "ceoCommentsAboutContractData",
+      "conditional": {
+        "hide": "=contractApproved != \"no\""
+      },
+      "validate": {
+        "required": true
+      },
+      "description": "This field contains the information explaining the rejection to P&amp;C"
+    }
+  ],
+  "type": "default",
+  "id": "Form_ApproveContract",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_2pa51op">{
+  "components": [
+    {
+      "text": "# Get Contract Documents Signed",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1a6ldxj",
+        "columns": null
+      },
+      "id": "Field_0hf4puq"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0y6wuan",
+        "columns": null
+      },
+      "id": "Field_1er2ncn"
+    },
+    {
+      "text": "## Contract Docs",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0vn8yz3",
+        "columns": null
+      },
+      "id": "Field_1vqd3zf"
+    },
+    {
+      "text": "**Contrato:** {{ if contractLink then \"[View](\" + contractLink + \")\" else \"Not Found\" }}\n\n**Política de Utilização SI-TI Syone:** {{ if usagePolicyLink then \"[View](\" + usagePolicyLink + \")\" else \"Not Found\" }}\n\n**Acordo IHT:** {{ if IHTAgreementLink then \"[View](\" + IHTAgreementLink + \")\" else \"Not Found\" }}\n\n{{ if duodecimos = \"No\" then \"\" else \"**Aditamento:** \" + (if aditamentoLink then \"[View](\" + aditamentoLink + \")\" else \"Not Found\")}}\n\n**Ficha Individual do Colaborador:** {{ if individualRecordLink then \"[View](\" + individualRecordLink + \")\" else \"Not Found\" }}\n\n**Autorização de Utilização de Imagens:** {{ if imageUseAuthorizationLink then \"[View](\" + imageUseAuthorizationLink + \")\" else \"Not Found\" }}\n\n",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0uqlljg",
+        "columns": null
+      },
+      "id": "Field_0p3woc2"
+    },
+    {
+      "label": "I have got the contract documents signed by the newcomer",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1meht6z",
+        "columns": null
+      },
+      "id": "Field_1mfh8n3",
+      "key": "contractSigned",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_GetContractDocsSigned",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_0shahsv">{
+  "components": [
+    {
+      "text": "# Forward Signed Docs to Office Operations",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yr9a3n",
+        "columns": null
+      },
+      "id": "Field_068w30p"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_07mnhhh",
+        "columns": null
+      },
+      "id": "Field_1yrrwk5"
+    },
+    {
+      "label": "I have forwarded the contract documents, signed and returned by the newcomer, to Office Operations",
+      "type": "checkbox",
+      "layout": {
+        "row": null,
+        "columns": null
+      },
+      "id": "Field_1w8s1gm",
+      "key": "signedContractForwarded",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_ForwardSignedDocsToOO",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_06q02tk">{
+  "components": [
+    {
+      "text": "# Task Checklist",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yl8by7",
+        "columns": null
+      },
+      "id": "Field_16b64op"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": null,
+        "columns": null
+      },
+      "id": "Field_08xv3ov"
+    },
+    {
+      "label": "Contract Documents Archived",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_12d96fz",
+        "columns": null
+      },
+      "id": "Field_0qa4s8f",
+      "key": "contractDocsArchived",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Certificate of Qualifications Archived",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0d1hedj",
+        "columns": null
+      },
+      "id": "Field_0cxn0dc",
+      "key": "certificateOfQualificationsArchived",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Meal Allowance Card Requested",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1muws48",
+        "columns": null
+      },
+      "id": "Field_1tw0lym",
+      "key": "mealAllowanceCardRequested",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Newcomer Registered in Social Security",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0058q70",
+        "columns": null
+      },
+      "id": "Field_0id92q9",
+      "key": "newcomerRegisteredInSocialSecurity",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Newcomer Registered in Health Insurance",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1lze1ux",
+        "columns": null
+      },
+      "id": "Field_13a7ktf",
+      "key": "newcomerRegisteredInHealthInsurance",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Newcomer Registered in Workcare",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_06bzmht",
+        "columns": null
+      },
+      "id": "Field_067jgeo",
+      "key": "newcomerRegisteredInWorkcare",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_ExternalTasksChecklist",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_17hpt7q">{
+  "components": [
+    {
+      "text": "# Create Life Profile",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0xrs8uc",
+        "columns": null
+      },
+      "id": "Field_095n11n"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_16tfxbn",
+        "columns": null
+      },
+      "id": "Field_1jy61lv"
+    },
+    {
+      "label": "I have created newcomer's Life profile",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1vqqifv",
+        "columns": null
+      },
+      "id": "Field_1feroal",
+      "key": "lifeProfileConfigured",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_CreateLifeProfile",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_02e17tr">{
+  "components": [
+    {
+      "text": "# Create Gerir Profile",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ymayc5",
+        "columns": null
+      },
+      "id": "Field_0q0p4gx"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1l6vfyx",
+        "columns": null
+      },
+      "id": "Field_05tzzsw"
+    },
+    {
+      "label": "I have created newcomer's Gerir profile",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_08dhk7i",
+        "columns": null
+      },
+      "id": "Field_0tvy7l0",
+      "key": "gerirProfileConfigured",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_CreateGerirProfile",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_3t4gksr">{
+  "components": [
+    {
+      "text": "# Close Jira Ticket",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ro1omd",
+        "columns": null
+      },
+      "id": "Field_1yzgfqv"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0lnqrlf",
+        "columns": null
+      },
+      "id": "Field_0jbf7y8"
+    },
+    {
+      "label": "I have closed the Jira ticket",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1m5r4p8",
+        "columns": null
+      },
+      "id": "Field_0b1hxcf",
+      "key": "ticketClosed",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_CloseJiraTicket",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_1n1fi89">{
+  "components": [
+    {
+      "text": "# Open Jira Ticket",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0kiv9na",
+        "columns": null
+      },
+      "id": "Field_13q33zp"
+    },
+    {
+      "text": "## Newcomer Information",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ot9snd",
+        "columns": null
+      },
+      "id": "Field_15mtkct"
+    },
+    {
+      "text": "**Full Name:** {{fullName}}\n\n**Date of Birth:** {{dateOfBirth}}\n\n**Email Address:** {{emailAddress}}\n\n**Citizen Card (CC) Number:** {{identificationNumber}}\n\n**Citizen Card (CC) Validity:** {{identificationValidity}}\n\n**NIF:** {{nif}}\n\n**NISS:** {{niss}}\n\n**Address:** {{address}}\n\n**Postal Code:** {{postalCode}}\n\n**Marital Status:** {{maritalStatus}}\n\n**Number of Dependents:** {{numberOfDependents}}\n\n**IBAN:** {{iban}}\n\n**Start Date:** {{startDate}}\n\n**Photo:** {{ if photoLink != \"\" then \"[View](\" + photoLink + \")\" else \"Not Provided\"}}\n\n**Certificate of Qualifications:** {{if certificateOfQualificationsLink != \"\" then \"[View](\" + certificateOfQualificationsLink + \")\" else \"Not Provided\"}}\n",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1giexle",
+        "columns": null
+      },
+      "id": "Field_1lipnaq"
+    },
+    {
+      "label": "I have opened the Jira ticket",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0aoq319",
+        "columns": null
+      },
+      "id": "Field_041yopg",
+      "key": "ticketOpened",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_OpenJiraTicket",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_2fhbr6q">{
+  "components": [
+    {
+      "text": "# Run Scripts",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_03ojqqp",
+        "columns": null
+      },
+      "id": "Field_04c4ycg"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1b9jf45",
+        "columns": null
+      },
+      "id": "Field_0lu5mn4"
+    },
+    {
+      "label": "Newcomer's Syone Email Address",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0pmjvqd",
+        "columns": null
+      },
+      "id": "Field_1p4jvyw",
+      "key": "companyEmailAddress",
+      "description": "Ex. goncalo.ramos@syone.com",
+      "validate": {
+        "required": true,
+        "validationType": "email"
+      }
+    },
+    {
+      "label": "I have run the Jira workflow scripts for the newcomer",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1jqrwuu",
+        "columns": null
+      },
+      "id": "Field_0r0t4fq",
+      "key": "scriptsRan",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_RunScripts",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_0v01884">{
+  "components": [
+    {
+      "text": "# Prepare Equipment and Update Snipe-IT",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ov9rv7",
+        "columns": null
+      },
+      "id": "Field_1xhfz7m"
+    },
+    {
+      "label": "I have prepared the equipment for the newcomer and updated the data on Snipe-IT",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1wwinfg",
+        "columns": null
+      },
+      "id": "Field_0bi3swq",
+      "key": "equipmentPrepared",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_PrepareEquipmentUpdateSnipeIT",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_3b4fj9l">{
+  "components": [
+    {
+      "text": "# Verify Policies Approval",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_03whooj",
+        "columns": null
+      },
+      "id": "Field_1datvaa"
+    },
+    {
+      "label": "I have verified that the company policies have been approved by the newcomer",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_03dk1o2",
+        "columns": null
+      },
+      "id": "Field_1axb2rk",
+      "key": "policiesApproved",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_VerifyPoliciesApproval",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_3ef9ml5">{
+  "components": [
+    {
+      "text": "# Validate Jira Ticket Data",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0aaeu0n",
+        "columns": null
+      },
+      "id": "Field_0hcu1nv"
+    },
+    {
+      "label": "I have checked and validated the Jira ticket data",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1opl5f4",
+        "columns": null
+      },
+      "id": "Field_0jiei82",
+      "key": "ticketValidated",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_ValidateJiraTicket",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}</zeebe:userTaskForm>
+    </bpmn:extensionElements>
+    <bpmn:laneSet id="LaneSet_1dhmpal">
+      <bpmn:lane id="Lane_PeopleAndCulture" name="People and Culture">
+        <bpmn:flowNodeRef>Task_ValidateNewcomerInfo</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_FormSubmitted</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_SendMailsAboutBuddy</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_19bzqjm</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AutoValidateSalaryData</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0vr1ay8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_OpenTicket</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0a4kyge</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AssignBuddy</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AddContractData</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_12w3zmn</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_06bqwct</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_SendContractDocsToNewcomer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_DeliverSignedDocsToOO</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_GetContractDocsSigned</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0fzoisp</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ForwardSignedDocsToOO</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_WaitForSignedDocs</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0ngo6al</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AssignManager</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_CEO" name="CEO">
+        <bpmn:flowNodeRef>Task_ApproveContract</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0pmdndo</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_OfficeOperations" name="Office Operations">
+        <bpmn:flowNodeRef>Task_PrepareContract</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AutoPrepareContract</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1w1z08t</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ChooseContractTemplate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_05brd8l</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ValidateContractData</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1dprzgn</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_CreateGerirProfile</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_CreateLifeProfile</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1g4wfgk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1o1ckic</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_03boyyg</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0i51o2s</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_TaskChecklist</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1rjbrmr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_PrepareOtherContractDocs</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_SupportServices" name="Support Services">
+        <bpmn:flowNodeRef>Task_VerifyPoliciesApproval</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_PrepareEquipmentUpdateSnipeIT</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ValidateTicket</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0iskq0p</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_11jgg9h</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_RunScripts</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1rj0934</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0fepw2m</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_CloseTicket</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0r0e8wi</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_OnboardingComplete</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_PerformProcessCleanup</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:sequenceFlow id="Flow_07o19x6" sourceRef="Gateway_0iskq0p" targetRef="Task_VerifyPoliciesApproval" />
+    <bpmn:sequenceFlow id="Flow_0arh7y7" sourceRef="Task_PrepareEquipmentUpdateSnipeIT" targetRef="Gateway_0iskq0p" />
+    <bpmn:sequenceFlow id="Flow_03mcijs" sourceRef="Task_SendMailsAboutBuddy" targetRef="Gateway_0fepw2m" />
+    <bpmn:sequenceFlow id="Flow_1bejxek" sourceRef="Gateway_0fepw2m" targetRef="Task_PerformProcessCleanup" />
+    <bpmn:sequenceFlow id="Flow_05bpi6b" sourceRef="Task_CloseTicket" targetRef="Gateway_0fepw2m" />
+    <bpmn:sequenceFlow id="Flow_0wb6psn" sourceRef="Gateway_0r0e8wi" targetRef="Task_CloseTicket" />
+    <bpmn:sequenceFlow id="Flow_0q14agd" sourceRef="Task_VerifyPoliciesApproval" targetRef="Gateway_0r0e8wi" />
+    <bpmn:sequenceFlow id="Flow_1cdkjzx" sourceRef="Gateway_1g4wfgk" targetRef="Gateway_0r0e8wi" />
+    <bpmn:sequenceFlow id="Flow_078c98x" sourceRef="Gateway_1o1ckic" targetRef="Gateway_1g4wfgk" />
+    <bpmn:sequenceFlow id="Flow_0uimit5" sourceRef="Task_CreateGerirProfile" targetRef="Gateway_1o1ckic" />
+    <bpmn:sequenceFlow id="Flow_1fox9gd" sourceRef="Task_CreateLifeProfile" targetRef="Gateway_1o1ckic" />
+    <bpmn:sequenceFlow id="Flow_1l441d5" sourceRef="Gateway_0i51o2s" targetRef="Task_CreateGerirProfile" />
+    <bpmn:sequenceFlow id="Flow_08817bz" sourceRef="Gateway_0i51o2s" targetRef="Task_CreateLifeProfile" />
+    <bpmn:sequenceFlow id="Flow_1u9srex" sourceRef="Gateway_03boyyg" targetRef="Gateway_0i51o2s" />
+    <bpmn:sequenceFlow id="Flow_1k6rrx5" sourceRef="Task_TaskChecklist" targetRef="Gateway_1g4wfgk" />
+    <bpmn:sequenceFlow id="Flow_1y2in03" sourceRef="Gateway_1rjbrmr" targetRef="Gateway_03boyyg" />
+    <bpmn:sequenceFlow id="Flow_1tsoyer" sourceRef="Gateway_1rjbrmr" targetRef="Task_TaskChecklist" />
+    <bpmn:sequenceFlow id="Flow_1fx8bpp" name="no" sourceRef="Gateway_1w1z08t" targetRef="Task_PrepareContract">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=contractAutomated = false</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0g8mpfx" name="yes" sourceRef="Gateway_1w1z08t" targetRef="Task_AutoPrepareContract">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=contractAutomated = true</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_123as5u" name="yes" sourceRef="Gateway_0pmdndo" targetRef="Gateway_1dprzgn">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=contractApproved = "yes"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1d56zur" sourceRef="Task_ApproveContract" targetRef="Gateway_0pmdndo" />
+    <bpmn:sequenceFlow id="Flow_0m0jkr5" sourceRef="Task_GetContractDocsSigned" targetRef="Task_DeliverSignedDocsToOO" />
+    <bpmn:sequenceFlow id="Flow_1ep8okt" sourceRef="Gateway_0fzoisp" targetRef="Gateway_1rjbrmr" />
+    <bpmn:sequenceFlow id="Flow_0i0dgbf" sourceRef="Task_DeliverSignedDocsToOO" targetRef="Gateway_0fzoisp" />
+    <bpmn:sequenceFlow id="Flow_0o20gej" sourceRef="Task_ForwardSignedDocsToOO" targetRef="Gateway_0fzoisp" />
+    <bpmn:sequenceFlow id="Flow_1y2rgi6" sourceRef="Task_WaitForSignedDocs" targetRef="Task_ForwardSignedDocsToOO" />
+    <bpmn:sequenceFlow id="Flow_0qhcq4c" sourceRef="Task_SendContractDocsToNewcomer" targetRef="Task_WaitForSignedDocs" />
+    <bpmn:sequenceFlow id="Flow_0kgt0cp" name="yes" sourceRef="Gateway_0ngo6al" targetRef="Task_GetContractDocsSigned">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=inPersonSigning = true</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_085su9u" name="no" sourceRef="Gateway_0ngo6al" targetRef="Task_SendContractDocsToNewcomer">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=inPersonSigning = false</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1dzck7v" sourceRef="Task_PrepareOtherContractDocs" targetRef="Gateway_0ngo6al" />
+    <bpmn:sequenceFlow id="Flow_0bc7hgd" sourceRef="Gateway_19bzqjm" targetRef="Task_SendMailsAboutBuddy" />
+    <bpmn:sequenceFlow id="Flow_1pxayvy" sourceRef="Gateway_11jgg9h" targetRef="Gateway_0iskq0p" />
+    <bpmn:sequenceFlow id="Flow_0dkkf6k" name="scripts have&#10; run" sourceRef="Gateway_11jgg9h" targetRef="Gateway_19bzqjm" />
+    <bpmn:sequenceFlow id="Flow_1vft4xp" name="scripts have&#10;run" sourceRef="Gateway_11jgg9h" targetRef="Gateway_03boyyg" />
+    <bpmn:sequenceFlow id="Flow_19ymg93" sourceRef="Task_RunScripts" targetRef="Gateway_11jgg9h" />
+    <bpmn:sequenceFlow id="Flow_1yjlz1u" sourceRef="Gateway_1rj0934" targetRef="Task_PrepareEquipmentUpdateSnipeIT" />
+    <bpmn:sequenceFlow id="Flow_0i9tbqy" sourceRef="Gateway_1rj0934" targetRef="Task_RunScripts" />
+    <bpmn:sequenceFlow id="Flow_1w1cqwu" sourceRef="Task_ValidateTicket" targetRef="Gateway_1rj0934" />
+    <bpmn:sequenceFlow id="Flow_153zljr" sourceRef="Task_ChooseContractTemplate" targetRef="Gateway_1w1z08t" />
+    <bpmn:sequenceFlow id="Flow_191cc7q" name="yes" sourceRef="Gateway_05brd8l" targetRef="Task_ChooseContractTemplate">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=validateDataDecision = "yes"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1743ghe" sourceRef="Task_ValidateContractData" targetRef="Gateway_05brd8l" />
+    <bpmn:sequenceFlow id="Flow_166seut" name="yes" sourceRef="Gateway_0vr1ay8" targetRef="Task_ValidateContractData">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=isSalaryDataValid=true</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1gfv7rn" sourceRef="Task_AutoValidateSalaryData" targetRef="Gateway_0vr1ay8" />
+    <bpmn:sequenceFlow id="Flow_0ssxgm7" sourceRef="Task_OpenTicket" targetRef="Task_ValidateTicket" />
+    <bpmn:sequenceFlow id="Flow_0zijee5" sourceRef="Gateway_0a4kyge" targetRef="Task_OpenTicket" />
+    <bpmn:sequenceFlow id="Flow_0cl587n" sourceRef="Task_AssignBuddy" targetRef="Gateway_19bzqjm" />
+    <bpmn:sequenceFlow id="Flow_0qwppd4" sourceRef="Task_AddContractData" targetRef="Task_AutoValidateSalaryData" />
+    <bpmn:sequenceFlow id="Flow_0h403dd" sourceRef="Gateway_12w3zmn" targetRef="Task_AddContractData" />
+    <bpmn:sequenceFlow id="Flow_1f7p5dm" name="no" sourceRef="Gateway_0pmdndo" targetRef="Gateway_12w3zmn">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=contractApproved = "no"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1tl9ixa" name="no" sourceRef="Gateway_05brd8l" targetRef="Gateway_12w3zmn">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=validateDataDecision = "no"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_05kf4e5" name="no" sourceRef="Gateway_0vr1ay8" targetRef="Gateway_12w3zmn">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=isSalaryDataValid=false</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1cvtzwe" sourceRef="Gateway_0a4kyge" targetRef="Gateway_12w3zmn" />
+    <bpmn:sequenceFlow id="Flow_020bpw1" sourceRef="Task_ValidateNewcomerInfo" targetRef="Task_AssignManager" />
+    <bpmn:sequenceFlow id="Flow_0nuz05i" sourceRef="Gateway_06bqwct" targetRef="Task_AssignBuddy" />
+    <bpmn:sequenceFlow id="Flow_0laezbg" sourceRef="Gateway_06bqwct" targetRef="Gateway_0a4kyge" />
+    <bpmn:sequenceFlow id="Flow_11yxlf2" sourceRef="Task_AssignManager" targetRef="Gateway_06bqwct" />
+    <bpmn:sequenceFlow id="Flow_048zt7n" sourceRef="StartEvent_FormSubmitted" targetRef="Task_ValidateNewcomerInfo" />
+    <bpmn:userTask id="Task_ValidateNewcomerInfo" name="Validate Newcomer Info">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_25kakc8" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Validate Newcomer Info" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="people.culture" candidateUsers="people.culture" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_048zt7n</bpmn:incoming>
+      <bpmn:outgoing>Flow_020bpw1</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:startEvent id="StartEvent_FormSubmitted" name="Newcomer Submitted Form">
+      <bpmn:outgoing>Flow_048zt7n</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1jpjyaq" sourceRef="Task_PerformProcessCleanup" targetRef="EndEvent_OnboardingComplete" />
+    <bpmn:sequenceFlow id="Flow_18y6kxz" sourceRef="Task_AutoPrepareContract" targetRef="Task_ApproveContract" />
+    <bpmn:sequenceFlow id="Flow_0iu4kdx" sourceRef="Task_PrepareContract" targetRef="Gateway_1dprzgn" />
+    <bpmn:sequenceFlow id="Flow_1ufz4c6" sourceRef="Gateway_1dprzgn" targetRef="Task_PrepareOtherContractDocs" />
+    <bpmn:manualTask id="Task_VerifyPoliciesApproval" name="Verify Policies Approval">
+      <bpmn:incoming>Flow_07o19x6</bpmn:incoming>
+      <bpmn:outgoing>Flow_0q14agd</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="Task_PrepareEquipmentUpdateSnipeIT" name="Prepare Equipment and Update Snipe-IT">
+      <bpmn:incoming>Flow_1yjlz1u</bpmn:incoming>
+      <bpmn:outgoing>Flow_0arh7y7</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="Task_ValidateTicket" name="Validate Jira Ticket">
+      <bpmn:incoming>Flow_0ssxgm7</bpmn:incoming>
+      <bpmn:outgoing>Flow_1w1cqwu</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:parallelGateway id="Gateway_0iskq0p">
+      <bpmn:incoming>Flow_0arh7y7</bpmn:incoming>
+      <bpmn:incoming>Flow_1pxayvy</bpmn:incoming>
+      <bpmn:outgoing>Flow_07o19x6</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:serviceTask id="Task_SendMailsAboutBuddy" name="Send Mails About Buddy">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="sendMailsAboutBuddy" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0bc7hgd</bpmn:incoming>
+      <bpmn:outgoing>Flow_03mcijs</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_PrepareContract" name="Prepare Contract">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2arknk5" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Prepare Contract" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="office.operations" candidateUsers="office.operations" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1fx8bpp</bpmn:incoming>
+      <bpmn:outgoing>Flow_0iu4kdx</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_AutoPrepareContract" name="Prepare Contract (auto)">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="prepareContract" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0g8mpfx</bpmn:incoming>
+      <bpmn:outgoing>Flow_18y6kxz</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gateway_1w1z08t" name="Automatic Preparation?">
+      <bpmn:incoming>Flow_153zljr</bpmn:incoming>
+      <bpmn:outgoing>Flow_0g8mpfx</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1fx8bpp</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:parallelGateway id="Gateway_19bzqjm">
+      <bpmn:incoming>Flow_0cl587n</bpmn:incoming>
+      <bpmn:incoming>Flow_0dkkf6k</bpmn:incoming>
+      <bpmn:outgoing>Flow_0bc7hgd</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:parallelGateway id="Gateway_11jgg9h">
+      <bpmn:incoming>Flow_19ymg93</bpmn:incoming>
+      <bpmn:outgoing>Flow_1pxayvy</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1vft4xp</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0dkkf6k</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:userTask id="Task_RunScripts" name="Run Scripts">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2fhbr6q" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Run Scripts" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="support.services" candidateUsers="support.services" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0i9tbqy</bpmn:incoming>
+      <bpmn:outgoing>Flow_19ymg93</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:parallelGateway id="Gateway_1rj0934">
+      <bpmn:incoming>Flow_1w1cqwu</bpmn:incoming>
+      <bpmn:outgoing>Flow_0i9tbqy</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1yjlz1u</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:businessRuleTask id="Task_ChooseContractTemplate" name="Choose Contract Template">
+      <bpmn:extensionElements>
+        <zeebe:calledDecision decisionId="chooseContractTemplate" resultVariable="contractTemplateResult" />
+        <zeebe:ioMapping>
+          <zeebe:output source="=contractTemplateResult.contractTemplate" target="contractTemplate" />
+          <zeebe:output source="=contractTemplateResult.contractAutomated" target="contractAutomated" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_191cc7q</bpmn:incoming>
+      <bpmn:outgoing>Flow_153zljr</bpmn:outgoing>
+    </bpmn:businessRuleTask>
+    <bpmn:businessRuleTask id="Task_AutoValidateSalaryData" name="Auto-Validate Salary Data">
+      <bpmn:extensionElements>
+        <zeebe:calledDecision decisionId="autoValidateSalaryData" resultVariable="autoValidationResult" />
+        <zeebe:ioMapping>
+          <zeebe:input source="=baseSalary+iht" target="baseIHT" />
+          <zeebe:output source="=autoValidationResult.isSalaryDataValid" target="isSalaryDataValid" />
+          <zeebe:output source="=autoValidationResult.autoValidationCommentsAboutSalaryData" target="autoValidationCommentsAboutSalaryData" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0qwppd4</bpmn:incoming>
+      <bpmn:outgoing>Flow_1gfv7rn</bpmn:outgoing>
+    </bpmn:businessRuleTask>
+    <bpmn:exclusiveGateway id="Gateway_05brd8l" name="Data correct?">
+      <bpmn:incoming>Flow_1743ghe</bpmn:incoming>
+      <bpmn:outgoing>Flow_1tl9ixa</bpmn:outgoing>
+      <bpmn:outgoing>Flow_191cc7q</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_ValidateContractData" name="Validate Data">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_0qjsttm" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Validate Data" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="office.operations" candidateUsers="office.operations" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_166seut</bpmn:incoming>
+      <bpmn:outgoing>Flow_1743ghe</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_0vr1ay8" name="Salary data correct?">
+      <bpmn:incoming>Flow_1gfv7rn</bpmn:incoming>
+      <bpmn:outgoing>Flow_05kf4e5</bpmn:outgoing>
+      <bpmn:outgoing>Flow_166seut</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_OpenTicket" name="Open Jira Ticket">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_1n1fi89" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Open Jira Ticket" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="people.culture" candidateUsers="people.culture" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0zijee5</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ssxgm7</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:parallelGateway id="Gateway_0a4kyge">
+      <bpmn:incoming>Flow_0laezbg</bpmn:incoming>
+      <bpmn:outgoing>Flow_1cvtzwe</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0zijee5</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:userTask id="Task_AssignBuddy" name="Assign Buddy">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_285gtn6" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Assign Buddy" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="people.culture" candidateUsers="people.culture" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0nuz05i</bpmn:incoming>
+      <bpmn:outgoing>Flow_0cl587n</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_AddContractData" name="Add Data for Contract Docs">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_1c1nsr1" />
+        <zeebe:ioMapping>
+          <zeebe:output source="=client" target="client" />
+          <zeebe:output source="=area" target="area" />
+          <zeebe:output source="=level" target="level" />
+          <zeebe:output source="=baseSalary" target="baseSalary" />
+          <zeebe:output source="=baseSalaryInWords" target="baseSalaryInWords" />
+          <zeebe:output source="=baseSalary * 0.25" target="iht" />
+          <zeebe:output source="=expenses" target="expenses" />
+          <zeebe:output source="=contractType" target="contractType" />
+          <zeebe:output source="=if contractDuration != null then contractDuration else null" target="contractDuration" />
+          <zeebe:output source="=if contractEndDate != null then contractEndDate else null" target="contractEndDate" />
+          <zeebe:output source="=contractRegime" target="contractRegime" />
+          <zeebe:output source="=if hoursPerDay != null then hoursPerDay else null" target="hoursPerDay" />
+          <zeebe:output source="=if daysPerWeek != null then daysPerWeek else null" target="daysPerWeek" />
+          <zeebe:output source="=contractOrigin" target="contractOrigin" />
+          <zeebe:output source="=duodecimos" target="duodecimos" />
+          <zeebe:output source="=inPersonSigning" target="inPersonSigning" />
+          <zeebe:output source="=&#34;&#34;" target="ooCommentsAboutContractData" />
+          <zeebe:output source="=&#34;&#34;" target="ceoCommentsAboutContractData" />
+          <zeebe:output source="=null" target="validateDataDecision" />
+          <zeebe:output source="=null" target="contractApproved" />
+          <zeebe:output source="=null" target="contractPrepared" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Add Data for Contract Docs" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="people.culture" candidateUsers="people.culture" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0h403dd</bpmn:incoming>
+      <bpmn:outgoing>Flow_0qwppd4</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_12w3zmn">
+      <bpmn:incoming>Flow_1cvtzwe</bpmn:incoming>
+      <bpmn:incoming>Flow_05kf4e5</bpmn:incoming>
+      <bpmn:incoming>Flow_1tl9ixa</bpmn:incoming>
+      <bpmn:incoming>Flow_1f7p5dm</bpmn:incoming>
+      <bpmn:outgoing>Flow_0h403dd</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:parallelGateway id="Gateway_06bqwct">
+      <bpmn:incoming>Flow_11yxlf2</bpmn:incoming>
+      <bpmn:outgoing>Flow_0laezbg</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0nuz05i</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:userTask id="Task_ApproveContract" name="Approve Contract">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_1ao5im2" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Approve Contract" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="ceo" candidateUsers="ceo" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_18y6kxz</bpmn:incoming>
+      <bpmn:outgoing>Flow_1d56zur</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_0pmdndo" name="Approved?">
+      <bpmn:incoming>Flow_1d56zur</bpmn:incoming>
+      <bpmn:outgoing>Flow_1f7p5dm</bpmn:outgoing>
+      <bpmn:outgoing>Flow_123as5u</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_1dprzgn">
+      <bpmn:incoming>Flow_123as5u</bpmn:incoming>
+      <bpmn:incoming>Flow_0iu4kdx</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ufz4c6</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:parallelGateway id="Gateway_0fepw2m">
+      <bpmn:incoming>Flow_05bpi6b</bpmn:incoming>
+      <bpmn:incoming>Flow_03mcijs</bpmn:incoming>
+      <bpmn:outgoing>Flow_1bejxek</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:serviceTask id="Task_SendContractDocsToNewcomer" name="Send Contract Docs to Newcomer">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="sendContractDocsToNewcomer" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_085su9u</bpmn:incoming>
+      <bpmn:outgoing>Flow_0qhcq4c</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_CloseTicket" name="Close Jira Ticket">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_3t4gksr" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Close Jira Ticket" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="support.services" candidateUsers="support.services" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0wb6psn</bpmn:incoming>
+      <bpmn:outgoing>Flow_05bpi6b</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:parallelGateway id="Gateway_0r0e8wi">
+      <bpmn:incoming>Flow_1cdkjzx</bpmn:incoming>
+      <bpmn:incoming>Flow_0q14agd</bpmn:incoming>
+      <bpmn:outgoing>Flow_0wb6psn</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:userTask id="Task_CreateGerirProfile" name="Create Gerir Profile">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_02e17tr" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Create Gerir Profile" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="office.operations" candidateUsers="office.operations" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1l441d5</bpmn:incoming>
+      <bpmn:outgoing>Flow_0uimit5</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_CreateLifeProfile" name="Create Life Profile">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_17hpt7q" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Create Life Profile" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="office.operations" candidateUsers="office.operations" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_08817bz</bpmn:incoming>
+      <bpmn:outgoing>Flow_1fox9gd</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:parallelGateway id="Gateway_1g4wfgk">
+      <bpmn:incoming>Flow_1k6rrx5</bpmn:incoming>
+      <bpmn:incoming>Flow_078c98x</bpmn:incoming>
+      <bpmn:outgoing>Flow_1cdkjzx</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:parallelGateway id="Gateway_1o1ckic">
+      <bpmn:incoming>Flow_1fox9gd</bpmn:incoming>
+      <bpmn:incoming>Flow_0uimit5</bpmn:incoming>
+      <bpmn:outgoing>Flow_078c98x</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:parallelGateway id="Gateway_03boyyg">
+      <bpmn:incoming>Flow_1y2in03</bpmn:incoming>
+      <bpmn:incoming>Flow_1vft4xp</bpmn:incoming>
+      <bpmn:outgoing>Flow_1u9srex</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:parallelGateway id="Gateway_0i51o2s">
+      <bpmn:incoming>Flow_1u9srex</bpmn:incoming>
+      <bpmn:outgoing>Flow_08817bz</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1l441d5</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:userTask id="Task_TaskChecklist" name="Task Checklist">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_06q02tk" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Task Checklist" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="office.operations" candidateUsers="office.operations" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1tsoyer</bpmn:incoming>
+      <bpmn:outgoing>Flow_1k6rrx5</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:parallelGateway id="Gateway_1rjbrmr">
+      <bpmn:incoming>Flow_1ep8okt</bpmn:incoming>
+      <bpmn:outgoing>Flow_1tsoyer</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1y2in03</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:serviceTask id="Task_PrepareOtherContractDocs" name="Prepare Other Contract Docs">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="prepareOtherContractDocs" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1ufz4c6</bpmn:incoming>
+      <bpmn:outgoing>Flow_1dzck7v</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:manualTask id="Task_DeliverSignedDocsToOO" name="Deliver Signed Docs to OO">
+      <bpmn:incoming>Flow_0m0jkr5</bpmn:incoming>
+      <bpmn:outgoing>Flow_0i0dgbf</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:userTask id="Task_GetContractDocsSigned" name="Get Contract Docs Signed">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2pa51op" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Get Contract Docs Signed" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="people.culture" candidateUsers="people.culture" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0kgt0cp</bpmn:incoming>
+      <bpmn:outgoing>Flow_0m0jkr5</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_0fzoisp">
+      <bpmn:incoming>Flow_0o20gej</bpmn:incoming>
+      <bpmn:incoming>Flow_0i0dgbf</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ep8okt</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_ForwardSignedDocsToOO" name="Forward Signed Docs to OO">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_0shahsv" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Forward Signed Docs to OO" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="people.culture" candidateUsers="people.culture" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1y2rgi6</bpmn:incoming>
+      <bpmn:outgoing>Flow_0o20gej</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:manualTask id="Task_WaitForSignedDocs" name="Wait for Signed Docs">
+      <bpmn:incoming>Flow_0qhcq4c</bpmn:incoming>
+      <bpmn:outgoing>Flow_1y2rgi6</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:exclusiveGateway id="Gateway_0ngo6al" name="In-person signing?">
+      <bpmn:incoming>Flow_1dzck7v</bpmn:incoming>
+      <bpmn:outgoing>Flow_085su9u</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0kgt0cp</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="EndEvent_OnboardingComplete" name="Onboarding Process Completed">
+      <bpmn:incoming>Flow_1jpjyaq</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="Task_PerformProcessCleanup" name="Perform Process Cleanup">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="performProcessCleanup" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1bejxek</bpmn:incoming>
+      <bpmn:outgoing>Flow_1jpjyaq</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_AssignManager" name="Assign Manager">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2oa1o9b" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="taskName" value="Assign Manager" />
+        </zeebe:taskHeaders>
+        <zeebe:assignmentDefinition assignee="people.culture" candidateUsers="people.culture" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_020bpw1</bpmn:incoming>
+      <bpmn:outgoing>Flow_11yxlf2</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_OnboardingProcess">
+      <bpmndi:BPMNShape id="Participant_02rxjcp_di" bpmnElement="Participant_NewcomerOnboardingProcess" isHorizontal="true">
+        <dc:Bounds x="157" y="85" width="4553" height="1210" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1wzy673_di" bpmnElement="Lane_SupportServices" isHorizontal="true">
+        <dc:Bounds x="187" y="1045" width="4523" height="250" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1q1todb_di" bpmnElement="Lane_OfficeOperations" isHorizontal="true">
+        <dc:Bounds x="187" y="695" width="4523" height="350" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1sgpal9_di" bpmnElement="Lane_CEO" isHorizontal="true">
+        <dc:Bounds x="187" y="555" width="4523" height="140" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0j77zuu_di" bpmnElement="Lane_PeopleAndCulture" isHorizontal="true">
+        <dc:Bounds x="187" y="85" width="4523" height="470" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0jyla1t_di" bpmnElement="Task_ValidateNewcomerInfo">
+        <dc:Bounds x="352" y="242" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_FormSubmitted">
+        <dc:Bounds x="261" y="264" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="240" y="307" width="79" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1mml1we_di" bpmnElement="Task_VerifyPoliciesApproval">
+        <dc:Bounds x="2200" y="1075" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1i5and7_di" bpmnElement="Task_PrepareEquipmentUpdateSnipeIT">
+        <dc:Bounds x="1830" y="1185" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_18l95jt_di" bpmnElement="Task_ValidateTicket">
+        <dc:Bounds x="1570" y="1075" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0s7v0m7_di" bpmnElement="Gateway_0iskq0p">
+        <dc:Bounds x="2095" y="1090" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1mg1urk_di" bpmnElement="Task_SendMailsAboutBuddy">
+        <dc:Bounds x="2110" y="115" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1h9mx47_di" bpmnElement="Task_PrepareContract">
+        <dc:Bounds x="2162" y="835" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_16m66be_di" bpmnElement="Task_AutoPrepareContract">
+        <dc:Bounds x="2162" y="725" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1w1z08t_di" bpmnElement="Gateway_1w1z08t" isMarkerVisible="true">
+        <dc:Bounds x="2047" y="740" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2040" y="710" width="64" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1ul3wfl_di" bpmnElement="Gateway_19bzqjm">
+        <dc:Bounds x="1985" y="130" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1u11nfb_di" bpmnElement="Gateway_11jgg9h">
+        <dc:Bounds x="1985" y="1090" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_12rylcr_di" bpmnElement="Task_RunScripts">
+        <dc:Bounds x="1830" y="1075" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1e9ir8n_di" bpmnElement="Gateway_1rj0934">
+        <dc:Bounds x="1725" y="1090" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1rzss6f_di" bpmnElement="Task_ChooseContractTemplate">
+        <dc:Bounds x="1872" y="725" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_02pktwz_di" bpmnElement="Task_AutoValidateSalaryData">
+        <dc:Bounds x="1322" y="275" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_05brd8l_di" bpmnElement="Gateway_05brd8l" isMarkerVisible="true">
+        <dc:Bounds x="1767" y="740" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1759" y="797" width="67" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0gqmi0g_di" bpmnElement="Task_ValidateContractData">
+        <dc:Bounds x="1602" y="725" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0vr1ay8_di" bpmnElement="Gateway_0vr1ay8" isMarkerVisible="true">
+        <dc:Bounds x="1487" y="290" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1484" y="261" width="56" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0e5wpyx_di" bpmnElement="Task_OpenTicket">
+        <dc:Bounds x="1162" y="445" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1jvxorw_di" bpmnElement="Gateway_0a4kyge">
+        <dc:Bounds x="957" y="377" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0u89e8d_di" bpmnElement="Task_AssignBuddy">
+        <dc:Bounds x="1162" y="115" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0pfol4f_di" bpmnElement="Task_AddContractData">
+        <dc:Bounds x="1162" y="275" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_12w3zmn_di" bpmnElement="Gateway_12w3zmn" isMarkerVisible="true">
+        <dc:Bounds x="1057" y="290" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0iyl83y_di" bpmnElement="Gateway_06bqwct">
+        <dc:Bounds x="887" y="257" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1hi1bj3_di" bpmnElement="Task_ApproveContract">
+        <dc:Bounds x="2372" y="585" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0pmdndo_di" bpmnElement="Gateway_0pmdndo" isMarkerVisible="true">
+        <dc:Bounds x="2527" y="600" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2526" y="660" width="53" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1dprzgn_di" bpmnElement="Gateway_1dprzgn" isMarkerVisible="true">
+        <dc:Bounds x="2577" y="740" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0i2gz49_di" bpmnElement="Gateway_0fepw2m">
+        <dc:Bounds x="4377" y="1090" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0641loz_di" bpmnElement="Task_SendContractDocsToNewcomer">
+        <dc:Bounds x="2922" y="275" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0uh9gyc_di" bpmnElement="Task_CloseTicket">
+        <dc:Bounds x="4222" y="1075" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0dtezc8_di" bpmnElement="Gateway_0r0e8wi">
+        <dc:Bounds x="4107" y="1090" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_13mzsrg_di" bpmnElement="Task_CreateGerirProfile">
+        <dc:Bounds x="3832" y="935" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ze0i5q_di" bpmnElement="Task_CreateLifeProfile">
+        <dc:Bounds x="3832" y="835" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0kdw0qk_di" bpmnElement="Gateway_1g4wfgk">
+        <dc:Bounds x="4047" y="740" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_16j4vjd_di" bpmnElement="Gateway_1o1ckic">
+        <dc:Bounds x="3987" y="850" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0gukkee_di" bpmnElement="Gateway_03boyyg">
+        <dc:Bounds x="3607" y="850" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0jw1mm8_di" bpmnElement="Gateway_0i51o2s">
+        <dc:Bounds x="3727" y="850" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_18yaf4t_di" bpmnElement="Task_TaskChecklist">
+        <dc:Bounds x="3582" y="725" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0amt8em_di" bpmnElement="Gateway_1rjbrmr">
+        <dc:Bounds x="3487" y="740" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0qamohv_di" bpmnElement="Task_PrepareOtherContractDocs">
+        <dc:Bounds x="2662" y="725" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_14g5aik_di" bpmnElement="Task_DeliverSignedDocsToOO">
+        <dc:Bounds x="3082" y="445" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_111mkjs_di" bpmnElement="Task_GetContractDocsSigned">
+        <dc:Bounds x="2922" y="445" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0fzoisp_di" bpmnElement="Gateway_0fzoisp" isMarkerVisible="true">
+        <dc:Bounds x="3357" y="377" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0pftbyo_di" bpmnElement="Task_ForwardSignedDocsToOO">
+        <dc:Bounds x="3242" y="275" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1mh7riz_di" bpmnElement="Task_WaitForSignedDocs">
+        <dc:Bounds x="3082" y="275" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0ngo6al_di" bpmnElement="Gateway_0ngo6al" isMarkerVisible="true">
+        <dc:Bounds x="2847" y="377" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2799" y="361" width="47" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1kxlkhm_di" bpmnElement="EndEvent_OnboardingComplete">
+        <dc:Bounds x="4632" y="1097" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4621" y="1140" width="58" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0f5akuz_di" bpmnElement="Task_PerformProcessCleanup">
+        <dc:Bounds x="4480" y="1075" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_024glxd_di" bpmnElement="Task_AssignManager">
+        <dc:Bounds x="740" y="242" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_07o19x6_di" bpmnElement="Flow_07o19x6">
+        <di:waypoint x="2145" y="1115" />
+        <di:waypoint x="2200" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0arh7y7_di" bpmnElement="Flow_0arh7y7">
+        <di:waypoint x="1930" y="1225" />
+        <di:waypoint x="2120" y="1225" />
+        <di:waypoint x="2120" y="1140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03mcijs_di" bpmnElement="Flow_03mcijs">
+        <di:waypoint x="2210" y="155" />
+        <di:waypoint x="4402" y="155" />
+        <di:waypoint x="4402" y="1090" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1bejxek_di" bpmnElement="Flow_1bejxek">
+        <di:waypoint x="4427" y="1115" />
+        <di:waypoint x="4480" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05bpi6b_di" bpmnElement="Flow_05bpi6b">
+        <di:waypoint x="4322" y="1115" />
+        <di:waypoint x="4377" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0wb6psn_di" bpmnElement="Flow_0wb6psn">
+        <di:waypoint x="4157" y="1115" />
+        <di:waypoint x="4222" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0q14agd_di" bpmnElement="Flow_0q14agd">
+        <di:waypoint x="2300" y="1115" />
+        <di:waypoint x="4107" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1cdkjzx_di" bpmnElement="Flow_1cdkjzx">
+        <di:waypoint x="4097" y="765" />
+        <di:waypoint x="4132" y="765" />
+        <di:waypoint x="4132" y="1090" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_078c98x_di" bpmnElement="Flow_078c98x">
+        <di:waypoint x="4037" y="875" />
+        <di:waypoint x="4072" y="875" />
+        <di:waypoint x="4072" y="790" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0uimit5_di" bpmnElement="Flow_0uimit5">
+        <di:waypoint x="3932" y="975" />
+        <di:waypoint x="4012" y="975" />
+        <di:waypoint x="4012" y="900" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1fox9gd_di" bpmnElement="Flow_1fox9gd">
+        <di:waypoint x="3932" y="875" />
+        <di:waypoint x="3987" y="875" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1l441d5_di" bpmnElement="Flow_1l441d5">
+        <di:waypoint x="3752" y="900" />
+        <di:waypoint x="3752" y="975" />
+        <di:waypoint x="3832" y="975" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08817bz_di" bpmnElement="Flow_08817bz">
+        <di:waypoint x="3777" y="875" />
+        <di:waypoint x="3832" y="875" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1u9srex_di" bpmnElement="Flow_1u9srex">
+        <di:waypoint x="3657" y="875" />
+        <di:waypoint x="3727" y="875" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1k6rrx5_di" bpmnElement="Flow_1k6rrx5">
+        <di:waypoint x="3682" y="765" />
+        <di:waypoint x="4047" y="765" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1y2in03_di" bpmnElement="Flow_1y2in03">
+        <di:waypoint x="3512" y="790" />
+        <di:waypoint x="3512" y="875" />
+        <di:waypoint x="3607" y="875" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1tsoyer_di" bpmnElement="Flow_1tsoyer">
+        <di:waypoint x="3537" y="765" />
+        <di:waypoint x="3582" y="765" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1fx8bpp_di" bpmnElement="Flow_1fx8bpp">
+        <di:waypoint x="2072" y="790" />
+        <di:waypoint x="2072" y="875" />
+        <di:waypoint x="2162" y="875" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2081" y="798" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0g8mpfx_di" bpmnElement="Flow_0g8mpfx">
+        <di:waypoint x="2097" y="765" />
+        <di:waypoint x="2162" y="765" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2121" y="747" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_123as5u_di" bpmnElement="Flow_123as5u">
+        <di:waypoint x="2577" y="625" />
+        <di:waypoint x="2602" y="625" />
+        <di:waypoint x="2602" y="740" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2583" y="608" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1d56zur_di" bpmnElement="Flow_1d56zur">
+        <di:waypoint x="2472" y="625" />
+        <di:waypoint x="2527" y="625" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0m0jkr5_di" bpmnElement="Flow_0m0jkr5">
+        <di:waypoint x="3022" y="485" />
+        <di:waypoint x="3082" y="485" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ep8okt_di" bpmnElement="Flow_1ep8okt">
+        <di:waypoint x="3407" y="402" />
+        <di:waypoint x="3442" y="402" />
+        <di:waypoint x="3442" y="765" />
+        <di:waypoint x="3487" y="765" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0i0dgbf_di" bpmnElement="Flow_0i0dgbf">
+        <di:waypoint x="3182" y="485" />
+        <di:waypoint x="3382" y="485" />
+        <di:waypoint x="3382" y="427" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0o20gej_di" bpmnElement="Flow_0o20gej">
+        <di:waypoint x="3342" y="315" />
+        <di:waypoint x="3382" y="315" />
+        <di:waypoint x="3382" y="377" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1y2rgi6_di" bpmnElement="Flow_1y2rgi6">
+        <di:waypoint x="3182" y="315" />
+        <di:waypoint x="3242" y="315" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qhcq4c_di" bpmnElement="Flow_0qhcq4c">
+        <di:waypoint x="3022" y="315" />
+        <di:waypoint x="3082" y="315" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0kgt0cp_di" bpmnElement="Flow_0kgt0cp">
+        <di:waypoint x="2872" y="427" />
+        <di:waypoint x="2872" y="485" />
+        <di:waypoint x="2922" y="485" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2879" y="448" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_085su9u_di" bpmnElement="Flow_085su9u">
+        <di:waypoint x="2872" y="377" />
+        <di:waypoint x="2872" y="315" />
+        <di:waypoint x="2922" y="315" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2881" y="343" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1dzck7v_di" bpmnElement="Flow_1dzck7v">
+        <di:waypoint x="2762" y="765" />
+        <di:waypoint x="2802" y="765" />
+        <di:waypoint x="2802" y="402" />
+        <di:waypoint x="2847" y="402" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0bc7hgd_di" bpmnElement="Flow_0bc7hgd">
+        <di:waypoint x="2035" y="155" />
+        <di:waypoint x="2110" y="155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pxayvy_di" bpmnElement="Flow_1pxayvy">
+        <di:waypoint x="2035" y="1115" />
+        <di:waypoint x="2095" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0dkkf6k_di" bpmnElement="Flow_0dkkf6k">
+        <di:waypoint x="2010" y="1090" />
+        <di:waypoint x="2010" y="180" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1940" y="203" width="59" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1vft4xp_di" bpmnElement="Flow_1vft4xp">
+        <di:waypoint x="2010" y="1090" />
+        <di:waypoint x="2010" y="980" />
+        <di:waypoint x="3632" y="980" />
+        <di:waypoint x="3632" y="900" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3560" y="946" width="59" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_19ymg93_di" bpmnElement="Flow_19ymg93">
+        <di:waypoint x="1930" y="1115" />
+        <di:waypoint x="1985" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1yjlz1u_di" bpmnElement="Flow_1yjlz1u">
+        <di:waypoint x="1750" y="1140" />
+        <di:waypoint x="1750" y="1225" />
+        <di:waypoint x="1830" y="1225" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0i9tbqy_di" bpmnElement="Flow_0i9tbqy">
+        <di:waypoint x="1775" y="1115" />
+        <di:waypoint x="1830" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1w1cqwu_di" bpmnElement="Flow_1w1cqwu">
+        <di:waypoint x="1670" y="1115" />
+        <di:waypoint x="1725" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_153zljr_di" bpmnElement="Flow_153zljr">
+        <di:waypoint x="1972" y="765" />
+        <di:waypoint x="2047" y="765" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_191cc7q_di" bpmnElement="Flow_191cc7q">
+        <di:waypoint x="1817" y="765" />
+        <di:waypoint x="1872" y="765" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1836" y="747" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1743ghe_di" bpmnElement="Flow_1743ghe">
+        <di:waypoint x="1702" y="765" />
+        <di:waypoint x="1767" y="765" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_166seut_di" bpmnElement="Flow_166seut">
+        <di:waypoint x="1537" y="315" />
+        <di:waypoint x="1562" y="315" />
+        <di:waypoint x="1562" y="765" />
+        <di:waypoint x="1602" y="765" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1543" y="298" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gfv7rn_di" bpmnElement="Flow_1gfv7rn">
+        <di:waypoint x="1422" y="315" />
+        <di:waypoint x="1487" y="315" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ssxgm7_di" bpmnElement="Flow_0ssxgm7">
+        <di:waypoint x="1262" y="485" />
+        <di:waypoint x="1292" y="485" />
+        <di:waypoint x="1292" y="1115" />
+        <di:waypoint x="1570" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0zijee5_di" bpmnElement="Flow_0zijee5">
+        <di:waypoint x="982" y="427" />
+        <di:waypoint x="982" y="485" />
+        <di:waypoint x="1162" y="485" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0cl587n_di" bpmnElement="Flow_0cl587n">
+        <di:waypoint x="1262" y="155" />
+        <di:waypoint x="1985" y="155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qwppd4_di" bpmnElement="Flow_0qwppd4">
+        <di:waypoint x="1262" y="315" />
+        <di:waypoint x="1322" y="315" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0h403dd_di" bpmnElement="Flow_0h403dd">
+        <di:waypoint x="1107" y="315" />
+        <di:waypoint x="1162" y="315" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1f7p5dm_di" bpmnElement="Flow_1f7p5dm">
+        <di:waypoint x="2552" y="600" />
+        <di:waypoint x="2552" y="235" />
+        <di:waypoint x="1082" y="235" />
+        <di:waypoint x="1082" y="290" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2535" y="578" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1tl9ixa_di" bpmnElement="Flow_1tl9ixa">
+        <di:waypoint x="1792" y="740" />
+        <di:waypoint x="1792" y="235" />
+        <di:waypoint x="1082" y="235" />
+        <di:waypoint x="1082" y="290" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1775" y="719" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05kf4e5_di" bpmnElement="Flow_05kf4e5">
+        <di:waypoint x="1512" y="340" />
+        <di:waypoint x="1512" y="395" />
+        <di:waypoint x="1082" y="395" />
+        <di:waypoint x="1082" y="340" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1495" y="348" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1cvtzwe_di" bpmnElement="Flow_1cvtzwe">
+        <di:waypoint x="982" y="377" />
+        <di:waypoint x="982" y="315" />
+        <di:waypoint x="1057" y="315" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_020bpw1_di" bpmnElement="Flow_020bpw1">
+        <di:waypoint x="452" y="282" />
+        <di:waypoint x="740" y="282" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0nuz05i_di" bpmnElement="Flow_0nuz05i">
+        <di:waypoint x="912" y="257" />
+        <di:waypoint x="912" y="155" />
+        <di:waypoint x="1162" y="155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0laezbg_di" bpmnElement="Flow_0laezbg">
+        <di:waypoint x="912" y="307" />
+        <di:waypoint x="912" y="402" />
+        <di:waypoint x="957" y="402" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11yxlf2_di" bpmnElement="Flow_11yxlf2">
+        <di:waypoint x="840" y="282" />
+        <di:waypoint x="887" y="282" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_048zt7n_di" bpmnElement="Flow_048zt7n">
+        <di:waypoint x="297" y="282" />
+        <di:waypoint x="352" y="282" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1jpjyaq_di" bpmnElement="Flow_1jpjyaq">
+        <di:waypoint x="4580" y="1115" />
+        <di:waypoint x="4632" y="1115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18y6kxz_di" bpmnElement="Flow_18y6kxz">
+        <di:waypoint x="2262" y="765" />
+        <di:waypoint x="2310" y="765" />
+        <di:waypoint x="2310" y="625" />
+        <di:waypoint x="2372" y="625" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0iu4kdx_di" bpmnElement="Flow_0iu4kdx">
+        <di:waypoint x="2262" y="875" />
+        <di:waypoint x="2602" y="875" />
+        <di:waypoint x="2602" y="790" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ufz4c6_di" bpmnElement="Flow_1ufz4c6">
+        <di:waypoint x="2627" y="765" />
+        <di:waypoint x="2662" y="765" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

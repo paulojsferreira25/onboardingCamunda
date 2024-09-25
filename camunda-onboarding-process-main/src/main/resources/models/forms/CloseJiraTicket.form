@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "text": "# Close Jira Ticket",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ro1omd",
+        "columns": null
+      },
+      "id": "Field_1yzgfqv"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0lnqrlf",
+        "columns": null
+      },
+      "id": "Field_0jbf7y8"
+    },
+    {
+      "label": "I have closed the Jira ticket",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1m5r4p8",
+        "columns": null
+      },
+      "id": "Field_0b1hxcf",
+      "key": "ticketClosed",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_CloseJiraTicket",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

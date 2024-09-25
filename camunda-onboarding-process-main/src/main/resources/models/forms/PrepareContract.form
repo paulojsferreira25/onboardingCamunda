@@ -1,0 +1,86 @@
+{
+  "components": [
+    {
+      "text": "# Prepare Contract",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_09rssee",
+        "columns": null
+      },
+      "id": "Field_0r80khx"
+    },
+    {
+      "label": "I have prepared the contract, got it signed by the CEO and uploaded it.",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0s2w0ww",
+        "columns": null
+      },
+      "id": "Field_18f7flg",
+      "key": "contractPrepared",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "text": "**Upload Contract Form:** {{ if uploadContractFormLink then \"[Link](\" + uploadContractFormLink + \")\" else \"Not Found\" }}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0fst384",
+        "columns": null
+      },
+      "id": "Field_0tyxwmw"
+    },
+    {
+      "text": "## Newcomer Information",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1rgwjrq",
+        "columns": null
+      },
+      "id": "Field_1mcvhyj"
+    },
+    {
+      "text": "**Full Name:** {{fullName}}\n\n**Date of Birth:** {{dateOfBirth}}\n\n**Email Address:** {{emailAddress}}\n\n**Citizen Card (CC) Number:** {{identificationNumber}}\n\n**Citizen Card (CC) Validity:** {{identificationValidity}}\n\n**NIF:** {{nif}}\n\n**NISS:** {{niss}}\n\n**Address:** {{address}}\n\n**Postal Code:** {{postalCode}}\n\n**Marital Status:** {{maritalStatus}}\n\n**Number of Dependents:** {{numberOfDependents}}\n\n**IBAN:** {{iban}}\n\n**Start Date:** {{startDate}}\n\n**Photo:** {{ if photoLink != \"\" then \"[View](\" + photoLink + \")\" else \"Not Provided\"}}\n\n**Certificate of Qualifications:** {{if certificateOfQualificationsLink != \"\" then \"[View](\" + certificateOfQualificationsLink + \")\" else \"Not Provided\"}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_06b81fx",
+        "columns": null
+      },
+      "id": "Field_0x4hzom"
+    },
+    {
+      "text": "## Data for Contract Documents",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1c7jxnd",
+        "columns": null
+      },
+      "id": "Field_09uamek"
+    },
+    {
+      "text": "**Client:** {{client}}\n\n**Area:** {{area}}\n\n**Level:** {{level}}\n\n**Base Salary:** {{baseSalary}}\n\n**IHT:** {{iht}} \n\n**Expenses:** {{expenses}}\n\n**Contract Type:** {{contractType}} \n\n{{if contractDuration != null then \"**Duration (in months):** \" + string(contractDuration) else \"\"}}\n\n{{if contractEndDate != null then \"**End Date:** \" + contractEndDate else \"\"}}\n\n**Contract Regime:** {{contractRegime}}\n\n{{if hoursPerDay != null then \"**Hours per Day:** \" + string(hoursPerDay) else \"\"}}\n\n{{if daysPerWeek != null then \"**Days Per Week:** \" + string(daysPerWeek) else \"\"}}\n\n**Newcomer Origin:** {{contractOrigin}}\n\n**Duodécimos:** {{duodecimos}}\n\n**In-Person Signing:** {{if inPersonSigning = true then \"Yes\" else \"No\"}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1cn2gja",
+        "columns": null
+      },
+      "id": "Field_14ou714"
+    }
+  ],
+  "type": "default",
+  "id": "Form_AddDataForContractDocs",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

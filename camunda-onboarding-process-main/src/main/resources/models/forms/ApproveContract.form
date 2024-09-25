@@ -1,0 +1,73 @@
+{
+  "components": [
+    {
+      "text": "# Approve Contract",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0njg3ey",
+        "columns": null
+      },
+      "id": "Field_0txijxp"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}\n\n**Contract:** {{ if contractLink then \"[View](\" + contractLink + \")\" else \"Not Found\" }}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0bj7ts8",
+        "columns": null
+      },
+      "id": "Field_09yx3ni"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "yes"
+        },
+        {
+          "label": "No",
+          "value": "no"
+        }
+      ],
+      "label": "Do you approve?",
+      "type": "radio",
+      "layout": {
+        "row": "Row_1htf9f9",
+        "columns": null
+      },
+      "id": "Field_1kpiopc",
+      "key": "contractApproved",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Comments",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1yfxvo0",
+        "columns": null
+      },
+      "id": "Field_1j5qb09",
+      "key": "ceoCommentsAboutContractData",
+      "conditional": {
+        "hide": "=contractApproved != \"no\""
+      },
+      "validate": {
+        "required": true
+      },
+      "description": "This field contains the information explaining the rejection to P&C"
+    }
+  ],
+  "type": "default",
+  "id": "Form_ApproveContract",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

@@ -1,0 +1,268 @@
+{
+  "components": [
+    {
+      "text": "#",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0v80kym",
+        "columns": 5
+      },
+      "id": "Field_1y8gpl5"
+    },
+    {
+      "label": "Image view",
+      "type": "image",
+      "layout": {
+        "row": "Row_0v80kym",
+        "columns": 5
+      },
+      "id": "Field_146inxk",
+      "source": "https://careers.recruiteecdn.com/image/upload/q_auto,f_auto,w_400,c_limit/production/images/BN5l/2dDjxgF-CXUi.png"
+    },
+    {
+      "text": "___",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0xprwaq",
+        "columns": null
+      },
+      "id": "Field_1tt5b8p"
+    },
+    {
+      "text": "# Validate Newcomer Information",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_09rssee",
+        "columns": null
+      },
+      "id": "Field_0r80khx"
+    },
+    {
+      "label": "Full Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1bx2pcm",
+        "columns": null
+      },
+      "id": "Field_172tpcy",
+      "key": "fullName",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date of Birth",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1dil4oz",
+        "columns": null
+      },
+      "id": "Field_0mgj3qz",
+      "key": "dateOfBirth",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Email Address",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1dil4oz",
+        "columns": null
+      },
+      "id": "Field_07vchnb",
+      "key": "emailAddress",
+      "validate": {
+        "required": true,
+        "validationType": "email"
+      }
+    },
+    {
+      "label": "Citizen Card (CC) Number",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0lkjzcz",
+        "columns": null
+      },
+      "id": "Field_16w3nwk",
+      "key": "identificationNumber",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Citizen Card (CC) Validity",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0lkjzcz",
+        "columns": null
+      },
+      "id": "Field_17oc3ak",
+      "key": "identificationValidity",
+      "properties": {},
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "NIF",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00rvd39",
+        "columns": null
+      },
+      "id": "Field_1pn7w9p",
+      "key": "nif",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "NISS",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00rvd39",
+        "columns": null
+      },
+      "id": "Field_1a6y9jo",
+      "key": "niss",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Address",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_03rp5cl",
+        "columns": 12
+      },
+      "id": "Field_1nknf7n",
+      "key": "address",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Postal Code",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_03rp5cl",
+        "columns": 4
+      },
+      "id": "Field_11faooy",
+      "key": "postalCode",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Single",
+          "value": "Não Casado"
+        },
+        {
+          "label": "Married (Sole Holder)",
+          "value": "Casado, único titular"
+        },
+        {
+          "label": "Married (Two Holders)",
+          "value": "Casado, dois titulares"
+        },
+        {
+          "label": "Single - Disabled",
+          "value": "Não Casado – portador de deficiência"
+        },
+        {
+          "label": "Married (Sole Holder) - Disabled",
+          "value": "Casado, único titular - portador de deficiência"
+        },
+        {
+          "label": "Married (Two Holders) - Disabled",
+          "value": "Casado, dois titulares - portador de deficiência"
+        }
+      ],
+      "label": "Marital Status",
+      "type": "select",
+      "layout": {
+        "row": "Row_0ji2kel",
+        "columns": null
+      },
+      "id": "Field_0lqsdkr",
+      "key": "maritalStatus",
+      "searchable": false,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Number of Dependents",
+      "type": "number",
+      "layout": {
+        "row": "Row_0ji2kel",
+        "columns": null
+      },
+      "id": "Field_0okh0h9",
+      "key": "numberOfDependents",
+      "decimalDigits": 0,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "IBAN",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1jk1il4",
+        "columns": null
+      },
+      "id": "Field_0c2m4o2",
+      "key": "iban",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Start Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1hu78sd",
+        "columns": null
+      },
+      "id": "Field_0jp3x7b",
+      "key": "startDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "text": "**Photo:** {{ if photoLink != \"\" then \"[View](\" + photoLink + \")\" else \"Not Provided\"}}\n\n**Certificate of Qualifications:** {{if certificateOfQualificationsLink != \"\" then \"[View](\" + certificateOfQualificationsLink + \")\" else \"Not Provided\"}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0k47j6l",
+        "columns": null
+      },
+      "id": "Field_1ttualc"
+    }
+  ],
+  "type": "default",
+  "id": "Form_ValidateNewcomerInfo",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.23.0"
+  },
+  "schemaVersion": 16
+}

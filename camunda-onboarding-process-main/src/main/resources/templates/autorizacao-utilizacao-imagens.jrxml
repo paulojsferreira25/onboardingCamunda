@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4a17573-461e-4cb7-8298-83dc10f3cb89">
+	<parameter name="syoneLogoURL" class="java.lang.String"/>
+	<parameter name="fullName" class="java.lang.String"/>
+	<parameter name="identificationNumber" class="java.lang.String"/>
+	<parameter name="identificationValidity" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="postalCode" class="java.lang.String"/>
+	<parameter name="startDate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="10" width="75" height="30" uuid="bde73ee7-2c8c-4ade-ad5f-ddcc2beaf798"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Open Software Solutions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="110" width="480" height="30" forecolor="#02CCB1" uuid="51c5dd1c-2785-42a8-817a-89b68e1e00df"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AUTORIZAÇÃO PARA USO DE IMAGEM]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="160" width="480" height="570" uuid="1be2f0d5-4595-44ad-bbdc-85744a6bad9f"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Para os devidos e legais efeitos, eu, " + $P{fullName} + ", portador/a do documento de identificação n.º " + $P{identificationNumber} + ", e validade " + $P{identificationValidity} + ", com residência na " + $P{address} + ", " + $P{postalCode} + ", declaro conceder autorização à Syone, S.A. (doravante designada por Syone), com sede na Rua Alfredo da Silva, n.º 8, A, Edifício Stern, Piso 3D, 2610 - 016 Alfragide, pessoa coletiva número 504 729 624, a utilizar a minha imagem, fixa ou em movimento, captada em fotografia e/ou filmagens, realizadas no âmbito de atividades promovidas pela Syone, e destinadas a uso interno, nomeadamente na rede Syone e/ou divulgação ao público, aqui se incluindo os meios de comunicação social, a difusão na internet e televisão, que podem incluir, entre outros, a publicidade, promoção e marketing, na internet (incluindo o website) e redes sociais da Syone, e dos respetivos serviços, diretamente ou através de terceiros. Mais declaro concordar, que a imagem pode ser reproduzida e utilizada em qualquer suporte físico e/ou digital (conhecido ou que venha a ser), bem como, ser combinada com outras imagens (fixas ou em movimento), textos ou gráficos, bem como, sofrer alterações ou modificações.<br>Declaro concordar com o facto de não ter direitos sobre o uso dessas imagens e/ou filmagens obtidas com as mesmas, nomeadamente direito a qualquer contrapartida económica pela utilização das mesmas, e que todos os direitos emergentes do uso daquelas pertencem à Syone.<br>Mais declaro que a presente autorização é realizada a título gratuito, bem assim, ter conhecimento de não ter quaisquer direitos adicionais, seja a que título for.<br>Declaro ainda que esta autorização vincula os meus herdeiros e representantes. Mais declaro concordar que esta autorização tem carácter irrevogável, mundial e perpétuo, e será regida pela legislação portuguesa excluindo a legislação de conflitos.<br>Declaro ainda que, à data da presente declaração, não me encontro vinculado a nenhum contrato de exclusividade para o uso da minha imagem ou qualquer outro que obste à utilização por parte da Syone das imagens e/ou filmagens nos termos previstos na presente autorização.<br><br><br>Pela presente, declaro, igualmente, ter conhecimento que a minha imagem, enquanto dado pessoal, será objeto de tratamento por parte da Syone de acordo com a Lei de Proteção de Dados em vigor, para os fins mencionados na presente declaração e durante o período estritamente necessário para efeito, autorizando desde já esse mesmo tratamento.<br>Declaro ainda que tomei conhecimento que este consentimento poderá ser retirado em qualquer altura, bem assim, que poderei exercer os meus direitos de acesso, retificação, cancelamento, oposição e portabilidade, reconhecidos na legislação de Proteção de Dados, em vigor, dirigindo um e-mail para dataprivacy@syone.com, ou uma carta para a morada: Rua Alfredo da Silva, n.º 8, A, Edifício Stern, Piso 3D, 2610 - 016 Alfragide e ainda que me é conferido o direito de apresentar reclamação junto da CNPD – Comissão Nacional de Proteção de Dados.<br><br><br>Declaro ter mais de 18 anos e ter capacidade jurídica, prevista por lei, para a execução deste ato.<br><br><br>Alfragide, " + $P{startDate} + "."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="750" width="120" height="40" uuid="7f771b5b-f804-4e1c-a555-f0c3a0fb10aa"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[R. Alfredo da Silva N8-A
+Edifício Stern 3D
+2610-016 Alfragide - Portugal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="750" width="50" height="40" forecolor="#02CCB1" uuid="ba962466-f361-4c2c-8855-2cfb4eaa16d4"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[syone.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="440" y="-10" width="80" height="80" uuid="7ca6365f-416a-4b58-9080-4b7ca512b510"/>
+				<imageExpression><![CDATA[$P{syoneLogoURL}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

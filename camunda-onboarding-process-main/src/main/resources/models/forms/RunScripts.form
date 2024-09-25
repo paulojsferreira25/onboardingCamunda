@@ -1,0 +1,61 @@
+{
+  "components": [
+    {
+      "text": "# Run Scripts",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_03ojqqp",
+        "columns": null
+      },
+      "id": "Field_04c4ycg"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1b9jf45",
+        "columns": null
+      },
+      "id": "Field_0lu5mn4"
+    },
+    {
+      "label": "Newcomer's Syone Email Address",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0pmjvqd",
+        "columns": null
+      },
+      "id": "Field_1p4jvyw",
+      "key": "companyEmailAddress",
+      "description": "Ex. goncalo.ramos@syone.com",
+      "validate": {
+        "required": true,
+        "validationType": "email"
+      }
+    },
+    {
+      "label": "I have run the Jira workflow scripts for the newcomer",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1jqrwuu",
+        "columns": null
+      },
+      "id": "Field_0r0t4fq",
+      "key": "scriptsRan",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_RunScripts",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

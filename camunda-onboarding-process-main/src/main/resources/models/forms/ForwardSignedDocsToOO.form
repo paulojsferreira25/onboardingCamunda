@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "text": "# Forward Signed Docs to Office Operations",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0yr9a3n",
+        "columns": null
+      },
+      "id": "Field_068w30p"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_07mnhhh",
+        "columns": null
+      },
+      "id": "Field_1yrrwk5"
+    },
+    {
+      "label": "I have forwarded the contract documents, signed and returned by the newcomer, to Office Operations",
+      "type": "checkbox",
+      "layout": {
+        "row": null,
+        "columns": null
+      },
+      "id": "Field_1w8s1gm",
+      "key": "signedContractForwarded",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_ForwardSignedDocsToOO",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

@@ -1,0 +1,36 @@
+{
+  "components": [
+    {
+      "text": "# Validate Jira Ticket Data",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0aaeu0n",
+        "columns": null
+      },
+      "id": "Field_0hcu1nv"
+    },
+    {
+      "label": "I have checked and validated the Jira ticket data",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1opl5f4",
+        "columns": null
+      },
+      "id": "Field_0jiei82",
+      "key": "ticketValidated",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_ValidateJiraTicket",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

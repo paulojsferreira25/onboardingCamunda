@@ -1,0 +1,66 @@
+{
+  "components": [
+    {
+      "text": "# Get Contract Documents Signed",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1a6ldxj",
+        "columns": null
+      },
+      "id": "Field_0hf4puq"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0y6wuan",
+        "columns": null
+      },
+      "id": "Field_1er2ncn"
+    },
+    {
+      "text": "## Contract Docs",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0vn8yz3",
+        "columns": null
+      },
+      "id": "Field_1vqd3zf"
+    },
+    {
+      "text": "**Contrato:** {{ if contractLink then \"[View](\" + contractLink + \")\" else \"Not Found\" }}\n\n**Política de Utilização SI-TI Syone:** {{ if usagePolicyLink then \"[View](\" + usagePolicyLink + \")\" else \"Not Found\" }}\n\n**Acordo IHT:** {{ if IHTAgreementLink then \"[View](\" + IHTAgreementLink + \")\" else \"Not Found\" }}\n\n{{ if duodecimos = \"No\" then \"\" else \"**Aditamento:** \" + (if aditamentoLink then \"[View](\" + aditamentoLink + \")\" else \"Not Found\")}}\n\n**Ficha Individual do Colaborador:** {{ if individualRecordLink then \"[View](\" + individualRecordLink + \")\" else \"Not Found\" }}\n\n**Autorização de Utilização de Imagens:** {{ if imageUseAuthorizationLink then \"[View](\" + imageUseAuthorizationLink + \")\" else \"Not Found\" }}\n\n",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0uqlljg",
+        "columns": null
+      },
+      "id": "Field_0p3woc2"
+    },
+    {
+      "label": "I have got the contract documents signed by the newcomer",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1meht6z",
+        "columns": null
+      },
+      "id": "Field_1mfh8n3",
+      "key": "contractSigned",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_GetContractDocsSigned",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}

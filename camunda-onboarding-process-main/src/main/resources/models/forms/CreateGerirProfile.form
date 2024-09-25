@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "text": "# Create Gerir Profile",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ymayc5",
+        "columns": null
+      },
+      "id": "Field_0q0p4gx"
+    },
+    {
+      "text": "**Newcomer Name:** {{fullName}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1l6vfyx",
+        "columns": null
+      },
+      "id": "Field_05tzzsw"
+    },
+    {
+      "label": "I have created newcomer's Gerir profile",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_08dhk7i",
+        "columns": null
+      },
+      "id": "Field_0tvy7l0",
+      "key": "gerirProfileConfigured",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_CreateGerirProfile",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.2.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.1"
+  },
+  "schemaVersion": 9
+}
